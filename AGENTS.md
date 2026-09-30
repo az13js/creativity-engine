@@ -90,7 +90,6 @@ scripts/     命令行入口；examples/ 是最小调用示例
 
 ## 提交与发布
 
-- 主分支 `master`，远端 `origin` 指向 `git@gitee.com:az13js/creativity-engine.git`。
+- 主分支 `master`，远端 `origin` 指向 `git@gitee.com:az13js/creativity-engine.git`。不要直接提交到主分支。
 - 提交信息用中文，说清改了什么、为什么；一次提交只做一件事。
 - 提交前：`npm test` 全绿、`git status` 干净、`docs/` 里的相对链接有效。
-- 提交作者保持现状（`Creativity Engine Agent <agent@localhost>`），不要改。
