@@ -9,7 +9,7 @@
 **交付物**
 1. **机制实现**：[src/agents/engine.ts](src/agents/engine.ts)（12 个认知算子 × 异质多 Agent × 质量-多样性档案 × 自适应控制器）
 2. **提示词协议**：[src/llm/prompts.ts](src/llm/prompts.ts) 与算子目录 [data/operators.json](data/operators.json)
-3. **Skill**：[skills/creativity-engine/SKILL.md](skills/creativity-engine/SKILL.md)
+3. **Skill**：[.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md)
 4. **基准**：[src/bench/](../src/bench/)（AUT / DAT / RAT / 设计简报四类任务，10 余个自动指标）
 5. **测试**：34 个单元测试（全部离线、确定性，`npm test`）
 6. **原始实验数据与报告**：[runs/main-live/report.html](runs/main-live/report.html)、[runs/ablation/report.html](runs/ablation/report.html)、[docs/results.md](results.md)
@@ -44,10 +44,10 @@
 元反思提示词负责诊断"这一轮在重复哪类套路"。
 
 关键点：**"发散"不是方法，"用哪个算子发散"才是方法**。完整模板见
-[SKILL.md](../skills/creativity-engine/SKILL.md)。
+[SKILL.md](../.agents/skills/creativity-engine/SKILL.md)。
 
 ### 1.3 Skill 层
-[skills/creativity-engine/SKILL.md](../skills/creativity-engine/SKILL.md) 把上述协议固定为七步操作手册
+[.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md) 把上述协议固定为七步操作手册
 （任务框定 → 算子分发 → 异质发散 → 技术评审 → 概念融合 → 质量-多样性策展 → 元反思纠偏 → 收敛交付），
 并列出**反模式**（只说"有创意"、单一角色、只保留 top-1、用温度代替方法……）与**自检方法**。
 
@@ -204,7 +204,7 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
 
 | 内容 | 文件 |
 | --- | --- |
-| Skill 交付物 | [skills/creativity-engine/SKILL.md](../skills/creativity-engine/SKILL.md) |
+| Skill 交付物 | [.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md) |
 | 机制设计说明 | [docs/design.md](design.md) |
 | 基准方法与指标定义 | [docs/benchmark.md](benchmark.md) |
 | 自动生成的结果表 | [docs/results.md](results.md) |

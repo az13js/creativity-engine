@@ -57,7 +57,7 @@
 │  融合提示词   = generic space → blend → emergent → risks              │
 │  元反思提示词 = 同质化诊断 + 下一轮算子建议 + 额外约束                 │
 └───────────────────────────────────────────────────────────────────────┘
-                 ↓ 由 Skill 固定下来（skills/creativity-engine/SKILL.md）
+                 ↓ 由 Skill 固定下来（.agents/skills/creativity-engine/SKILL.md）
 ┌─ 多 Agent 层（roles）─────────────────────────────────────────────────┐
 │  生成者 ×4（算子×角色×刺激词，互不相同）                               │
 │  评审者 ×1（找漏洞，给 feasibility/novelty/impact + failure_mode）      │
@@ -146,4 +146,4 @@
 | AUT 评分 | [src/core/aut.ts](src/core/aut.ts) |
 | RAT 评分 | [src/core/rat.ts](src/core/rat.ts) |
 | 基准任务与运行器 | [src/bench/](src/bench/) |
-| Skill 交付物 | [skills/creativity-engine/SKILL.md](skills/creativity-engine/SKILL.md) |
+| Skill 交付物 | [.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md) |
