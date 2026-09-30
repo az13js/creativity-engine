@@ -84,7 +84,7 @@ bash scripts/run-all.sh                                                         
 其他命令：
 
 ```bash
-npm test               # 35 个单元测试，离线，不需要模型端点
+npm test               # 55 个单元测试，离线，不需要模型端点
 node scripts/smoke.ts  # 连通性自检：一次对话 + 一次嵌入
 ```
 
@@ -128,11 +128,14 @@ for (const idea of result.archive.elites) {
 | 任务 | 测什么 | 主要指标 |
 | --- | --- | --- |
 | AUT（`aut-brick`、`aut-bottle`） | 发散思维 | 流畅性、灵活性、原创性、具体化、DT 指数 |
-| DAT（`dat-7`、`dat-10`） | 语义发散程度 | 前 7 个有效词的 21 对余弦距离均值 ×100（标准 DAT 计分） |
+| 英文 AUT（`aut-box-en`、`aut-rope-en`、`aut-brick-en`） | 发散思维，且与公开人类数据同题 | 同上，外加与人类作答的距离分布 |
+| DAT（`dat-7`、`dat-10`、`dat-en-7`） | 语义发散程度 | 前 7 个有效词的 21 对余弦距离均值 ×100（标准 DAT 计分） |
 | RAT（`rat-20`） | 聚合思维 | 严格命中率、任意候选命中率 |
 | 设计简报（`brief-stove`、`brief-box`） | 新颖且可用的方案 | 新颖度、可行性、新颖度×可行性、固定抽样多样性、跨配置区分度 |
 
 新颖度 = 1 − 与已知方案的最大余弦相似度；可行性由独立评委按同一份提示词给所有配置打分；跨配置区分度衡量同一道题上各家的想法有多容易撞车。完整定义见 [`docs/benchmark.md`](docs/benchmark.md)。
+
+**人类数据基线**：仓库导入了三个公开人类数据集（SemDis 的 AUT 与词语联想、Olson 等人的 DAT，共约 2.2 万条人类作答），用来做两件事——校验自动指标与人类评分者的相关，以及把机器输出放进人类分布里看百分位（`npm run human`）。数据来源、口径与结果见 [`docs/human-baseline.md`](docs/human-baseline.md)。
 
 ## 目录结构
 
@@ -140,13 +143,14 @@ for (const idea of result.archive.elites) {
 AGENTS.md              给编码 Agent 的项目约定（命令、约束、验证流程、已知坑）
 .agents/skills/creativity-engine/SKILL.md   Agent Skill（opencode 与 DSH 都会扫描）
 data/                  技法目录、AUT / DAT / RAT / 设计简报任务与已知方案语料
+data/human/            导入后的公开人类数据（由 npm run human:fetch 生成）
 src/core/              语义空间、新颖度、AUT / RAT 评分、质量-多样性档案、统计
 src/llm/               OpenAI 兼容客户端（磁盘缓存、并发、重试、审计日志）与提示词
 src/agents/            多 Agent 引擎、基线策略、成对比较评审
-src/bench/             任务加载、自动评分、矩阵运行器、报告生成、PCA 投影
+src/bench/             任务加载、自动评分、矩阵运行器、报告生成、PCA 投影、人类数据基线与指标校验
 examples/quickstart.ts 最小代码调用示例
-scripts/               demo / bench / rescore / analyze / run-all 命令行
-test/                  35 个单元测试（确定性夹具或假模型，离线）
+scripts/               demo / bench / rescore / analyze / human / fetch-human-data / run-all 命令行
+test/                  55 个单元测试（确定性夹具或假模型，离线）
 runs/                  实验产物与报告（模型调用缓存在 runs/cache/）
 docs/                  调研笔记、机制设计、基准方法、结果与结论
 ```
@@ -165,6 +169,8 @@ docs/                  调研笔记、机制设计、基准方法、结果与结
 主实验（4 配置 × 7 任务）与消融实验（4 配置 × 3 任务）的完整数据在 [`docs/results.md`](docs/results.md)，交互报告是 [`runs/main-live/report.html`](runs/main-live/report.html) 和 [`runs/ablation/report.html`](runs/ablation/report.html)。
 
 跨任务均值：机制的新颖度最高（0.441，基线 0.387–0.405），AUT 灵活性 8 / 6（基线 3–5），跨配置区分度在 7 道题上全部排第一；可行性最低（0.460，基线 0.700–0.727），调用次数约为基线的 2.7 倍。消融显示增益主要来自技法异质化和融合（去掉后多样性 0.504 → 0.347），自适应升温在这批任务上未触发。结论与局限见 [`docs/report.md`](docs/report.md)。
+
+人类数据基线（[`runs/human-baseline/report.md`](runs/human-baseline/report.md)，[HTML](runs/human-baseline/report.html)）：在 SemDis 公开的 1,800 条 AUT 人类作答上，本仓库的语义距离与人类评分的相关（与最近人类作答的距离 Spearman 0.52、与题目词的距离 0.40）高于原论文 GloVe 距离在同一批作答上的 0.20；在 2,524 名真实参与者的 DAT 数据上（用本仓库嵌入重算，人类均值 39.4±3.9），与人类同题的机制运行落在第 63 百分位，与题目词的距离落在 AUT 人类分布的第 97–99 百分位。口径、样本与局限见 [`docs/human-baseline.md`](docs/human-baseline.md)。
 
 ## 常见问题
 
@@ -206,13 +212,15 @@ docs/                  调研笔记、机制设计、基准方法、结果与结
 ## 已知限制
 
 - 每份配置每个任务只跑一次、一个种子，结果说明方向和量级，不是显著性结论；
-- 没有人类被试数据，因此报告里没有「超过人类」这类结论；
+- 人类数据来自公开数据集（SemDis 的 AUT/词语联想与 Olson 等人的 DAT），是别人招募的被试，不是本项目招募的；因此能给出「机器输出在人类分布里的位置」和「自动指标与人类评分的相关」，但没有让人类来评价我们自己的想法；
 - 可行性由模型评委打分，而字数越多它给分越低（逐条数据里两者负相关），机制的想法又比基线长两倍多，这个偏置写在 [`docs/report.md`](docs/report.md)；
 - 投影图的提示框只支持鼠标悬停，触屏上还没有对应交互。
 
 ## 许可
 
-MIT，见 [`LICENSE`](LICENSE)。
+代码用 MIT，见 [`LICENSE`](LICENSE)。
+
+`data/human/` 里的第三方人类数据（SemDis、Olson 等人的公开数据集）版权属于原作者，按原项目的公开共享条款用于研究复现，不随本仓库的 MIT 许可一并授权；来源、引用与校验和记录在每个 JSON 文件的 `sources` 字段和 [`docs/human-baseline.md`](docs/human-baseline.md) 里。
 
 ## 参考
 
