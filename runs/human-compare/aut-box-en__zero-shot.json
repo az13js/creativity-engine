@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-box-en",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "Cut a hole for your head to wear it as a silly hat.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "Stack several to build a sturdy fort for kids.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "Flatten it into a makeshift sled for sliding down grass.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "Poke holes and fill with soil to grow seedlings.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "Tape it shut and use as a lightweight shipping container.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "Draw a target on it for safe indoor archery practice.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "Cut windows and doors to make a dollhouse.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "Fold it into a tray for painting or messy crafts.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "Place it over your head as a cheap eclipse viewer.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "Stuff with clothes to make a DIY punching bag.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "Use as a canvas for a large painting or mural.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "Cut into strips to make biodegradable packing material.",
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 110,
+    "completionTokens": 149,
+    "failures": 0,
+    "wallMs": 7147,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

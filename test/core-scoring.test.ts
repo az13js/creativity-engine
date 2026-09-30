@@ -147,3 +147,16 @@ test("descriptive statistics and effect sizes", () => {
   const ci = bootstrapCI([1, 2, 3, 4, 5], 0.95, 500, 42);
   assert.ok(ci[0]! <= 3 && ci[1]! >= 3);
 });
+
+
+test("AUT falls back to clustering when the task has no category lexicon", async () => {
+  const space = new ClusterSpace({ "one": "a", "two": "a", "three": "b", "four": "b", "five": "c" });
+  const report = await scoreAut({
+    object: "widget",
+    responses: ["one", "two", "three", "four", "five"],
+    space
+  });
+  assert.equal(report.flexibilitySource, "clustering");
+  assert.equal(report.flexibility, 3, "one cluster per semantic group");
+  assert.equal(report.fluency, 5);
+});

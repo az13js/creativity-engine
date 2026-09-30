@@ -1,0 +1,43 @@
+{
+  "taskId": "dat-en-7",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 7 words",
+  "metrics": {
+    "nIdeas": 34,
+    "nUnique": 34,
+    "meanPairwiseDistance": 0.6071,
+    "clusters": 14,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.6187,
+    "ctrl_clusters": 8,
+    "wordsGiven": 7,
+    "wordsScored": 7,
+    "validRate": 1,
+    "dispersion": 40.67,
+    "minPairDistance": 14.9335,
+    "maxPairDistance": 56.4602,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": -0.29
+  },
+  "extras": {
+    "words": [
+      "特征",
+      "把",
+      "DAT",
+      "想到",
+      "从",
+      "撞墙",
+      "耳垢"
+    ],
+    "scored": [
+      "特征",
+      "把",
+      "DAT",
+      "想到",
+      "从",
+      "撞墙",
+      "耳垢"
+    ]
+  }
+}

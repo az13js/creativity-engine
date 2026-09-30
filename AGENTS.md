@@ -30,6 +30,9 @@ npm run bench:dry                                 # 假模型跑通基准流水�
 npm run bench -- --tasks aut-brick --configs engine,zero-shot --out runs/try
 npm run rescore -- --run runs/try                 # 只重算分数与报告
 npm run analyze -- runs/try > docs/results.md     # 结果导成 Markdown 表
+npm run human:fetch                               # 导入公开人类数据（需要网络，校验 SHA-256）
+npm run human -- --stage validation               # 自动指标 vs 人类评分
+npm run human -- --stage compare --run runs/try   # 机器想法 vs 同题人类作答
 bash scripts/run-all.sh                           # 主实验 + 消融 + 报告
 ```
 
@@ -44,10 +47,12 @@ src/llm/     端点客户端（缓存、并发、重试、审计日志）与提�
    ↑
 src/agents/  引擎、基线策略、成对比较评审；只依赖 LlmLike 接口，不直接 new ChatClient
    ↑
-src/bench/   任务加载、自动评分、矩阵运行器、报告生成、PCA 投影
+src/bench/   任务加载、自动评分、矩阵运行器、报告生成、PCA 投影、人类数据基线（human.ts）
    ↑
 scripts/     命令行入口；examples/ 是最小调用示例
 ```
+
+`data/human/` 是导入后的人类数据，只由 `scripts/fetch-human-data.ts` 写入，其它代码只读。
 
 `src/core/` 不允许 import 上层任何东西。`test-support/` 只给测试用，不进 `src/`。
 
@@ -59,6 +64,9 @@ scripts/     命令行入口；examples/ 是最小调用示例
 - **档案按身份归档**：`QualityDiversityArchive.add(item, descriptor, objective, key)` 的 `key` 是想法 id。同一条想法被评审改写可行性后要**移动**到新格，不能留两份。
 - **尺寸可比**：多样性一类会随想法条数变化的指标，比较时必须用固定条数抽样（`ctrl_*` 前缀那组）。
 - **Skill 保持独立**：`.agents/skills/creativity-engine/SKILL.md` 可以被单独拷到别的项目用，里面不能引入对本仓库路径的硬依赖（提到仓库代码时必须写成可选）。
+- **人类数据只读**：`data/human/*.json` 由 `npm run human:fetch` 生成，脚本里钉住 SHA-256；不要手改这些文件，也不要让 `src/` 下的代码下载数据。
+- **人类评分不跨题合并**：不同题目、不同研究的 1~5 分不可直接合并；相关性必须在题目内部算，再用 Fisher z 汇总（`src/bench/human.ts`）。
+- **同题才比**：机器任务与人类数据的比较只在题目措辞相同时成立；跨语言（中文 AUT vs 英文被试）只能作为标注清楚的稳健性检查。
 
 ## 改动怎么验
 
@@ -67,6 +75,7 @@ scripts/     命令行入口；examples/ 是最小调用示例
 | `src/core/` 评分或工具 | `npm test`；新增行为补 `test/core-scoring.test.ts` 的夹具用例 |
 | 提示词、引擎、Agent 角色 | 先 `npm run bench:dry`，再小范围真跑（`--tasks aut-brick --configs engine --out runs/try`），然后 `rescore` + `analyze` |
 | 基准任务或指标 | 更新 `docs/benchmark.md`，重跑受影响的运行，提交原始产物与重新生成的报告 |
+| 人类数据导入或人类基线指标 | `npm test`（含人类数据不变量用例）；`npm run human:fetch -- --check` 校验来源；重跑 `npm run human` 并提交 `runs/human-*/` 与 `docs/human-baseline.md` 里的数字 |
 | 命令行或 npm script | 在 `package.json` 里加对应条目，README「用法二」同步 |
 | 文档 | 链接用相对路径且必须指向真实文件（提交前手动核一遍） |
 
@@ -79,6 +88,7 @@ scripts/     命令行入口；examples/ 是最小调用示例
 - **新指标** → `src/bench/scoring.ts` 计算，`scripts/analyze.ts` 加一行，`docs/benchmark.md` 写定义。
 - **新命令** → `scripts/*.ts` + `package.json` 的 `scripts` + README 用法二。
 - **新单元测试** → `test/*.test.ts`，夹具放 `test-support/`。
+- **新人类数据集** → 在 `scripts/fetch-human-data.ts` 的 `SOURCES` 里加 URL + SHA-256 + 解析器，产出物进 `data/human/`，指标定义补进 `docs/human-baseline.md`，并在 `test/human.test.ts` 加不变量断言。
 
 ## 已知坑
 
@@ -87,6 +97,8 @@ scripts/     命令行入口；examples/ 是最小调用示例
 - 嵌入模型是 `qwen3-embedding:latest`（4096 维，本机端点）。它对无关词对的余弦相似度也在 0.5~0.65 之间，所以新颖度、多样性这类指标必须和随机词基线一起读。
 - 中文分词会把 CJK 切成单字加双字组合（`src/core/text.ts`），写近重复判断时留意这个粒度。
 - `runs/` 下的产物会进版本库，体量不小；跑实验时不要顺手把整个缓存目录复制进去。
+- xlsx 解析用仓库自带的 `src/core/xlsx.ts`（zip + DEFLATE + SpreadsheetML 子集）。它只认共享字符串、内联字符串和 `<v>` 里的数值；公式缓存值之外的东西（样式、批注）一律忽略。
+- 人类基线阶段会把上万条作答送进嵌入端点，缓存文件 `runs/cache/embeddings-human.jsonl` 会长到几百 MB（该目录已 gitignore）。跑之前看一眼磁盘；`--limit N` 可以只跑每题前 N 条。
 
 ## 提交与发布
 

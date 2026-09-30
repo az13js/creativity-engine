@@ -8,7 +8,7 @@
  * The composite "DT index" is an explicit, configurable weighted mean; weights are
  * recorded with every report so results stay interpretable.
  */
-import { lexiconFlexibility, type CategoryLexicon, type FlexibilityResult } from "./flexibility.ts";
+import { lexiconFlexibility, clusterFlexibility, type CategoryLexicon, type FlexibilityResult } from "./flexibility.ts";
 import type { SemanticSpace } from "./semantic-space.ts";
 import { dedupeNear, normalize, tokenize } from "./text.ts";
 import { round } from "./stats.ts";
@@ -85,6 +85,10 @@ export async function scoreAut(opts: AutScoringOptions): Promise<AutReport> {
   let flex: FlexibilityResult = { categories: 0, labels: [], byCategory: {} };
   let flexibilitySource: AutReport["flexibilitySource"] = "none";
   if (opts.lexicon && kept.length > 0) { flex = lexiconFlexibility(kept, opts.lexicon); flexibilitySource = "lexicon"; }
+  // Tasks without a hand-built category lexicon still get a flexibility estimate:
+  // clustering the responses by semantic similarity, which is what flexibility means
+  // operationally when no category rules exist.
+  else if (opts.space && kept.length > 1) { flex = await clusterFlexibility(kept, opts.space); flexibilitySource = "clustering"; }
 
   let originalityByText = new Map<string, number>();
   if (opts.reference && opts.reference.length > 0 && opts.space && kept.length > 0) {

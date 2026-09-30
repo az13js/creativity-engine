@@ -7,7 +7,8 @@
 | 任务 | 类型 | 测量什么 | 评分方式 |
 | --- | --- | --- | --- |
 | `aut-brick`、`aut-bottle` | 替代用途测验（AUT, Alternative Uses Test） | 发散思维的流畅性/灵活性/原创性/具体化 | 见 §2.1 |
-| `dat-7`、`dat-10` | 发散联想任务（DAT, Divergent Association Task）风格 | 语义空间的发散程度 | 见 §2.2，采用标准 DAT 计分公式 |
+| `aut-box-en`、`aut-rope-en`、`aut-brick-en` | 与 SemDis 公开人类数据同题的英文 AUT | 同上，并可和同题人类作答直接比较 | 见 §2.1；人类参照见 [human-baseline.md](human-baseline.md) |
+| `dat-7`、`dat-10`、`dat-en-7` | 发散联想任务（DAT, Divergent Association Task）风格 | 语义空间的发散程度 | 见 §2.2，采用标准 DAT 计分公式；`dat-en-7` 与公开人类样本同题 |
 | `rat-20` | 远距离联想测验（RAT, Remote Associates Test）格式 | 聚合思维（收敛能力）是否被机制损害 | 见 §2.3 |
 | `brief-stove`、`brief-box` | 设计简报（带已知方案语料） | 相对已知方案的新颖度 + 可行性 + 多样性 | 见 §2.4 |
 
@@ -17,7 +18,10 @@
   本地端点上的 `qwen3-embedding`，不是原论文的 GloVe/Common Crawl，因此**绝对值不可与论文常模直接比较**，
   本报告只做配置间相对比较，并提供随机词基线（`data/dat-items.json` 的 calibration 字段）；
 - RAT 的 20 道题按 Mednick (1962) 的题型自行编写（提示词—共同答案），**不是**标准化的 Mednick 题集；
-- 设计简报的"已知方案语料"（各 12 条）由本项目编写，代表大众化答案，用于计算新颖度。
+- 设计简报的"已知方案语料"（各 12 条）由本项目编写，代表大众化答案，用于计算新颖度；
+- 三个英文 AUT 任务（`aut-box-en`、`aut-rope-en`、`aut-brick-en`）与 `dat-en-7` 的措辞对齐公开人类数据（SemDis；
+  Olson et al. 的 DAT），它们的"常见答案"参照表直接取自人类作答里出现频率最高的回答。人类数据、导入流程与比较口径见
+  [human-baseline.md](human-baseline.md)。
 
 ## 2. 指标定义
 
@@ -25,6 +29,8 @@
 - 有效想法（validity）：长度 2–300 字符、不是对象名称的回显、去重后保留；
 - **流畅性 fluency** = 有效且互不重复（token Jaccard < 0.85）的想法条数；
 - **灵活性 flexibility** = 词表类别数（`data/aut-items.json` 的 lexicon：建筑/承重/研磨/热学/装饰/…）；
+  没有 lexicon 的 AUT 任务（例如三个与人类数据同题的英文任务）改用**聚类回退**：按 0.45 距离阈值做平均连接聚类，
+  簇数即灵活性，分数里用 `flexibilitySource` 标出用的是 `lexicon` 还是 `clustering`；
 - **原创性 originality** = 每条想法 `1 − 与常见答案参照表的最大余弦相似度`，报告均值与最大值；
 - **具体化 elaboration** = min(1, token 数/12) + 机制标记词（因为/通过/利用/…）+ 变化标记词（不同/各种/…）；
 - **DT-index** = 0.2×流畅性(归一) + 0.25×灵活性(归一) + 0.4×平均原创性 + 0.15×具体化（本项目定义，权重随分数一起存档）。

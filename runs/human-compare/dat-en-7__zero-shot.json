@@ -1,0 +1,85 @@
+{
+  "taskId": "dat-en-7",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "cloud",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "hammer",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "silk",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "lizard",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "volcano",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "courage",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "bicycle",
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 112,
+    "completionTokens": 24,
+    "failures": 0,
+    "wallMs": 10935,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

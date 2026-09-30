@@ -1,0 +1,140 @@
+{
+  "taskId": "aut-brick-en",
+  "configId": "zero-shot",
+  "kind": "aut",
+  "title": "AUT: brick",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.4273,
+    "clusters": 3,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4273,
+    "ctrl_clusters": 3,
+    "meanNovelty": 0.3993,
+    "maxNovelty": 0.6155,
+    "meanElaboration": 0.8264,
+    "ctrl_meanNovelty": 0.3993,
+    "meanFeasibility": 0.7083,
+    "meanImpact": 0.2333,
+    "noveltyUsefulness": 0.2828,
+    "fluency": 12,
+    "flexibility": 3,
+    "meanOriginality": 0.3993,
+    "maxOriginality": 0.6155,
+    "elaboration": 0.8264,
+    "invalid": 0,
+    "dtIndex": 0.5587
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "簇0",
+      "簇1",
+      "簇2"
+    ],
+    "reviews": [
+      {
+        "text": "Use it as a doorstop to keep doors propped open because it's heavy and stable.",
+        "feasibility": 1,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 78,
+        "novelty": 0.3426221427357451
+      },
+      {
+        "text": "Use it as a paperweight to hold papers down because it's heavy.",
+        "feasibility": 1,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 63,
+        "novelty": 0.22885370484039425
+      },
+      {
+        "text": "Use it as a bookend to keep books upright because it's solid and weighty.",
+        "feasibility": 1,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 73,
+        "novelty": 0.3843531529785399
+      },
+      {
+        "text": "Use it as a hammer to drive nails because it's hard and heavy.",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "Brick is brittle and may chip or shatter on impact, and lacks a handle for controlled striking.",
+        "chars": 62,
+        "novelty": 0.34237436000670873
+      },
+      {
+        "text": "Use it as a sharpener for knives by rubbing the blade on its rough surface.",
+        "feasibility": 0.3,
+        "impact": 0.2,
+        "failureMode": "Fired brick is too porous and irregular to abrade steel; it crumbles and dulls rather than sharpens the edge.",
+        "chars": 75,
+        "novelty": 0.4331776701193557
+      },
+      {
+        "text": "Use it as a weapon for self-defense because it's hard and heavy.",
+        "feasibility": 0.9,
+        "impact": 0.4,
+        "failureMode": "Requires close proximity and a firm grip; a dropped or glancing brick is easily taken and used against you.",
+        "chars": 64,
+        "novelty": 0.36785731912426334
+      },
+      {
+        "text": "Use it as a makeshift step to reach high places because it's sturdy.",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "A single brick is only ~6-8 cm tall, giving negligible height gain and an unstable, tipping platform.",
+        "chars": 68,
+        "novelty": 0.43809608086127094
+      },
+      {
+        "text": "Use it as a heat sink to absorb and radiate heat because it has thermal mass.",
+        "feasibility": 0.4,
+        "impact": 0.2,
+        "failureMode": "Brick is a thermal insulator, not a conductor; it stores heat slowly and radiates it poorly compared to metal.",
+        "chars": 77,
+        "novelty": 0.6155149268283187
+      },
+      {
+        "text": "Use it as a weight for exercise by lifting it repeatedly to build strength.",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "No grip surface; a standard brick is too light (~3 kg) for progressive overload and awkward to hold during reps.",
+        "chars": 75,
+        "novelty": 0.40284209228842216
+      },
+      {
+        "text": "Use it as a garden marker by scratching plant names on it with a nail.",
+        "feasibility": 0.7,
+        "impact": 0.2,
+        "failureMode": "Scratches on a porous, weathering surface fade and fill with dirt, becoming illegible within a season.",
+        "chars": 70,
+        "novelty": 0.49523872470038577
+      },
+      {
+        "text": "Use it as a toy for stacking and building with children because it's durable.",
+        "feasibility": 0.5,
+        "impact": 0.2,
+        "failureMode": "Bricks are heavy and abrasive; dropped on a child's foot or head they cause serious injury, so unsafe as a toy.",
+        "chars": 77,
+        "novelty": 0.3400772279640052
+      },
+      {
+        "text": "Use it as a writing surface by chalking on it for temporary notes.",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "Chalk adheres poorly to the rough, dusty, porous face and rubs off at the slightest contact.",
+        "chars": 66,
+        "novelty": 0.4002173830168959
+      }
+    ]
+  }
+}
