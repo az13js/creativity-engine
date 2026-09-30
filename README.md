@@ -1,80 +1,36 @@
-# Creativity Engine：可自动评分的 AI 创造力机制
+这个仓库做的事，说起来简单：把「让 AI 有点想象力」从一句玄学要求，变成一条能跑、能测、也能被人反驳的流水线。起点是 [prompt.txt](prompt.txt) 里的问题——如果提示词、Skill 和多子 Agent 真能让机器复现人的创造力，甚至超过，那它们长什么样。光讨论没用。我们写了代码，也跑了实验。
 
-本仓库回答一个问题：**如果 AI 能通过提示词、Skill、多子 Agent 机制学会或复现人类级别的想象力/
-创造力/灵感，那么这套提示词、Skill、机制长什么样，怎么证明它有效？**
+机制在发散类指标上赢了：想法更新，种类更多，彼此离得更开。代价是可行性掉下去，同一个评委给的分明显低于几句提示词的基线。这笔账里还混着一层别的东西，后面说。
 
-答案不是一个"咒语"，而是一套可检验的流水线：
+代码在 [engine.ts](src/agents/engine.ts)。四路生成者，每路领一条创造力技法（creativity technique）——代码和数据里管它叫 operator，中文写成「算子」，意思是一条固定的思考动作。技法都有出处：SCAMPER 的替代和组合，TRIZ 的矛盾消解，结构映射的类比迁移，Fauconnier 和 Turner 讲的概念融合（conceptual blending），一共十二条，抄在 [operators.json](data/operators.json) 里。生成者之间不共享技法，角色和随机刺激词也各不相同。同一个模子采样十次，得到的只是十个同义词，数量从来不等于新意。
 
-1. **提示词层**：生成者被绑定到**认知算子**（SCAMPER、TRIZ 矛盾消解、结构映射、概念融合等 12 个
-   有文献出处的算子）而不是"请有创意"；评审被要求给失败原因而不是打分鼓励。
-2. **Skill 层**：[skills/creativity-engine/SKILL.md](skills/creativity-engine/SKILL.md) 把协议固定成
-   可复用的操作手册（何时使用、七个步骤、提示词模板、反模式、自检方法）。
-3. **多 Agent 层**：4 个异质生成者 + 1 个评审者 + 1 个概念融合者 + 1 个元反思者，
-   外加一个**自适控制器**（平均两两语义距离低于阈值时升温并换算子）。
-4. **档案层**：MAP-Elites 式质量-多样性档案，交付"覆盖多个格子的精英集合"而不是单一最佳答案。
-5. **基准层**：AUT、DAT、RAT、设计简报四类任务 + 十来个全自动指标（流畅性/灵活性/原创性/
-   新颖度/可行性/多样性/同质化/路线覆盖），可以拿来做消融实验。
+评审者只干一件事，找漏洞：给可行性、新颖度、影响各打一个分，再写一条最要紧的失败原因。融合者从不同的档案格里挑两条想法配对，写出它们共享的抽象结构、叠加之后的方案，还有任何一方单独都不具备的新性质。同类想法配对只会得到折中，跨了格子才有新结构。折中不算新东西。档案是照演化计算里的 quality-diversity（质量-多样性）做的，最常见的实现叫 MAP-Elites：按新颖度和可行性拉一张网格，每格只留最好的那一条，交到手里的是一组覆盖多个格子的想法，不是一条「最佳答案」。
 
-## 快速开始
+还有一个零件。每轮结束都算一次想法之间的平均语义距离，掉到阈值以下就说明开始重复套路，这时把温度调高，同时按元反思的建议换一批技法接着跑。只升温不换算子，出来的常常是更乱的句子，不是更新的想法。
+
+操作手册在 [SKILL.md](skills/creativity-engine/SKILL.md)：什么时候用，七步怎么走，提示词模板，常见的坑，都写了。
+
+测的东西在 [src/bench/](src/bench/)，四类任务。替代用途测验（Alternative Uses Test，AUT），发散联想任务（Divergent Association Task，DAT），远距离联想测验（Remote Associates Test，RAT），还有两个带已知方案清单的设计简报。指标全部由程序算，没有人工打分：流畅性，灵活性，原创性，具体化，新颖度（一减去它和已知方案之间最大的余弦相似度），可行性，多样性，还有一个跨配置区分度——量的是同一道题上各家的想法有多容易撞车。DAT 走标准程序：取前七个有效词，二十一对余弦距离求平均，再乘一百。
+
+可行性这一列得说清楚。它评的是 feasibility，也就是今天做不做得出来；不是 usefulness，也就是对人有没有用。两回事。报告里用的是前者。
+
+跑起来是这样：
 
 ```bash
-npm test                               # 31 个单元测试，全部离线、确定性
-node scripts/smoke.ts                  # 连通性自检：一次对话 + 一次嵌入
-node scripts/bench.ts --dry            # 用假模型跑通整条基准流水线（不需要网络）
-node scripts/bench.ts --generations 3  # 真模型全量运行（写入 runs/<时间戳>/）
-node scripts/bench.ts --tasks aut-brick --configs engine,zero-shot
-node scripts/rescore.ts --run runs/<目录名>   # 只重算分数与报告，不重新生成想法
+npm test                       # 34 个单元测试，离线，不碰网络
+node scripts/bench.ts --dry    # 用假模型把整条流水线跑通
+node scripts/bench.ts --generations 3 --out runs/main-live
+node scripts/rescore.ts --run runs/main-live
 ```
 
-模型端点优先从环境变量读取（`CREATIVE_BASE_URL` / `CREATIVE_API_KEY` /
-`CREATIVE_CHAT_MODEL` / `CREATIVE_EMBED_MODEL`），否则回退到本机 OpenCode 配置。
-**密钥只从配置文件读入，不写入任何产物**；所有实验产物在 `runs/`（已 gitignore）。
+模型端点从环境变量 `CREATIVE_BASE_URL` 和 `CREATIVE_API_KEY` 读，读不到就退回本机 OpenCode 的配置。密钥只在运行时取进来，不落进任何产物。每次调用按模型、消息、采样参数做磁盘缓存，同一个实验重跑基本不花时间，调用记录写在 `runs/cache/chat-log.jsonl` 里，方便对账。原始想法、逐格分数和报告都在 `runs/` 下：主实验的 [report.md](runs/main-live/report.md) 给版本管理看，[report.html](runs/main-live/report.html) 能用鼠标悬停看想法原文，也能看想法空间的投影散点；消融实验的两份在 [runs/ablation](runs/ablation/) 里。
 
-## 实验结果
+文献笔记在 [research-notes.md](docs/research-notes.md)，七十多条出处，每条都标了是实验证据还是理论主张。为什么这么设计，写在 [design.md](docs/design.md)；指标口径和被砍掉的口径，写在 [benchmark.md](docs/benchmark.md)；自动生成的结果表在 [results.md](docs/results.md)；结论和局限在 [report.md](docs/report.md)。
 
-跨任务均值（4 配置 × 7 任务，全部指标自动计算）：
+实验的结果不算体面。但值得看。四份配置里，机制的新颖度最高，AUT 的类别数和有效想法数也最多，同质化那一项在七道题上全部排第一；可行性最低，低得还不少。消融实验把原因拆开了一点：拿掉技法异质化和融合，多样性掉了一大截，发散思维综合指数也跟着掉，说明增益主要来自这两块；那个自动调温的调节器在这批任务上几乎没起作用，因为任务的多样性本来就在阈值以上，它更像一根保险丝。另外，把两百多条被评委打过分的想法摊在一起看，字数越多，可行性分数越低，而机制的平均想法长度是基线的两倍多。所以「机制的想法更不实用」这句话不能说死。至少得先做长度盲评，或者换一批人来评。
 
-| 配置 | 新颖度↑ | 可行性↑ | 新颖×可行↑ | 多样性(抽样)↑ | AUT DT 指数↑ | RAT 命中↑ | 平均调用 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **engine（本机制）** | **0.441** | 0.460 | 0.205 | **0.445** | **0.738** | 0.45 | 33.1 |
-| self-refine | 0.387 | **0.727** | **0.287** | 0.403 | 0.638 | 1.00 | 12.1 |
-| structured-cot | 0.405 | 0.700 | **0.287** | 0.406 | 0.700 | 0.05 | 12.1 |
-| zero-shot | 0.393 | 0.708 | 0.281 | 0.406 | 0.667 | 1.00 | 12.1 |
+几条硬限制。没有人类被试。「超过人类」这句话我们没说过，也不能说；DAT 的绝对值不能跟论文常模比，嵌入模型不是同一个。每个任务只跑了一次，一个种子，结果说明的是机制能跑、方向和量级值得跟进，不是显著性结论。「多 Agent」的好处里，有多少来自并行采样，有多少来自角色分工，这批实验只回答了一部分。再往下做，优先补人类基线、多种子重复，再把第二列换成评 usefulness 的清单。
 
-机制在**新颖度、灵活性、多样性、跨配置区分度**（7/7 任务最高）上领先，
-在**可行性**上付出代价；消融显示增益主要来自**算子异质化 + 概念融合**。
-逐条评判显示评委可能把"长"当成"不可行"（字数 vs 可行性 r = −0.497），这是一个已记录的混淆。
-详见 [docs/results.md](docs/results.md) 与 [docs/report.md](docs/report.md)。
+投影那块一开始有个毛病：提示框贴到画布下边缘会被裁掉。现在修好了。提示框会自己翻到点的上方或者左侧，宽窗口和窄窗口都试过，整框都能看见。
 
-- 主实验（4 配置 × 7 任务）：[runs/main-live/report.md](runs/main-live/report.md) ·
-  [runs/main-live/report.html](runs/main-live/report.html)
-- 消融实验（机制各部分贡献）：[runs/ablation/report.md](runs/ablation/report.md) ·
-  [runs/ablation/report.html](runs/ablation/report.html)
-- 综合结论与局限：[docs/report.md](docs/report.md)
-- 文献调研笔记（71 条已核实出处）：[docs/research-notes.md](docs/research-notes.md)
-- 机制设计说明：[docs/design.md](docs/design.md)
-- 基准方法与指标定义：[docs/benchmark.md](docs/benchmark.md)
-
-## 目录结构
-
-```
-data/                 算子目录、AUT/DAT/RAT/简报任务与已知方案语料
-skills/creativity-engine/SKILL.md   Skill 交付物（可直接被 Agent 加载）
-src/core/             语义距离、语义空间、新颖度、AUT/RAT 评分、QD 档案、统计
-src/llm/              OpenAI 兼容客户端（磁盘缓存、并发、重试、审计日志）与提示词
-src/agents/           多 Agent 引擎、基线策略、成对比较评审
-src/bench/            任务加载、自动评分、矩阵运行器、报告生成、PCA 投影
-test/                 31 个单元测试（全部使用确定性夹具或假模型）
-scripts/              smoke / bench / rescore 命令行
-runs/                 实验产物（原始想法、逐格分数、报告）
-```
-
-## 设计原则
-
-- **可测试性优先**：LLM 被抽象成 `LlmLike` 接口，编排逻辑用假模型测试；
-  评分逻辑用确定性夹具测试（`npm test` 不需要网络）。
-- **可复现**：固定种子；LLM 调用按 (模型, 消息, 采样参数) 做磁盘缓存，
-  重跑基准不花钱；每次调用写入 `runs/cache/chat-log.jsonl` 供审计。
-- **可审计**：每个分数都能追溯到原始想法文本（`runs/<dir>/<task>__<config>.json`）。
-- **诚实**：同时报告新颖度与可行性，报告随机词基线与已知度量局限；
-  不声称"超过人类"，因为没有人类被试数据。
+报告里每一个小数背后都有一条能打开的想法原文，就在 `runs/` 下面那些 JSON 文件里，评分脚本读的就是这些文件。

@@ -7,7 +7,7 @@
 ## 摘要
 
 **交付物**
-1. **机制实现**：[src/agents/engine.ts](src/agents/engine.ts)（12 个认知算子 × 异质多 Agent × 质量-多样性档案 × 自适控制器）
+1. **机制实现**：[src/agents/engine.ts](src/agents/engine.ts)（12 个认知算子 × 异质多 Agent × 质量-多样性档案 × 自适应控制器）
 2. **提示词协议**：[src/llm/prompts.ts](src/llm/prompts.ts) 与算子目录 [data/operators.json](data/operators.json)
 3. **Skill**：[skills/creativity-engine/SKILL.md](skills/creativity-engine/SKILL.md)
 4. **基准**：[src/bench/](../src/bench/)（AUT / DAT / RAT / 设计简报四类任务，10 余个自动指标）
@@ -58,7 +58,7 @@
 | 评审者 | 1/轮 | feasibility / novelty / impact + 失败原因 | 强制找漏洞，避免分数膨胀 |
 | 概念融合者 | 2/轮 | 跨档案格配对，概念融合 | 同类融合只会得到折中，跨簇才有新结构 |
 | 元反思者 | 1/轮 | 诊断套路重复、推荐下一轮算子 | 只提建议，执行由控制器决定 |
-| 自适控制器 | 代码 | 平均两两距离 < 0.35 → 升温 + 换算子 | 升温与换算子绑定，避免温度—连贯性权衡 |
+| 自适应控制器 | 代码 | 平均两两距离 < 0.35 → 升温 + 换算子 | 升温与换算子绑定，避免温度—连贯性权衡 |
 
 ### 1.5 档案层
 MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标函数最高的想法；
