@@ -1,0 +1,130 @@
+{
+  "taskId": "brief-stove",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "安装带定时自动断火的燃气灶，旋钮开启后最长30分钟自动切断气源，无需老人操作。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "在灶台正上方安装热源感应+一氧化碳/烟雾复合探测器，检测到无人看管（如持续加热但无人体移动信号）超过10分钟即自动关闭燃气电磁阀并发出语音提示。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "使用智能插座为电水壶、电暖器等大功率电器供电，插座内置倒计时（如30分钟），到点自动断电，并伴有蜂鸣提醒。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "在电饭煲、电热毯等常用电器上粘贴NFC标签，老人用手机碰一下即启动“定时断电”模式；若老人不用手机，则由家属远程设置固定断电时间。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "安装智能门磁+人体存在传感器，当老人离家（门磁关闭且30秒内无人体移动）时，自动切断非必要电器电源（冰箱除外）并关闭燃气总阀。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "在厨房安装燃气报警器联动机械手，报警时机械手自动关闭燃气管道阀门，同时向家属手机推送报警。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "使用带防干烧功能的电磁炉，锅底温度超过280℃或空烧2分钟即自动关机并蜂鸣，适合老人使用。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "在插座回路中加装电流互感器，监测电器持续运行时间，若同一插座连续供电超过设定时长（如2小时），自动跳闸断电并发送提醒。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "为电热毯、电暖器配备温控器+倒计时插座，当环境温度达到设定值或倒计时结束，自动断电；倒计时旋钮由家属每周代为设置。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "在入户门内侧安装一键离家开关，老人出门时按下（或门磁自动触发），延时30秒后切断除冰箱、路由器外的所有电源并关闭燃气总阀。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "使用带自动熄火保护+定时关火的燃气灶，并加装燃气定时阀：旋钮开启后机械发条倒计时（如15/30/60分钟），到点自动关闭阀门，无需电力。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "在厨房天花板安装毫米波雷达，持续监测灶台区域是否有人；若灶台在加热但雷达连续5分钟未检测到人体活动，则通过语音提醒并自动关闭燃气电磁阀和抽油烟机电源。",
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

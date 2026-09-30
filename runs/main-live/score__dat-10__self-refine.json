@@ -1,0 +1,39 @@
+{
+  "taskId": "dat-10",
+  "configId": "self-refine",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 10,
+    "nUnique": 10,
+    "meanPairwiseDistance": 0.3569,
+    "clusters": 1,
+    "ctrl_n": 10,
+    "ctrl_meanPairwiseDistance": 0.3569,
+    "ctrl_clusters": 1,
+    "wordsGiven": 5,
+    "wordsScored": 5,
+    "validRate": 0.5,
+    "dispersion": 33.56,
+    "minPairDistance": 24.5067,
+    "maxPairDistance": 38.7747,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": -7.41
+  },
+  "extras": {
+    "words": [
+      "雨伞",
+      "算盘",
+      "风铃",
+      "罗盘",
+      "沙漏"
+    ],
+    "scored": [
+      "雨伞",
+      "算盘",
+      "风铃",
+      "罗盘",
+      "沙漏"
+    ]
+  }
+}

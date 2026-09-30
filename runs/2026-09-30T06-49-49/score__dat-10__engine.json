@@ -1,0 +1,46 @@
+{
+  "taskId": "dat-10",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 33,
+    "nUnique": 33,
+    "meanPairwiseDistance": 0.6041,
+    "clusters": 17,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.6021,
+    "ctrl_clusters": 8,
+    "wordsGiven": 9,
+    "wordsScored": 7,
+    "validRate": 0.9,
+    "dispersion": 45.36,
+    "minPairDistance": 32.9084,
+    "maxPairDistance": 60.414,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 4.39,
+    "crossConfigDistinctiveness": 0.5768
+  },
+  "extras": {
+    "words": [
+      "潮汐",
+      "山折",
+      "与",
+      "漂洗",
+      "候诊",
+      "V",
+      "停歇",
+      "同时",
+      "弹开"
+    ],
+    "scored": [
+      "潮汐",
+      "山折",
+      "与",
+      "漂洗",
+      "候诊",
+      "V",
+      "停歇"
+    ]
+  }
+}

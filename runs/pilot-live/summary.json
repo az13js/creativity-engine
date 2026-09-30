@@ -1,0 +1,103 @@
+{
+  "runId": "pilot-live",
+  "createdAt": "2026-09-30T06:16:53.642Z",
+  "seed": 20240930,
+  "tasks": [
+    {
+      "id": "aut-brick",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "ideasTarget": 12
+    }
+  ],
+  "configs": [
+    {
+      "id": "zero-shot",
+      "label": "零样本单轮（基线 A）",
+      "budget": "1 次调用"
+    },
+    {
+      "id": "engine",
+      "label": "多Agent创造力引擎（本机制）",
+      "budget": "生成4x3 + 融合2 + 评审1 + 元反思1，共约 3 轮"
+    }
+  ],
+  "scores": [
+    {
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.5238,
+        "clusters": 8,
+        "meanNovelty": 0.531,
+        "maxNovelty": 0.5901,
+        "meanElaboration": 1,
+        "fluency": 12,
+        "flexibility": 5,
+        "meanOriginality": 0.531,
+        "maxOriginality": 0.5901,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.6874
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "承重与固定",
+          "热与能量",
+          "研磨与工具",
+          "其他",
+          "装饰与艺术"
+        ]
+      }
+    },
+    {
+      "taskId": "aut-brick",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 26,
+        "nUnique": 26,
+        "meanPairwiseDistance": 0.4817,
+        "clusters": 6,
+        "meanNovelty": 0.5355,
+        "maxNovelty": 0.6304,
+        "meanElaboration": 1,
+        "fluency": 26,
+        "flexibility": 7,
+        "meanOriginality": 0.5355,
+        "maxOriginality": 0.6304,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.7392
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "建筑与铺设",
+          "研磨与工具",
+          "其他",
+          "热与能量",
+          "承重与固定",
+          "游戏与训练",
+          "装饰与艺术"
+        ]
+      }
+    }
+  ]
+}

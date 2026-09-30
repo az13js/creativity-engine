@@ -1,0 +1,112 @@
+{
+  "taskId": "dat-10",
+  "configId": "self-refine",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "self-refine-0",
+      "text": "回形针",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-1",
+      "text": "雨伞",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-2",
+      "text": "算盘",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-3",
+      "text": "风铃",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-4",
+      "text": "橡皮擦",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-5",
+      "text": "罗盘",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-6",
+      "text": "沙漏",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-7",
+      "text": "万花筒",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-8",
+      "text": "订书机",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-9",
+      "text": "指南针",
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 3,
+    "cachedCalls": 0,
+    "promptTokens": 306,
+    "completionTokens": 90,
+    "failures": 0,
+    "wallMs": 4105,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

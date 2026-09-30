@@ -1,0 +1,23 @@
+{
+  "taskId": "rat-20",
+  "configId": "zero-shot",
+  "kind": "rat",
+  "title": "RAT: 20 constructed items",
+  "metrics": {
+    "nIdeas": 20,
+    "nUnique": 20,
+    "meanPairwiseDistance": 0.3438,
+    "clusters": 1,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.3494,
+    "ctrl_clusters": 1,
+    "strictAccuracy": 1,
+    "strictSolved": 20,
+    "passAtK": 1,
+    "itemsSolvedByAnyCandidate": 20,
+    "crossConfigDistinctiveness": 0
+  },
+  "extras": {
+    "parseMode": "positional"
+  }
+}

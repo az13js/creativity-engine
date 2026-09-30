@@ -1,0 +1,44 @@
+{
+  "taskId": "aut-brick",
+  "configId": "structured-cot",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.5477,
+    "clusters": 8,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.5477,
+    "ctrl_clusters": 8,
+    "meanNovelty": 0.5656,
+    "maxNovelty": 0.6287,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.5656,
+    "fluency": 12,
+    "flexibility": 7,
+    "meanOriginality": 0.5656,
+    "maxOriginality": 0.6287,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.7512,
+    "crossConfigDistinctiveness": 0.4049
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "其他",
+      "研磨与工具",
+      "热与能量",
+      "承重与固定",
+      "装饰与艺术",
+      "信息与测量",
+      "建筑与铺设"
+    ]
+  }
+}

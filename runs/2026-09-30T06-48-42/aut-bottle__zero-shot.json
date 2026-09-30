@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-bottle",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "把塑料瓶剪成螺旋长条，缠绕在晾衣绳上作为防鸟刺，因为瓶身硬且带尖角，能阻止鸟类停靠并避免鸟粪污染衣物。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "将塑料瓶从中间剪开，上半部分倒扣在下半部分内，做成简易捕蝇器，因为瓶口小、瓶身透明，苍蝇易进难出且能观察诱饵状态。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "把多个塑料瓶装满水并密封，嵌入土墙中砌成透光砖，因为水和塑料的折射能让阳光柔和透入，同时提供一定隔热效果。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "将塑料瓶纵向剖开并压平，用热风枪软化后塑形为自行车挡泥板，因为PET材料受热可塑且冷却后坚硬，能有效阻挡泥水。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "把塑料瓶底部剪掉，瓶口套在扫帚柄末端，做成墙壁角落的灰尘收集器，因为瓶身能贴合直角，扫入的灰尘不会散落。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "将塑料瓶切成细丝，混入纸浆中压制成花盆，因为塑料纤维能增加纸盆的韧性和防水性，降解前可维持形状。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "把塑料瓶装满沙子并封口，用绳子串联成防滑垫，因为沙袋能贴合地面且瓶身凹凸增加摩擦，适合铺在湿滑泥地。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "将塑料瓶上半部剪下，瓶口插入橡皮筋并固定，做成简易弹弓的弹兜，因为瓶口能卡住石子且塑料弹性可缓冲拉力。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "把塑料瓶横放并切开一个长口，内部放入旧毛巾，做成户外壁挂式洗手滴水器，因为瓶口可接小水管，拧盖控制水流。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "将塑料瓶剪成鱼鳞状小片，用线串成反光窗帘，因为瓶片能折射阳光并在风中碰撞发声，起到驱鸟和装饰作用。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "把塑料瓶底部钻小孔，装满木炭碎块，挂在衣柜里做除湿除味器，因为炭块吸附湿气，瓶身孔洞让空气流通。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "将多个塑料瓶的瓶口对接并用胶带密封，连成浮力管绑在救生衣上，因为密封空瓶提供浮力，且连接后受力均匀不易断裂。",
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

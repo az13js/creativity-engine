@@ -1,0 +1,85 @@
+{
+  "taskId": "dat-7",
+  "configId": "structured-cot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "structured-cot-0",
+      "text": "石头",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-1",
+      "text": "河流",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-2",
+      "text": "窗户",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-3",
+      "text": "火焰",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-4",
+      "text": "钥匙",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-5",
+      "text": "蛋糕",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-6",
+      "text": "雨伞",
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

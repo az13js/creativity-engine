@@ -1,0 +1,202 @@
+{
+  "taskId": "rat-20",
+  "configId": "self-refine",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "self-refine-0",
+      "text": "cheese",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-1",
+      "text": "ice",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-2",
+      "text": "star",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-3",
+      "text": "sleeping",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-4",
+      "text": "apple",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-5",
+      "text": "fire",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-6",
+      "text": "board",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-7",
+      "text": "water",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-8",
+      "text": "snow",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-9",
+      "text": "book",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-10",
+      "text": "flower",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-11",
+      "text": "egg",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-12",
+      "text": "note",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-13",
+      "text": "hand",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-14",
+      "text": "back",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-15",
+      "text": "under",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-16",
+      "text": "house",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-17",
+      "text": "time",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-18",
+      "text": "moon",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-19",
+      "text": "sand",
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 3,
+    "cachedCalls": 3,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

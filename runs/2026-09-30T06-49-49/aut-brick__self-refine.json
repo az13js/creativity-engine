@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-brick",
+  "configId": "self-refine",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "self-refine-0",
+      "text": "将砖头侧立后用粉笔在顶面写品种名，按固定株距压入松土留下凹坑和标签，因为砖头尺寸统一、压痕等距且字迹随砖走，播种时一眼就能识别。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-1",
+      "text": "把三块砖头按三角形摆好，上面搁一块木板和旧棉垫做成临时矮凳，因为三角形支撑最稳，砖头抗压强度足以承受成人重量。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-2",
+      "text": "用砖头粗面当磨刀时的垫板——刀背贴砖面保持固定角度，另一只手拉磨刀石，因为砖面平整粗糙不打滑，还能刮掉磨刀石表面的铁屑。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-3",
+      "text": "将砖头浸湿后放入密封袋冷冻，停电时摆在冷藏室上层，袋装冰砖比裸砖干净且蓄冷量比同体积冰块释放更慢，可延长低温数小时。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-4",
+      "text": "把砖头表面钻几个浅孔，插香、插小花或插小旗，因为砖头多孔结构既能固定细杆又不会像泡沫那样被香火烧熔。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-5",
+      "text": "用砖头在雪地上并排压出两行脚印间距的凹痕，作为雪地徒步时的踏点参考，因为砖长宽统一，压出的坑距等于步幅且边缘清晰。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-6",
+      "text": "把砖头碎块装入旧棉袜，扎口后当门缝挡风条或窗台配重，因为碎砖比整砖更贴合缝隙，棉袜又不会刮伤窗框地板。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-7",
+      "text": "将砖头投入火堆烧热后夹出放铁盆里，上面架烤网做野外烤架底座，因为砖头耐火且能反射热量，铁盆接灰不污染地面。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-8",
+      "text": "用砖头蘸石灰浆在水泥地上画格子或跳房子图案，因为砖头边缘笔直、重量足，拖行时浆料线条均匀且不费力。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-9",
+      "text": "把两块砖头并排放在汽车后备箱垫布上，急刹时它比塑料箱更稳地压住易滑物品，因为砖头底面粗糙、重量集中，不会像圆罐那样滚动。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-10",
+      "text": "将砖头裹上旧毛巾塞进单肩包底部，背重物时包包不会塌形，因为砖头提供硬质底板，毛巾防止砖角磨破包布。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-11",
+      "text": "用砖头在湿沙上拍出平整表面，再拿小木棍刻字做沙雕底座，因为砖面宽大、重量均匀，拍出的沙面比手压更平实不塌。",
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 3,
+    "cachedCalls": 3,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

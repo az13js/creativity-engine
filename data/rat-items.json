@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "note": "Remote Associates Test format (Mednick 1962): three cue words, one answer that forms a common compound or phrase with each cue. These 20 items were constructed for this benchmark; they are not the standardised Mednick set.",
+  "items": [
+    {
+      "id": "rat-01",
+      "cues": [
+        "cottage",
+        "swiss",
+        "cake"
+      ],
+      "answers": [
+        "cheese"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-02",
+      "cues": [
+        "cream",
+        "skate",
+        "water"
+      ],
+      "answers": [
+        "ice"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-03",
+      "cues": [
+        "falling",
+        "actor",
+        "dust"
+      ],
+      "answers": [
+        "star"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-04",
+      "cues": [
+        "bag",
+        "beauty",
+        "pill"
+      ],
+      "answers": [
+        "sleep"
+      ],
+      "note": "sleeping bag / beauty sleep / sleeping pill"
+    },
+    {
+      "id": "rat-05",
+      "cues": [
+        "pie",
+        "sauce",
+        "tree"
+      ],
+      "answers": [
+        "apple"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-06",
+      "cues": [
+        "camp",
+        "works",
+        "fly"
+      ],
+      "answers": [
+        "fire"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-07",
+      "cues": [
+        "chess",
+        "cutting",
+        "ironing"
+      ],
+      "answers": [
+        "board"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-08",
+      "cues": [
+        "melon",
+        "fall",
+        "proof"
+      ],
+      "answers": [
+        "water"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-09",
+      "cues": [
+        "man",
+        "flake",
+        "ball"
+      ],
+      "answers": [
+        "snow"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-10",
+      "cues": [
+        "case",
+        "end",
+        "store"
+      ],
+      "answers": [
+        "book"
+      ],
+      "note": "bookcase / bookend / bookstore"
+    },
+    {
+      "id": "rat-11",
+      "cues": [
+        "pot",
+        "sun",
+        "girl"
+      ],
+      "answers": [
+        "flower"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-12",
+      "cues": [
+        "plant",
+        "shell",
+        "beat"
+      ],
+      "answers": [
+        "egg"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-13",
+      "cues": [
+        "book",
+        "pad",
+        "worthy"
+      ],
+      "answers": [
+        "note"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-14",
+      "cues": [
+        "shake",
+        "bag",
+        "writing"
+      ],
+      "answers": [
+        "hand"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-15",
+      "cues": [
+        "pack",
+        "bone",
+        "ground"
+      ],
+      "answers": [
+        "back"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-16",
+      "cues": [
+        "ground",
+        "wear",
+        "line"
+      ],
+      "answers": [
+        "under"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-17",
+      "cues": [
+        "hold",
+        "work",
+        "keeper"
+      ],
+      "answers": [
+        "house"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-18",
+      "cues": [
+        "table",
+        "line",
+        "keeper"
+      ],
+      "answers": [
+        "time"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-19",
+      "cues": [
+        "light",
+        "walk",
+        "stone"
+      ],
+      "answers": [
+        "moon"
+      ],
+      "note": "答案不在提示词中"
+    },
+    {
+      "id": "rat-20",
+      "cues": [
+        "paper",
+        "box",
+        "castle"
+      ],
+      "answers": [
+        "sand"
+      ],
+      "note": "答案不在提示词中"
+    }
+  ]
+}

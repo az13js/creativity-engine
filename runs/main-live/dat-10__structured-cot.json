@@ -1,0 +1,112 @@
+{
+  "taskId": "dat-10",
+  "configId": "structured-cot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "structured-cot-0",
+      "text": "石头",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-1",
+      "text": "河流",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-2",
+      "text": "椅子",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-3",
+      "text": "窗户",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-4",
+      "text": "面包",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-5",
+      "text": "鞋子",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-6",
+      "text": "雨伞",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-7",
+      "text": "镜子",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-8",
+      "text": "钥匙",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-9",
+      "text": "蜡烛",
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 129,
+    "completionTokens": 26,
+    "failures": 0,
+    "wallMs": 1853,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

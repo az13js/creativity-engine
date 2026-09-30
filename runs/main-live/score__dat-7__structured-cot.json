@@ -1,0 +1,43 @@
+{
+  "taskId": "dat-7",
+  "configId": "structured-cot",
+  "kind": "dat",
+  "title": "DAT: 7 words",
+  "metrics": {
+    "nIdeas": 7,
+    "nUnique": 7,
+    "meanPairwiseDistance": 0.4197,
+    "clusters": 2,
+    "ctrl_n": 7,
+    "ctrl_meanPairwiseDistance": 0.4197,
+    "ctrl_clusters": 2,
+    "wordsGiven": 7,
+    "wordsScored": 7,
+    "validRate": 1,
+    "dispersion": 41.97,
+    "minPairDistance": 34.9452,
+    "maxPairDistance": 50.9702,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 1
+  },
+  "extras": {
+    "words": [
+      "石头",
+      "河流",
+      "窗户",
+      "火焰",
+      "钥匙",
+      "蛋糕",
+      "雨伞"
+    ],
+    "scored": [
+      "石头",
+      "河流",
+      "窗户",
+      "火焰",
+      "钥匙",
+      "蛋糕",
+      "雨伞"
+    ]
+  }
+}

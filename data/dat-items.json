@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "note": "Divergent Association Task style items: 7 unrelated single nouns. Score = mean pairwise cosine distance of the word embeddings, after validity filtering (single word, no proper nouns, no repeats).",
+  "items": [
+    {
+      "id": "dat-7",
+      "count": 7,
+      "prompt": "请给出 7 个彼此尽量没有关联的常见名词。要求：每个都是单个词（不要写成句子）、不要专有名词、不要重复；每条想法只输出一个名词。"
+    },
+    {
+      "id": "dat-10",
+      "count": 10,
+      "prompt": "请给出 10 个彼此尽量没有关联的常见名词。要求：每个都是单个词（不要写成句子）、不要专有名词、不要重复；每条想法只输出一个名词。"
+    }
+  ],
+  "calibration": [
+    "桌子",
+    "云",
+    "钥匙",
+    "面包",
+    "石头",
+    "歌声",
+    "雨",
+    "书",
+    "河流",
+    "灯",
+    "树",
+    "铁钉"
+  ]
+}

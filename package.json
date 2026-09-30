@@ -1,0 +1,15 @@
+{
+  "name": "creative-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prompt + Skill + multi-agent mechanism for AI creativity, with an automatically scorable benchmark.",
+  "scripts": {
+    "test": "node --test",
+    "bench": "node scripts/bench.ts",
+    "report": "node scripts/make-report.ts"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

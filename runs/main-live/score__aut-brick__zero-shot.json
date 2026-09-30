@@ -1,0 +1,142 @@
+{
+  "taskId": "aut-brick",
+  "configId": "zero-shot",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.5239,
+    "clusters": 8,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.5239,
+    "ctrl_clusters": 8,
+    "meanNovelty": 0.5311,
+    "maxNovelty": 0.5901,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.5311,
+    "meanFeasibility": 0.75,
+    "meanImpact": 0.25,
+    "noveltyUsefulness": 0.3983,
+    "fluency": 12,
+    "flexibility": 5,
+    "meanOriginality": 0.5311,
+    "maxOriginality": 0.5901,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6874
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "承重与固定",
+      "热与能量",
+      "研磨与工具",
+      "其他",
+      "装饰与艺术"
+    ],
+    "reviews": [
+      {
+        "text": "把砖头裹上软布当门挡，因为它的重量足以抵抗风力推动门板。",
+        "feasibility": 1,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 28,
+        "novelty": 0.46025283406270834
+      },
+      {
+        "text": "将砖头敲碎成小块，用作烧烤炉的蓄热体，因为陶瓷或黏土砖能缓慢释放热量。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "普通建筑砖可能含石灰石或杂质，高温烧烤时可能爆裂或释放有害物质",
+        "chars": 35,
+        "novelty": 0.49831814842013356
+      },
+      {
+        "text": "把砖头磨成粉末，混入黏土中制作手工陶器，因为砖粉可充当熟料减少收缩开裂。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "砖粉成分不稳定且可能含砂粒和杂质，会显著改变陶土塑性并导致烧成缺陷",
+        "chars": 36,
+        "novelty": 0.5583465817300053
+      },
+      {
+        "text": "在砖头侧面钻孔，穿入铁丝做成简易挂钩，因为砖的强度能悬挂轻型工具。",
+        "feasibility": 0.5,
+        "impact": 0.2,
+        "failureMode": "砖是脆性材料，钻孔和悬挂受力时孔边易崩裂，承重可靠性差",
+        "chars": 33,
+        "novelty": 0.5259246546102686
+      },
+      {
+        "text": "将砖头垫在汽车轮胎下防止溜车，因为其高摩擦力和抗压性可替代止退器。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "砖块尺寸和形状不匹配轮胎曲面，可能被压碎或滑脱，不能可靠替代止退器",
+        "chars": 33,
+        "novelty": 0.5197584545225238
+      },
+      {
+        "text": "把砖头浸泡后冷冻，用作冷敷袋，因为多孔结构含水后能长时间保持低温。",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "冷冻后砖表面会结霜并可能冻裂，直接接触皮肤易造成冻伤且不便重复使用",
+        "chars": 33,
+        "novelty": 0.5699753963490691
+      },
+      {
+        "text": "将砖头雕刻成砚台或镇纸，因为致密的烧结黏土易于打磨且有一定重量。",
+        "feasibility": 0.7,
+        "impact": 0.2,
+        "failureMode": "普通砖内部多孔且含杂质，雕刻时易崩边，难以达到砚台所需的细腻发墨面",
+        "chars": 32,
+        "novelty": 0.5390439438963883
+      },
+      {
+        "text": "在砖头表面涂上颜料，作为儿童户外绘画的立体画布，因为粗糙纹理能吸附颜料。",
+        "feasibility": 0.9,
+        "impact": 0.2,
+        "failureMode": "砖面粗糙多孔会大量吸颜料且难以清洗，儿童使用还可能划伤皮肤",
+        "chars": 36,
+        "novelty": 0.5240550369501555
+      },
+      {
+        "text": "把砖头放入马桶水箱，减少每次冲水量，因为占据体积可节约用水。",
+        "feasibility": 0.9,
+        "impact": 0.3,
+        "failureMode": "砖块长期浸泡会掉渣并可能卡住水箱配件，节水效果也随水箱结构而异",
+        "chars": 30,
+        "novelty": 0.5901038089739834
+      },
+      {
+        "text": "将砖头敲成薄片，作为简易刮鱼鳞工具，因为边缘粗糙且不易生锈。",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "砖片边缘不规则且易碎，刮鳞时可能崩裂并伤手，效率远低于专用工具",
+        "chars": 30,
+        "novelty": 0.5276821390612212
+      },
+      {
+        "text": "用砖头压住帐篷地钉，增强固定效果，因为沙地或雪地中单靠地钉容易松脱。",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "砖块重量有限且接触面小，在松软沙雪中仍可能被风掀动，固定效果不稳定",
+        "chars": 34,
+        "novelty": 0.4812310404361808
+      },
+      {
+        "text": "把砖头系上绳子沉入水中，作为深度标记或简易锚点，因为其密度大且耐水泡。",
+        "feasibility": 0.9,
+        "impact": 0.2,
+        "failureMode": "砖块吸水后长期浸泡会酥解掉渣，作为锚点强度会逐渐下降",
+        "chars": 35,
+        "novelty": 0.5785931837410492
+      }
+    ]
+  }
+}

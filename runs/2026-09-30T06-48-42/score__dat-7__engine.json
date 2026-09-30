@@ -1,0 +1,32 @@
+{
+  "taskId": "dat-7",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 7 words",
+  "metrics": {
+    "nIdeas": 29,
+    "nUnique": 29,
+    "meanPairwiseDistance": 0.6049,
+    "clusters": 15,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.6039,
+    "ctrl_clusters": 8,
+    "wordsGiven": 1,
+    "wordsScored": 1,
+    "validRate": 0.1429,
+    "dispersion": 0,
+    "minPairDistance": 0,
+    "maxPairDistance": 0,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": -40.97,
+    "crossConfigDistinctiveness": 0.5981
+  },
+  "extras": {
+    "words": [
+      "帮工"
+    ],
+    "scored": [
+      "帮工"
+    ]
+  }
+}

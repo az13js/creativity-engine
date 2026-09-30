@@ -1,0 +1,47 @@
+{
+  "taskId": "dat-10",
+  "configId": "zero-shot",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 10,
+    "nUnique": 10,
+    "meanPairwiseDistance": 0.4357,
+    "clusters": 2,
+    "ctrl_n": 10,
+    "ctrl_meanPairwiseDistance": 0.4357,
+    "ctrl_clusters": 2,
+    "wordsGiven": 10,
+    "wordsScored": 7,
+    "validRate": 1,
+    "dispersion": 43.09,
+    "minPairDistance": 34.8039,
+    "maxPairDistance": 49.6592,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 2.13,
+    "crossConfigDistinctiveness": 0.1366
+  },
+  "extras": {
+    "words": [
+      "桌子",
+      "河流",
+      "雨伞",
+      "面包",
+      "窗户",
+      "石头",
+      "汽车",
+      "电话",
+      "鞋子",
+      "森林"
+    ],
+    "scored": [
+      "桌子",
+      "河流",
+      "雨伞",
+      "面包",
+      "窗户",
+      "石头",
+      "汽车"
+    ]
+  }
+}

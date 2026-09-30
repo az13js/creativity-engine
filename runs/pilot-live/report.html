@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>创造力机制基准实验 · pilot-live</title>
+<style>
+  :root{--bg:#f7f7f5;--fg:#1b1b1b;--muted:#6b6b6b;--card:#fff;--line:#e2e0da}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.65 system-ui,"Noto Sans SC",sans-serif}
+  header{padding:28px 36px;background:#1b1b1b;color:#fff}
+  header h1{margin:0 0 6px;font-size:22px}
+  header .meta{color:#bdbdbd;font-size:13px}
+  main{padding:24px 36px 80px;max-width:1180px;margin:0 auto}
+  section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:18px 0}
+  h2{margin:0 0 12px;font-size:18px}h3{margin:18px 0 8px;font-size:15px;color:#333}
+  table{border-collapse:collapse;width:100%;font-size:13.5px}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  td.best{font-weight:700;background:#f2f8f3}
+  .cards{display:flex;gap:14px;flex-wrap:wrap}
+  .card{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .card b{display:block;font-size:22px}
+  .card span{color:var(--muted);font-size:12.5px}
+  .chart{margin:10px 0}
+  .bar-row{display:flex;align-items:center;gap:8px;margin:4px 0}
+  .bar-label{width:150px;color:var(--muted);font-size:12.5px;text-align:right}
+  .bar{height:14px;border-radius:4px;display:inline-block}
+  .bar-val{font-variant-numeric:tabular-nums;font-size:12.5px}
+  .note{color:var(--muted);font-size:13px}
+  .scatter-wrap{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  canvas{display:block;width:100%;height:auto;background:#fcfcfb}
+  .tip{position:absolute;pointer-events:none;background:#1b1b1b;color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;max-width:320px;display:none}
+  .legend{display:flex;gap:14px;margin-top:8px;font-size:12.5px;color:var(--muted)}
+  .legend i{width:10px;height:10px;display:inline-block;border-radius:2px;margin-right:5px}
+  code{background:#eee;padding:1px 4px;border-radius:4px}
+</style></head><body>
+<header><h1>创造力机制基准实验</h1><div class="meta">运行 pilot-live · seed  · 生成于 2026-09-30T06:16:53.699Z</div></header>
+<main>
+<div class="cards">
+  <div class="card"><b>1</b><span>任务</span></div>
+  <div class="card"><b>2</b><span>配置</span></div>
+  <div class="card"><b>2</b><span>实验结果单元</span></div>
+  <div class="card"><b>14</b><span>模型调用次数</span></div>
+  <div class="card"><b>13.8k</b><span>token 总量</span></div>
+</div>
+<section><h2>配置汇总（跨任务平均）</h2>
+<div class='chart'><h3>平均新颖度（越高越好）</h3><div class='bar-row'><span class='bar-label'>zero-shot</span><span class='bar' style='width:99.2%;background:#d1495b'></span><span class='bar-val'>0.531</span></div><div class='bar-row'><span class='bar-label'>engine</span><span class='bar' style='width:100.0%;background:#2e86ab'></span><span class='bar-val'>0.536</span></div></div>
+<div class='chart'><h3>想法间平均语义距离（越高越分散）</h3><div class='bar-row'><span class='bar-label'>zero-shot</span><span class='bar' style='width:100.0%;background:#d1495b'></span><span class='bar-val'>0.524</span></div><div class='bar-row'><span class='bar-label'>engine</span><span class='bar' style='width:92.0%;background:#2e86ab'></span><span class='bar-val'>0.482</span></div></div>
+<div class='chart'><h3>AUT 发散思维综合指数</h3><div class='bar-row'><span class='bar-label'>zero-shot</span><span class='bar' style='width:93.0%;background:#d1495b'></span><span class='bar-val'>0.687</span></div><div class='bar-row'><span class='bar-label'>engine</span><span class='bar' style='width:100.0%;background:#2e86ab'></span><span class='bar-val'>0.739</span></div></div>
+
+</section>
+<section><h2>AUT 任务</h2><h3>发散思维综合指数 DT-index <code>dtIndex</code></h3><table><thead><tr><th>任务</th><th style='color:#d1495b'>zero-shot</th><th style='color:#2e86ab'>engine</th></tr></thead><tbody><tr><td>AUT: 砖头</td><td class='' style='--c:#d1495b'>0.687</td><td class='best' style='--c:#2e86ab'>0.739</td></tr></tbody></table><h3>平均原创性 <code>meanOriginality</code></h3><table><thead><tr><th>任务</th><th style='color:#d1495b'>zero-shot</th><th style='color:#2e86ab'>engine</th></tr></thead><tbody><tr><td>AUT: 砖头</td><td class='' style='--c:#d1495b'>0.531</td><td class='best' style='--c:#2e86ab'>0.536</td></tr></tbody></table><h3>类别数（灵活性） <code>flexibility</code></h3><table><thead><tr><th>任务</th><th style='color:#d1495b'>zero-shot</th><th style='color:#2e86ab'>engine</th></tr></thead><tbody><tr><td>AUT: 砖头</td><td class='' style='--c:#d1495b'>5</td><td class='best' style='--c:#2e86ab'>7</td></tr></tbody></table><h3>有效想法数（流畅性） <code>fluency</code></h3><table><thead><tr><th>任务</th><th style='color:#d1495b'>zero-shot</th><th style='color:#2e86ab'>engine</th></tr></thead><tbody><tr><td>AUT: 砖头</td><td class='' style='--c:#d1495b'>12</td><td class='best' style='--c:#2e86ab'>26</td></tr></tbody></table></section>
+<section><h2>成本</h2><table><thead><tr><th>配置</th><th>平均调用次数</th><th>平均提示 token</th><th>平均生成 token</th><th>想法数</th></tr></thead><tbody><tr><td style='color:#d1495b'>zero-shot</td><td>1</td><td>64</td><td>308</td><td>12</td></tr><tr><td style='color:#2e86ab'>engine</td><td>13</td><td>8529</td><td>4871</td><td>26</td></tr></tbody></table></section>
+<section><h2>引擎逐轮过程指标（模式坍塌监控）</h2><table><thead><tr><th>任务</th><th>轮次</th><th>新增想法</th><th>平均两两距离</th><th>平均新颖度</th><th>簇数</th><th>温度</th></tr></thead><tbody><tr><td>aut-brick</td><td>1</td><td>14</td><td>0.458</td><td>1</td><td>3</td><td>1</td></tr><tr><td>aut-brick</td><td>2</td><td>12</td><td>0.466</td><td>1</td><td>4</td><td>1</td></tr></tbody></table></section>
+<section><h2>想法空间投影（核 PCA，二维）</h2><p class='note'>把全部配置产出的想法向量投影到两维，用来看不同配置探索到了空间的哪些区域。图中每个点是一条想法，鼠标悬停可看原文。1/4 均分线只作视觉参考。</p><div class='scatter-wrap'><canvas id='scatter' width='900' height='520'></canvas><div id='tip' class='tip'></div></div><div class='legend'><span><i style='background:#d1495b'></i>zero-shot</span><span><i style='background:#2e86ab'></i>engine</span></div><script>window.__SCATTER__ = {"points":[{"x":0.28899082162355877,"y":-0.2834541957299732,"c":"#d1495b","t":"把砖头裹上软布当门挡，因为它的重量足以抵抗风力推动门板。","g":"aut-brick"},{"x":0.0850157923167259,"y":-0.08138807727823939,"c":"#d1495b","t":"将砖头敲碎成小块，用作烧烤炉的蓄热体，因为陶瓷或黏土砖能缓慢释放热量。","g":"aut-brick"},{"x":0.10167311722654862,"y":-0.047555624467535064,"c":"#d1495b","t":"把砖头磨成粉末，混入黏土中制作手工陶器，因为砖粉可充当熟料减少收缩开裂。","g":"aut-brick"},{"x":0.23768966198737126,"y":-0.14511548166948832,"c":"#d1495b","t":"在砖头侧面钻孔，穿入铁丝做成简易挂钩，因为砖的强度能悬挂轻型工具。","g":"aut-brick"},{"x":0.3314687565742682,"y":-0.24848645313040602,"c":"#d1495b","t":"将砖头垫在汽车轮胎下防止溜车，因为其高摩擦力和抗压性可替代止退器。","g":"aut-brick"},{"x":0.25455835628765877,"y":-0.16483050941583452,"c":"#d1495b","t":"把砖头浸泡后冷冻，用作冷敷袋，因为多孔结构含水后能长时间保持低温。","g":"aut-brick"},{"x":0.13890424808734297,"y":-0.07190251668664539,"c":"#d1495b","t":"将砖头雕刻成砚台或镇纸，因为致密的烧结黏土易于打磨且有一定重量。","g":"aut-brick"},{"x":0.18587348219430277,"y":0.020146095040771334,"c":"#d1495b","t":"在砖头表面涂上颜料，作为儿童户外绘画的立体画布，因为粗糙纹理能吸附颜料。","g":"aut-brick"},{"x":0.299011664433382,"y":-0.02121753640410167,"c":"#d1495b","t":"把砖头放入马桶水箱，减少每次冲水量，因为占据体积可节约用水。","g":"aut-brick"},{"x":0.3222369540138756,"y":-0.0897072016582359,"c":"#d1495b","t":"将砖头敲成薄片，作为简易刮鱼鳞工具，因为边缘粗糙且不易生锈。","g":"aut-brick"},{"x":0.3409580167614081,"y":-0.17034579876301217,"c":"#d1495b","t":"用砖头压住帐篷地钉，增强固定效果，因为沙地或雪地中单靠地钉容易松脱。","g":"aut-brick"},{"x":0.3116402099898417,"y":-0.03923380518797252,"c":"#d1495b","t":"把砖头系上绳子沉入水中，作为深度标记或简易锚点，因为其密度大且耐水泡。","g":"aut-brick"},{"x":0.029749837803247952,"y":0.2942336068785707,"c":"#2e86ab","t":"把砖头浸透盐水后风干，表面结晶出潮汐般的白色盐痕，再将数十块并排立成一道矮墙，作为记录月相涨落的触觉日历。","g":"aut-brick"},{"x":-0.05849443197127211,"y":0.25181977295026664,"c":"#2e86ab","t":"将砖头钻孔后悬吊在共振音箱上方，靠声波推动砖头做缓慢的钟摆式起伏，配合灯光投射出涨落不定的潮汐影子。","g":"aut-brick"},{"x":-0.027674874289988362,"y":0.36521597730334904,"c":"#2e86ab","t":"把砖头敲成碎块后按潮汐线排列在沙滩上，每次涨潮冲散一部分，退潮后留下残缺的砖阵，摄影记录其每日消长作为系列作品。","g":"aut-brick"},{"x":-0.36634043337659905,"y":-0.31331872142334993,"c":"#2e86ab","t":"将砖头烧制时预置折纸式折叠线，使砖块在施工时可按需折叠成弧形，从而同时满足强度与柔性的矛盾。","g":"aut-brick"},{"x":-0.2977491360732281,"y":-0.2853790284838887,"c":"#2e86ab","t":"在砖头内部嵌入微型加热元件和折纸结构，使其在高温时折叠收缩以增强结构密度，低温时展开以减轻重量，实现温度分离的矛盾消解。","g":"aut-brick"},{"x":-0.3228876932475628,"y":-0.28083183119875704,"c":"#2e86ab","t":"将砖头制成折纸式模块，施工时现场折叠并互锁，形成自支撑拱结构，从而在无需砂浆的情况下同时实现快速建造与结构稳定性。","g":"aut-brick"},{"x":0.29129689004397546,"y":0.005475455455990983,"c":"#2e86ab","t":"把砖头当回旋镖扔出去，让它飞一圈再飞回来，这样就能反复捡回来继续扔，不用走过去捡。","g":"aut-brick"},{"x":0.194867724988853,"y":0.05557075289668932,"c":"#2e86ab","t":"用砖头当积木搭一座会自己倒的塔，然后每次倒掉都重新搭，这样就能永远玩搭塔游戏。","g":"aut-brick"},{"x":0.279256910149398,"y":0.045412925902350576,"c":"#2e86ab","t":"把砖头当小船放进水里，看它能不能浮起来，如果沉下去就给它绑上很多空瓶子，让它变成一艘‘砖头船’。","g":"aut-brick"},{"x":-0.2006504380951871,"y":-0.03702137175691045,"c":"#2e86ab","t":"把砖头密集阵列嵌在墙体表面，模拟穿山甲鳞片的叠瓦结构，让每块砖略微外翘形成连续微型遮檐，使雨水沿鳞片间隙外流而不渗入墙体接缝。","g":"aut-brick"},{"x":-0.3404290647619997,"y":-0.024435710619817638,"c":"#2e86ab","t":"将砖头按毛衣编织的'上针下针'交替错位堆叠成镂空砌体，砖与砖之间留出连续曲折的通路，让空气可沿编织纹路在墙体内部绕行，形成夏季可换气的被动呼吸墙。","g":"aut-brick"},{"x":-0.10239057617173726,"y":-0.14444000517859815,"c":"#2e86ab","t":"以砖头作为配重单元，用绳索将砖块像毛衣的经纬线圈一样串联成可折叠的卷帘式格栅，卷起时砖块相互靠拢、放下时因自重张开成格栅，用作临时挡水或挡沙屏障。","g":"aut-brick"},{"x":-0.4645009081925887,"y":-0.17361614025551247,"c":"#2e86ab","t":"在砖坯上刻划出折纸折痕与镂空编织通道相结合的预置图案，烧制后得到可折叠的镂空砖；砌筑时既按压形成弧形曲面，又保留砖间连续迂回的通路。墙体因此能根据需要局部弯曲，同时空气沿曲折编织路径流动。","g":"aut-brick"},{"x":-0.48401544539794955,"y":-0.16391355782981512,"c":"#2e86ab","t":"在砖块烧制时预置折纸式折叠线，同时将砖块按毛衣编织的上针下针交替错位堆叠成镂空砌体：每块砖可沿折叠线弯折成弧形的编织单元，砖与砖之间的连续曲折通路既允许空气绕行，又能在需要时通过折叠变化改变通路截面，形成可调节的被动呼吸与形态自适应墙体。","g":"aut-brick"},{"x":0.15870649530180045,"y":0.20041575815303114,"c":"#2e86ab","t":"把砖头磨成纳米级粉末掺进面团里烤饼干，让孩子咬一口就明白‘吃土’是什么味道，因为砖粉的硅酸盐颗粒足够细时在口腔里只留下砂砾感而不会真正割伤，这是一种安全的感官教育。","g":"aut-brick"},{"x":0.020476702549383906,"y":0.2710110978544704,"c":"#2e86ab","t":"把砖头当作候鸟迁徙时的中途停歇标记，在迁徙路线的每个停歇点立一块砖并刻上到达日期，让砖块像‘鸟类的打卡桩’一样逐年累积，因为候鸟年复一年沿固定路线停歇，砖块作为不动的地面标记可与鸟群形成跨物种的长期对位记录。","g":"aut-brick"},{"x":-0.19156418792821583,"y":0.12807205988477166,"c":"#2e86ab","t":"把砖头烧制时混入产甲烷古菌的休眠孢子，然后整块沉入鱼塘底部当作‘微生物公寓’，砖的多孔结构为古菌提供厌氧微环境，古菌代谢产生的甲烷气泡从砖缝冒出，形成一座会自己冒泡的‘活砖头’。","g":"aut-brick"},{"x":-0.16462511056285078,"y":0.21866546584180716,"c":"#2e86ab","t":"参照候鸟迁徙的导航机制，把砖头烧结成多孔陶瓷块并浸泡在含磁性细菌的培养液中，细菌沿砖内毛细孔道定殖并留下磁性纳米颗粒链，使每块砖在地磁场中具有可测量的剩磁方向；把这种砖砌入墙体后，用磁力计扫描墙面即可读出每块砖的剩磁取向，从而在不破坏墙体的前提下判断哪块砖曾被拆下或替换过。","g":"aut-brick"},{"x":-0.228877504203145,"y":0.2958341206899568,"c":"#2e86ab","t":"把砖头粉碎到纳米级、与水泥按极低比例混合，做成一面巨大的‘砖灰墙’，然后用一台普通投影仪把砖灰墙当作屏幕投放一部关于砖窑的纪录片——观众看到的是纳米砖粒对光的散射与吸收形成的漫反射图像，而‘屏幕’本身既是建筑材料又是影像载体。","g":"aut-brick"},{"x":-0.07832496860098284,"y":0.17104376581711045,"c":"#2e86ab","t":"把砖头当作‘遗嘱执行人’：在每块砖内部预埋一根由不同熔点合金制成的细丝，细丝两端露出砖面并连接到一个简单的机械计数装置上，然后把砖砌进墙体；当墙体所在环境发生火灾时，不同位置的砖内合金丝按熔点先后熔断，计数装置记录下熔断顺序，事后拆开计数装置就能知道火是从哪里、以什么顺序烧过来的。","g":"aut-brick"},{"x":-0.1423541521434776,"y":0.21597001153087747,"c":"#2e86ab","t":"把砖头当作临终遗体的'骨灰压缩模具'，将骨灰与可降解胶混合后注入预先刻好逝者姓名与生卒年的砖坯空腔中烧制成纪念砖，嵌入公共纪念墙的编织状砖缝里，因为砖的烧结过程能把有机残留彻底矿化，使纪念物既耐候又无需额外墓碑。","g":"aut-brick"},{"x":-0.19924612458663812,"y":0.06024810800678571,"c":"#2e86ab","t":"把单块砖头用离子束刻蚀成纳米级多孔编织网，孔径控制在DNA分子可通过的尺度，作为微流控芯片中的过滤与混合层，因为砖的铝硅酸盐骨架在纳米化后仍保持化学惰性且表面可修饰，编织状孔道能引导流体按预设路径绕行。","g":"aut-brick"},{"x":-0.15340136534850995,"y":-0.09832093176098751,"c":"#2e86ab","t":"把砖头加热到半熔融态后像拉糖一样反复对折拉伸，利用砖体内气泡与杂质被拉成定向纤维，冷却后得到可弯曲的'砖纤维'，再把这些纤维像毛线一样编成受力绳索，用于吊装文物或代替钢筋，因为硅酸盐熔体的粘弹性允许拉丝，纤维化后抗拉强度远高于块状砖。","g":"aut-brick"},{"x":-0.10306250929181954,"y":0.009007362044403723,"c":"#2e86ab","t":"把砖头放到纳米尺度看：将烧制好的砖头表面用离子束刻蚀出间距约为砖厚百分之一的沟槽阵列，使每块砖成为一枚宏观热管蒸发端，贴附在电子器件散热器底部，槽内毛细力把冷却液从砖体内部微孔抽到热表面蒸发带走热量，这样用地质级材料作出纳米级毛细结构，可行性在于烧结砖本身含连通微孔，刻蚀仅改造表层而不破坏承压坯体。","g":"aut-brick"},{"x":0.024375344187794513,"y":0.1923918040251456,"c":"#2e86ab","t":"把砖头当作殡葬行业的骨灰寄存单元：将砖头中心钻出直径略大于骨灰胶囊的盲孔，孔口朝外砌入纪念墙，每块砖对应一位逝者，家属可用防水笔在砖面刻字，维护时只需更换单块砖而无需扰动墙体，可行性在于单块砖是砌体中最小的可替换单元，钻孔后的剩余壁厚仍足以承受砌筑压力。","g":"aut-brick"},{"x":0.029837937723015653,"y":0.08398035862273205,"c":"#2e86ab","t":"把砖头当成金融领域的实物期权凭证：在砖头侧面激光雕刻唯一编号和一份可转让的地下仓储空间使用权，砖头本身锁在银行保险库中作为提货凭证，交易时只转移砖头所有权而不搬运砖块，可行性在于砖头重量和体积恒定、易于估值和分割，仓储费按砖计价可精确到块。","g":"aut-brick"}],"colors":{"zero-shot":"#d1495b","engine":"#2e86ab"},"explained":[0.11330466619478938,0.06579809370619602]};</script></section>
+<section><h2>指标定义</h2><p class="note">全部指标由程序计算：发散思维综合指数 = 0.2×流畅性 + 0.25×灵活性 + 0.4×平均原创性 + 0.15×具体化程度；新颖度 = 1 − 与已知方案语料的最大余弦相似度；多样性 = 想法两两语义距离均值；灵活性 = 语义聚类簇数。已知方案语料与被试对象均由 data/*.json 提供。</p></section>
+</main>
+<script>
+(function(){
+  const d = window.__SCATTER__; if(!d) return;
+  const cv = document.getElementById('scatter'); if(!cv) return;
+  const ctx = cv.getContext('2d');
+  const pad = 40, W = cv.width, H = cv.height;
+  const xs = d.points.map(p=>p.x), ys = d.points.map(p=>p.y);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const sx = v => pad + (v - x0) / ((x1 - x0) || 1) * (W - 2*pad);
+  const sy = v => H - pad - (v - y0) / ((y1 - y0) || 1) * (H - 2*pad);
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle = '#e6e3dc'; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(pad,pad); ctx.lineTo(pad,H-pad); ctx.lineTo(W-pad,H-pad); ctx.stroke();
+  ctx.fillStyle = '#8a8a8a'; ctx.font = '12px system-ui';
+  ctx.fillText('主成分 1（解释方差 ' + (d.explained[0]*100).toFixed(1) + '%）', W/2-80, H-12);
+  ctx.save(); ctx.translate(14, H/2+60); ctx.rotate(-Math.PI/2); ctx.fillText('主成分 2（' + (d.explained[1]*100).toFixed(1) + '%）', 0, 0); ctx.restore();
+  const tip = document.getElementById('tip');
+  const draw = (hover)=> {
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle = '#e6e3dc'; ctx.beginPath(); ctx.moveTo(pad,pad); ctx.lineTo(pad,H-pad); ctx.lineTo(W-pad,H-pad); ctx.stroke();
+    d.points.forEach((p,i)=>{
+      ctx.beginPath(); ctx.arc(sx(p.x), sy(p.y), hover===i?6:3.4, 0, Math.PI*2);
+      ctx.fillStyle = p.c; ctx.globalAlpha = hover===i?1:0.75; ctx.fill(); ctx.globalAlpha = 1;
+    });
+  };
+  draw(-1);
+  cv.addEventListener('mousemove', (e)=>{
+    const r = cv.getBoundingClientRect();
+    const mx = (e.clientX - r.left) * (W / r.width), my = (e.clientY - r.top) * (H / r.height);
+    let best = -1, bd = 14*14;
+    d.points.forEach((p,i)=>{ const dx = sx(p.x)-mx, dy = sy(p.y)-my, dd = dx*dx+dy*dy; if(dd<bd){bd=dd;best=i;} });
+    if(best>=0){ draw(best); tip.style.display='block'; tip.style.left = Math.min(mx+12, r.width-330)+'px'; tip.style.top = (my+12)+'px'; tip.textContent = '[' + d.points[best].g + '] ' + d.points[best].t; }
+    else { draw(-1); tip.style.display='none'; }
+  });
+  cv.addEventListener('mouseleave', ()=>{ draw(-1); tip.style.display='none'; });
+})();
+</script>
+</body></html>

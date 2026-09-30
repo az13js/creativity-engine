@@ -1,0 +1,20 @@
+{
+  "taskId": "brief-box",
+  "configId": "engine",
+  "kind": "brief",
+  "title": "快递纸箱的重复利用",
+  "metrics": {
+    "nIdeas": 40,
+    "nUnique": 40,
+    "meanPairwiseDistance": 0.3775,
+    "clusters": 2,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.3659,
+    "ctrl_clusters": 1,
+    "meanNovelty": 0.33,
+    "maxNovelty": 0.5306,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.3284,
+    "crossConfigDistinctiveness": 0.2839
+  }
+}

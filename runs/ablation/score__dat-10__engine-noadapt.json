@@ -1,0 +1,41 @@
+{
+  "taskId": "dat-10",
+  "configId": "engine-noadapt",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 39,
+    "nUnique": 39,
+    "meanPairwiseDistance": 0.6096,
+    "clusters": 17,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.6226,
+    "ctrl_clusters": 9,
+    "wordsGiven": 6,
+    "wordsScored": 6,
+    "validRate": 0.6,
+    "dispersion": 43.59,
+    "minPairDistance": 30.3435,
+    "maxPairDistance": 52.556,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 2.62
+  },
+  "extras": {
+    "words": [
+      "用",
+      "自浮",
+      "糖分",
+      "温度",
+      "条款",
+      "文档"
+    ],
+    "scored": [
+      "用",
+      "自浮",
+      "糖分",
+      "温度",
+      "条款",
+      "文档"
+    ]
+  }
+}

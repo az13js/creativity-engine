@@ -1,0 +1,42 @@
+{
+  "taskId": "aut-brick",
+  "configId": "zero-shot",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.5238,
+    "clusters": 8,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.5238,
+    "ctrl_clusters": 8,
+    "meanNovelty": 0.531,
+    "maxNovelty": 0.5901,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.531,
+    "fluency": 12,
+    "flexibility": 5,
+    "meanOriginality": 0.531,
+    "maxOriginality": 0.5901,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6874,
+    "crossConfigDistinctiveness": 0.3518
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "承重与固定",
+      "热与能量",
+      "研磨与工具",
+      "其他",
+      "装饰与艺术"
+    ]
+  }
+}

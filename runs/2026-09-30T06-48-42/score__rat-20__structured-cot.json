@@ -1,0 +1,23 @@
+{
+  "taskId": "rat-20",
+  "configId": "structured-cot",
+  "kind": "rat",
+  "title": "RAT: 20 constructed items",
+  "metrics": {
+    "nIdeas": 20,
+    "nUnique": 20,
+    "meanPairwiseDistance": 0.3688,
+    "clusters": 2,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.361,
+    "ctrl_clusters": 2,
+    "strictAccuracy": 0.05,
+    "strictSolved": 1,
+    "passAtK": 0.05,
+    "itemsSolvedByAnyCandidate": 1,
+    "crossConfigDistinctiveness": 0.3452
+  },
+  "extras": {
+    "parseMode": "positional"
+  }
+}

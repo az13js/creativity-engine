@@ -1,0 +1,141 @@
+{
+  "taskId": "aut-bottle",
+  "configId": "structured-cot",
+  "kind": "aut",
+  "title": "AUT: 塑料瓶",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.4284,
+    "clusters": 3,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4284,
+    "ctrl_clusters": 3,
+    "meanNovelty": 0.4978,
+    "maxNovelty": 0.5961,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.4978,
+    "meanFeasibility": 0.7,
+    "meanImpact": 0.4083,
+    "noveltyUsefulness": 0.3485,
+    "fluency": 12,
+    "flexibility": 4,
+    "meanOriginality": 0.4978,
+    "maxOriginality": 0.5961,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6491
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "其他",
+      "手工与改造",
+      "容器与储存",
+      "物理与工程"
+    ],
+    "reviews": [
+      {
+        "text": "将多个塑料瓶垂直串联并填充土壤，固定在阳台栏杆上形成垂直菜园，因为塑料瓶耐水且轻便，可节省空间。",
+        "feasibility": 0.9,
+        "impact": 0.5,
+        "failureMode": "垂直串联的瓶体连接处承重和抗风是薄弱点，装满湿土后重心高，阳台栏杆固定不当易坠落。",
+        "chars": 48,
+        "novelty": 0.5343529699300298
+      },
+      {
+        "text": "把塑料瓶横向剖开，填充蜡和棉芯，制成简易蜡烛模具，因为塑料瓶易切割且蜡冷却后易脱模。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "PET瓶在蜡液温度（约60-80°C）下会软化变形，且蜡易粘附瓶壁，脱模并不如想象中容易。",
+        "chars": 42,
+        "novelty": 0.46757573522665674
+      },
+      {
+        "text": "将塑料瓶切成条状，编织成宠物玩具或垫子，因为塑料条柔韧且耐用，可替代传统编织材料。",
+        "feasibility": 0.7,
+        "impact": 0.4,
+        "failureMode": "手工切出的塑料条边缘锋利且长度不一，编织宠物玩具可能划伤宠物口腔或皮肤。",
+        "chars": 41,
+        "novelty": 0.4699463437677761
+      },
+      {
+        "text": "利用塑料瓶的透明性和浮力，制成浮标或小型浮台，用于钓鱼或水上活动，因为塑料瓶密封后浮力大且醒目。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "单个塑料瓶浮力有限，需大量瓶体才能支撑人体，且密封盖长期浸泡易渗漏。",
+        "chars": 48,
+        "novelty": 0.4886156806987514
+      },
+      {
+        "text": "将塑料瓶底部切除，倒置插入土壤中作为深层灌溉器，因为瓶内水缓慢渗入土中，可保持土壤湿润。",
+        "feasibility": 0.9,
+        "impact": 0.6,
+        "failureMode": "瓶口无控制阀时水流速度难以调节，土壤类型不同会导致渗水过快或完全堵塞。",
+        "chars": 44,
+        "novelty": 0.4545844775995559
+      },
+      {
+        "text": "把塑料瓶剪成螺旋条，缠绕在金属杆上制成捕虫器或鸟刺，因为塑料条尖锐且耐候，可防止鸟类停留。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "塑料螺旋条在户外紫外线下会脆化断裂，尖锐碎片可能伤及鸟类而非仅驱赶。",
+        "chars": 45,
+        "novelty": 0.5961385893093993
+      },
+      {
+        "text": "将塑料瓶内部涂黑，装满水后放在阳光下作为太阳能热水器，因为黑色吸热且塑料瓶保温，可加热水。",
+        "feasibility": 0.5,
+        "impact": 0.4,
+        "failureMode": "PET瓶透光且保温性差，涂黑后吸热但散热也快，实际水温提升有限，难以达到可用热水温度。",
+        "chars": 45,
+        "novelty": 0.43853061208786215
+      },
+      {
+        "text": "把塑料瓶切成环状，连接成链条用于固定或悬挂物品，因为塑料环强度高且可灵活连接。",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "塑料环切口处应力集中，承重时容易撕裂，连接处强度远低于完整瓶体。",
+        "chars": 39,
+        "novelty": 0.4746251308528068
+      },
+      {
+        "text": "将塑料瓶压扁并热封边缘，制成防水袋或小包，因为塑料瓶材料防水且热封后密封。",
+        "feasibility": 0.5,
+        "impact": 0.4,
+        "failureMode": "PET热封温度窗口窄，家用工具难以均匀热封且不烧穿，接缝处密封可靠性差。",
+        "chars": 37,
+        "novelty": 0.5774282473308324
+      },
+      {
+        "text": "利用塑料瓶的圆柱形状，制成简易的鼓或打击乐器，因为敲击瓶身可发出不同音调。",
+        "feasibility": 0.9,
+        "impact": 0.2,
+        "failureMode": "塑料瓶共鸣腔单一，音调变化有限，只能作为玩具而非实用乐器。",
+        "chars": 37,
+        "novelty": 0.4308291301152719
+      },
+      {
+        "text": "把塑料瓶剪成细条，作为3D打印机的耗材，因为PET塑料可熔融挤出，实现回收利用。",
+        "feasibility": 0.3,
+        "impact": 0.6,
+        "failureMode": "PET熔融温度约250°C且对湿度敏感，普通3D打印机喷头温度和挤出机构不匹配，且回收PET杂质导致堵头。",
+        "chars": 40,
+        "novelty": 0.48187197327554965
+      },
+      {
+        "text": "将塑料瓶填充沙土，堆叠成临时墙壁或屏障，因为塑料瓶轻便且沙土提供重量和稳定性。",
+        "feasibility": 0.8,
+        "impact": 0.5,
+        "failureMode": "瓶体圆柱形堆叠时接触面小，整体结构稳定性差，侧向力下容易倒塌，需额外框架约束。",
+        "chars": 39,
+        "novelty": 0.5592765935633717
+      }
+    ]
+  }
+}

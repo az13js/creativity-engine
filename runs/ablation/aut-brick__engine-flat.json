@@ -1,0 +1,198 @@
+{
+  "taskId": "aut-brick",
+  "configId": "engine-flat",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "i109",
+      "text": "把砖头的粘土材料替换为海绵状多孔陶粒烧结体，保留240×115×53mm标准尺寸，用于地下渗水盲沟的滤水砌块——雨水可穿过砖体进入排水管，泥沙被孔隙截留，每5年翻出用高压水枪反冲再生。",
+      "rationale": "材料属性替换：实心粘土→多孔陶粒，利用砖的标准模数便于砌筑，多孔结构提供透水与过滤双重功能；工程师视角下成本仅比普通砖高15%，失效模式是可预期的孔隙堵塞而非突然断裂。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 1,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.53921532746974,
+      "objective": 0.587646897361383,
+      "cell": "1-1",
+      "feasibility": 0.7,
+      "impact": 0.5,
+      "failureMode": "多孔陶粒滤块的孔隙会被细泥沙和生物膜逐渐堵塞，高压水枪反冲只能清除表层，5年周期内透水系数会衰减到无法满足盲沟排水要求。"
+    },
+    {
+      "id": "i110",
+      "text": "把砖头的'整体实心'属性替换为'两片薄壳+内部空腔'的三明治结构，壁厚8mm，空腔内预埋φ6钢筋并现场灌注细石混凝土，做成可干垒后灌芯的配筋砌体单元，用于两层以下农房承重墙——砌筑时无需砂浆，靠榫头定位，灌芯后抗剪强度达到传统砖墙的1.8倍。",
+      "rationale": "结构属性替换：实心→空腔薄壳，把现场湿作业的砂浆砌筑改为干垒+灌芯，减少对瓦工手艺的依赖；空腔兼作配筋空间，解决农村低层建筑抗震不足的典型故障模式。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 1,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.4226186788307531,
+      "objective": 0.5201784054738389,
+      "cell": "1-1",
+      "feasibility": 0.6,
+      "impact": 0.6,
+      "failureMode": "8mm薄壳砖在运输、干垒和灌芯振捣过程中极易局部压碎或胀裂，且无砂浆干垒加灌芯的施工质量高度依赖工人操作，实际抗剪强度离散性大，难以稳定达到传统砖墙1.8倍。"
+    },
+    {
+      "id": "i111",
+      "text": "把砖头的'手抓握持'交互方式替换为'绳索穿吊'——在砖坯入窑前沿长度方向预留两个φ8通孔，烧成后穿入尼龙绳串联成柔性带状，铺在温室大棚的土墙内侧作为可卷放的蓄热层：白天吸热、夜间缓慢释放，卷起时整条砖带像竹简一样收拢，便于清棚和检修。",
+      "rationale": "交互属性替换：单块手搬→成串吊装，通孔在制坯阶段几乎不增加成本；以绳索串联替代砂浆固定，使蓄热砖墙可局部更换单块破损砖，维护模式从'整墙拆除'变为'抽换单块'。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 1,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.5079115641169818,
+      "objective": 0.4835602038526418,
+      "cell": "1-1",
+      "feasibility": 0.5,
+      "impact": 0.4,
+      "failureMode": "烧结砖单块重约2.5kg，串联成整条砖带后卷放需要极大扭矩，尼龙绳在高温高湿温室环境中蠕变老化，且砖带与土墙间空气夹层会阻碍蓄热传导，实际蓄热效率远低于理论值。"
+    },
+    {
+      "id": "i112",
+      "text": "把砖头的'240mm长条整体'属性替换为'两块120mm短砖中间夹2mm厚不锈钢弹片'的组合体，弹片用砖窑余热回火定型，做成分体式可折叠爬藤架基座——短砖自重压住弹片下脚，弹片受压弯曲后回弹顶住藤蔓，收架时抽出弹片即可把砖块叠放运输，单片弹片更换成本低于0.5元。",
+      "rationale": "替换的是尺寸与结构连接方式属性，一线可焊接、可单件替换，失效模式仅为弹片疲劳，翻修时无需拆墙。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 2,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.4645390834183952,
+      "objective": 0.4090425875382779,
+      "cell": "1-1",
+      "feasibility": 0.4,
+      "impact": 0.3,
+      "failureMode": "不锈钢弹片在户外土壤/潮湿环境中会腐蚀疲劳，且砖窑余热温度不可控，无法稳定回火定型弹片。"
+    },
+    {
+      "id": "i113",
+      "text": "把砖头的'黏土烧结'材料属性替换为'海绵碎屑+水泥'的轻质再生料，保持标准外形但容重降至1.1g/cm³，做成带燕尾槽的隔墙砌块——燕尾槽内插入同材质的企口榫条，砌筑时只在上表面抹3mm粘结砂浆，墙面平整度靠槽口自锁，单块重量从2.6kg降到1.4kg，瓦工单手可提，减少腰部劳损。",
+      "rationale": "替换材料属性并借用海绵的轻质吸能特性，砌块仍可上现有砖机模具，生产改动小，故障模式是吸水后强度下降，通过表面刷防水剂解决。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 2,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.48305913294390557,
+      "objective": 0.5073766098247575,
+      "cell": "1-1",
+      "feasibility": 0.6,
+      "impact": 0.4,
+      "failureMode": "海绵碎屑+水泥的轻质砌块抗压强度远低于承重隔墙要求，燕尾槽自锁也无法保证墙面平整度，且企口榫条增加工序而非减少。"
+    },
+    {
+      "id": "i114",
+      "text": "把砖头的'实心承压'属性反转为'中空贯通+海绵内芯'，在砖体高度方向留一个直径40mm的圆孔并塞入聚氨酯海绵柱，作为混凝土模板的临时泄压塞——浇筑时海绵受压排水排气，拆模后拔出海绵柱得到整齐的穿墙对拉螺栓孔，省去后期钻孔工序，单孔可重复使用20次。",
+      "rationale": "反其道而行，把砖从结构件变成施工耗材，利用海绵的压缩与渗水特性实现排气泄压，一线工人可用钢筋钩直接捅出海绵。",
+      "taskId": "aut-brick",
+      "configId": "engine-flat",
+      "generation": 2,
+      "agent": "gen-0-domain-expert",
+      "operator": "attribute-substitution",
+      "persona": "该领域一线工程师",
+      "stimulus": "海绵",
+      "source": "generate",
+      "novelty": 0.48911543923908285,
+      "objective": 0.4051019476575873,
+      "cell": "1-1",
+      "feasibility": 0.3,
+      "impact": 0.4,
+      "failureMode": "浇筑混凝土时海绵柱在高压下会被压缩堵死而非排水排气，且拔出后孔壁被水泥浆包裹，无法得到整齐孔洞，重复使用20次不现实。"
+    }
+  ],
+  "events": [
+    {
+      "generation": 1,
+      "stage": "diverge",
+      "detail": "operators=attribute-substitution temperature=1.00"
+    },
+    {
+      "generation": 1,
+      "stage": "collect",
+      "detail": "新增 3 条想法",
+      "metric": 3
+    },
+    {
+      "generation": 1,
+      "stage": "critique",
+      "detail": "评审 3 条"
+    },
+    {
+      "generation": 1,
+      "stage": "measure",
+      "detail": "平均两两距离=0.364 新颖度=0.490 簇数=1",
+      "metric": 0.3640676261819161
+    },
+    {
+      "generation": 2,
+      "stage": "diverge",
+      "detail": "operators=attribute-substitution temperature=1.00"
+    },
+    {
+      "generation": 2,
+      "stage": "collect",
+      "detail": "新增 3 条想法",
+      "metric": 3
+    },
+    {
+      "generation": 2,
+      "stage": "critique",
+      "detail": "评审 3 条"
+    },
+    {
+      "generation": 2,
+      "stage": "measure",
+      "detail": "平均两两距离=0.378 新颖度=0.479 簇数=1",
+      "metric": 0.3775656951305707
+    }
+  ],
+  "stats": {
+    "calls": 4,
+    "cachedCalls": 0,
+    "promptTokens": 1944,
+    "completionTokens": 1318,
+    "failures": 0,
+    "wallMs": 18018,
+    "generations": [
+      {
+        "index": 1,
+        "newIdeas": 3,
+        "meanPairwiseDistance": 0.3641,
+        "meanNovelty": 0.4899,
+        "clusters": 1,
+        "temperature": 1
+      },
+      {
+        "index": 2,
+        "newIdeas": 3,
+        "meanPairwiseDistance": 0.3776,
+        "meanNovelty": 0.4789,
+        "clusters": 1,
+        "temperature": 1
+      }
+    ],
+    "archive": {
+      "size": 3,
+      "coverage": 0.3333333333333333,
+      "qdScore": 1.512927250492809
+    }
+  }
+}

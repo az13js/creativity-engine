@@ -1,0 +1,989 @@
+{
+  "runId": "2026-09-30T06-49-49",
+  "createdAt": "2026-09-30T06:54:19.919Z",
+  "seed": 20240930,
+  "tasks": [
+    {
+      "id": "aut-brick",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "ideasTarget": 12
+    },
+    {
+      "id": "aut-bottle",
+      "kind": "aut",
+      "title": "AUT: 塑料瓶",
+      "ideasTarget": 12
+    },
+    {
+      "id": "dat-7",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "ideasTarget": 7
+    },
+    {
+      "id": "dat-10",
+      "kind": "dat",
+      "title": "DAT: 10 words",
+      "ideasTarget": 10
+    },
+    {
+      "id": "rat-20",
+      "kind": "rat",
+      "title": "RAT: 20 constructed items",
+      "ideasTarget": 20
+    },
+    {
+      "id": "brief-stove",
+      "kind": "brief",
+      "title": "独居老人忘记关火的安全方案",
+      "ideasTarget": 12
+    },
+    {
+      "id": "brief-box",
+      "kind": "brief",
+      "title": "快递纸箱的重复利用",
+      "ideasTarget": 12
+    }
+  ],
+  "configs": [
+    {
+      "id": "zero-shot",
+      "label": "零样本单轮（基线 A）",
+      "budget": "1 次调用"
+    },
+    {
+      "id": "structured-cot",
+      "label": "结构化分类单轮（基线 B）",
+      "budget": "1 次调用"
+    },
+    {
+      "id": "self-refine",
+      "label": "自我批评再修改（基线 C）",
+      "budget": "3 次调用"
+    },
+    {
+      "id": "engine",
+      "label": "多Agent创造力引擎（本机制）",
+      "budget": "生成4x3 + 融合2 + 评审1 + 元反思1，共约 3 轮"
+    }
+  ],
+  "scores": [
+    {
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.5239,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.5239,
+        "ctrl_clusters": 8,
+        "meanNovelty": 0.5311,
+        "maxNovelty": 0.5901,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.5311,
+        "fluency": 12,
+        "flexibility": 5,
+        "meanOriginality": 0.5311,
+        "maxOriginality": 0.5901,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.6874,
+        "crossConfigDistinctiveness": 0.3523
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "承重与固定",
+          "热与能量",
+          "研磨与工具",
+          "其他",
+          "装饰与艺术"
+        ]
+      }
+    },
+    {
+      "taskId": "aut-bottle",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: 塑料瓶",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4464,
+        "clusters": 3,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4464,
+        "ctrl_clusters": 3,
+        "meanNovelty": 0.4909,
+        "maxNovelty": 0.5669,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.4909,
+        "fluency": 12,
+        "flexibility": 1,
+        "meanOriginality": 0.4909,
+        "maxOriginality": 0.5669,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.5714,
+        "crossConfigDistinctiveness": 0.3038
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "容器与储存"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-7",
+      "configId": "zero-shot",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 7,
+        "nUnique": 7,
+        "meanPairwiseDistance": 0.4175,
+        "clusters": 2,
+        "ctrl_n": 7,
+        "ctrl_meanPairwiseDistance": 0.4175,
+        "ctrl_clusters": 2,
+        "wordsGiven": 7,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 41.75,
+        "minPairDistance": 28.3825,
+        "maxPairDistance": 50.9702,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 0.78,
+        "crossConfigDistinctiveness": 0.2039
+      },
+      "extras": {
+        "words": [
+          "桌子",
+          "风",
+          "河流",
+          "面包",
+          "影子",
+          "钥匙",
+          "羽毛"
+        ],
+        "scored": [
+          "桌子",
+          "风",
+          "河流",
+          "面包",
+          "影子",
+          "钥匙",
+          "羽毛"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-10",
+      "configId": "zero-shot",
+      "kind": "dat",
+      "title": "DAT: 10 words",
+      "metrics": {
+        "nIdeas": 10,
+        "nUnique": 10,
+        "meanPairwiseDistance": 0.4357,
+        "clusters": 2,
+        "ctrl_n": 10,
+        "ctrl_meanPairwiseDistance": 0.4357,
+        "ctrl_clusters": 2,
+        "wordsGiven": 10,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 43.09,
+        "minPairDistance": 34.8039,
+        "maxPairDistance": 49.6592,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 2.13,
+        "crossConfigDistinctiveness": 0.1366
+      },
+      "extras": {
+        "words": [
+          "桌子",
+          "河流",
+          "雨伞",
+          "面包",
+          "窗户",
+          "石头",
+          "汽车",
+          "电话",
+          "鞋子",
+          "森林"
+        ],
+        "scored": [
+          "桌子",
+          "河流",
+          "雨伞",
+          "面包",
+          "窗户",
+          "石头",
+          "汽车"
+        ]
+      }
+    },
+    {
+      "taskId": "rat-20",
+      "configId": "zero-shot",
+      "kind": "rat",
+      "title": "RAT: 20 constructed items",
+      "metrics": {
+        "nIdeas": 20,
+        "nUnique": 20,
+        "meanPairwiseDistance": 0.3438,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3494,
+        "ctrl_clusters": 1,
+        "strictAccuracy": 1,
+        "strictSolved": 20,
+        "passAtK": 1,
+        "itemsSolvedByAnyCandidate": 20,
+        "crossConfigDistinctiveness": 0
+      },
+      "extras": {
+        "parseMode": "positional"
+      }
+    },
+    {
+      "taskId": "brief-stove",
+      "configId": "zero-shot",
+      "kind": "brief",
+      "title": "独居老人忘记关火的安全方案",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3583,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3583,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.2734,
+        "maxNovelty": 0.4345,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.2734,
+        "crossConfigDistinctiveness": 0.1783
+      }
+    },
+    {
+      "taskId": "brief-box",
+      "configId": "zero-shot",
+      "kind": "brief",
+      "title": "快递纸箱的重复利用",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3117,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3117,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.2767,
+        "maxNovelty": 0.4954,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.2767,
+        "crossConfigDistinctiveness": 0.1744
+      }
+    },
+    {
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.5477,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.5477,
+        "ctrl_clusters": 8,
+        "meanNovelty": 0.5656,
+        "maxNovelty": 0.6287,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.5656,
+        "fluency": 12,
+        "flexibility": 7,
+        "meanOriginality": 0.5656,
+        "maxOriginality": 0.6287,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.7512,
+        "crossConfigDistinctiveness": 0.4049
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "其他",
+          "研磨与工具",
+          "热与能量",
+          "承重与固定",
+          "装饰与艺术",
+          "信息与测量",
+          "建筑与铺设"
+        ]
+      }
+    },
+    {
+      "taskId": "aut-bottle",
+      "configId": "structured-cot",
+      "kind": "aut",
+      "title": "AUT: 塑料瓶",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4284,
+        "clusters": 3,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4284,
+        "ctrl_clusters": 3,
+        "meanNovelty": 0.4978,
+        "maxNovelty": 0.5961,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.4978,
+        "fluency": 12,
+        "flexibility": 1,
+        "meanOriginality": 0.4978,
+        "maxOriginality": 0.5961,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.5741,
+        "crossConfigDistinctiveness": 0.2845
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "容器与储存"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-7",
+      "configId": "structured-cot",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 7,
+        "nUnique": 7,
+        "meanPairwiseDistance": 0.4197,
+        "clusters": 2,
+        "ctrl_n": 7,
+        "ctrl_meanPairwiseDistance": 0.4197,
+        "ctrl_clusters": 2,
+        "wordsGiven": 7,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 41.97,
+        "minPairDistance": 34.9452,
+        "maxPairDistance": 50.9702,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 1,
+        "crossConfigDistinctiveness": 0.191
+      },
+      "extras": {
+        "words": [
+          "石头",
+          "河流",
+          "窗户",
+          "火焰",
+          "钥匙",
+          "蛋糕",
+          "雨伞"
+        ],
+        "scored": [
+          "石头",
+          "河流",
+          "窗户",
+          "火焰",
+          "钥匙",
+          "蛋糕",
+          "雨伞"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-10",
+      "configId": "structured-cot",
+      "kind": "dat",
+      "title": "DAT: 10 words",
+      "metrics": {
+        "nIdeas": 10,
+        "nUnique": 10,
+        "meanPairwiseDistance": 0.4204,
+        "clusters": 2,
+        "ctrl_n": 10,
+        "ctrl_meanPairwiseDistance": 0.4204,
+        "ctrl_clusters": 2,
+        "wordsGiven": 10,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 41.62,
+        "minPairDistance": 34.1269,
+        "maxPairDistance": 47.6754,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 0.66,
+        "crossConfigDistinctiveness": 0.1197
+      },
+      "extras": {
+        "words": [
+          "石头",
+          "河流",
+          "椅子",
+          "窗户",
+          "面包",
+          "鞋子",
+          "雨伞",
+          "镜子",
+          "钥匙",
+          "蜡烛"
+        ],
+        "scored": [
+          "石头",
+          "河流",
+          "椅子",
+          "窗户",
+          "面包",
+          "鞋子",
+          "雨伞"
+        ]
+      }
+    },
+    {
+      "taskId": "rat-20",
+      "configId": "structured-cot",
+      "kind": "rat",
+      "title": "RAT: 20 constructed items",
+      "metrics": {
+        "nIdeas": 20,
+        "nUnique": 20,
+        "meanPairwiseDistance": 0.3687,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3609,
+        "ctrl_clusters": 2,
+        "strictAccuracy": 0.05,
+        "strictSolved": 1,
+        "passAtK": 0.05,
+        "itemsSolvedByAnyCandidate": 1,
+        "crossConfigDistinctiveness": 0.3697
+      },
+      "extras": {
+        "parseMode": "positional"
+      }
+    },
+    {
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "kind": "brief",
+      "title": "独居老人忘记关火的安全方案",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3396,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3396,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.3085,
+        "maxNovelty": 0.4179,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.3085,
+        "crossConfigDistinctiveness": 0.1891
+      }
+    },
+    {
+      "taskId": "brief-box",
+      "configId": "structured-cot",
+      "kind": "brief",
+      "title": "快递纸箱的重复利用",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3227,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3227,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.2475,
+        "maxNovelty": 0.3293,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.2475,
+        "crossConfigDistinctiveness": 0.1659
+      }
+    },
+    {
+      "taskId": "aut-brick",
+      "configId": "self-refine",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4767,
+        "clusters": 4,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4767,
+        "ctrl_clusters": 4,
+        "meanNovelty": 0.492,
+        "maxNovelty": 0.5728,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.492,
+        "fluency": 12,
+        "flexibility": 4,
+        "meanOriginality": 0.492,
+        "maxOriginality": 0.5728,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.6468,
+        "crossConfigDistinctiveness": 0.3535
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "承重与固定",
+          "其他",
+          "研磨与工具",
+          "建筑与铺设"
+        ]
+      }
+    },
+    {
+      "taskId": "aut-bottle",
+      "configId": "self-refine",
+      "kind": "aut",
+      "title": "AUT: 塑料瓶",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.5121,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.5121,
+        "ctrl_clusters": 8,
+        "meanNovelty": 0.5117,
+        "maxNovelty": 0.649,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.5117,
+        "fluency": 12,
+        "flexibility": 1,
+        "meanOriginality": 0.5117,
+        "maxOriginality": 0.649,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.5797,
+        "crossConfigDistinctiveness": 0.3336
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "容器与储存"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 7,
+        "nUnique": 7,
+        "meanPairwiseDistance": 0.429,
+        "clusters": 2,
+        "ctrl_n": 7,
+        "ctrl_meanPairwiseDistance": 0.429,
+        "ctrl_clusters": 2,
+        "wordsGiven": 7,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 42.9,
+        "minPairDistance": 30.8014,
+        "maxPairDistance": 53.3327,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 1.93,
+        "crossConfigDistinctiveness": 0.3599
+      },
+      "extras": {
+        "words": [
+          "磁铁",
+          "芹菜",
+          "袜子",
+          "轮胎",
+          "胶水",
+          "梳子",
+          "漏斗"
+        ],
+        "scored": [
+          "磁铁",
+          "芹菜",
+          "袜子",
+          "轮胎",
+          "胶水",
+          "梳子",
+          "漏斗"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-10",
+      "configId": "self-refine",
+      "kind": "dat",
+      "title": "DAT: 10 words",
+      "metrics": {
+        "nIdeas": 10,
+        "nUnique": 10,
+        "meanPairwiseDistance": 0.3569,
+        "clusters": 1,
+        "ctrl_n": 10,
+        "ctrl_meanPairwiseDistance": 0.3569,
+        "ctrl_clusters": 1,
+        "wordsGiven": 5,
+        "wordsScored": 5,
+        "validRate": 0.5,
+        "dispersion": 33.56,
+        "minPairDistance": 24.5067,
+        "maxPairDistance": 38.7747,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": -7.41,
+        "crossConfigDistinctiveness": 0.3076
+      },
+      "extras": {
+        "words": [
+          "雨伞",
+          "算盘",
+          "风铃",
+          "罗盘",
+          "沙漏"
+        ],
+        "scored": [
+          "雨伞",
+          "算盘",
+          "风铃",
+          "罗盘",
+          "沙漏"
+        ]
+      }
+    },
+    {
+      "taskId": "rat-20",
+      "configId": "self-refine",
+      "kind": "rat",
+      "title": "RAT: 20 constructed items",
+      "metrics": {
+        "nIdeas": 20,
+        "nUnique": 20,
+        "meanPairwiseDistance": 0.3438,
+        "clusters": 1,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3368,
+        "ctrl_clusters": 1,
+        "strictAccuracy": 1,
+        "strictSolved": 20,
+        "passAtK": 1,
+        "itemsSolvedByAnyCandidate": 20,
+        "crossConfigDistinctiveness": 0
+      },
+      "extras": {
+        "parseMode": "positional"
+      }
+    },
+    {
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "kind": "brief",
+      "title": "独居老人忘记关火的安全方案",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3848,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3848,
+        "ctrl_clusters": 2,
+        "meanNovelty": 0.2895,
+        "maxNovelty": 0.4733,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.2895,
+        "crossConfigDistinctiveness": 0.2027
+      }
+    },
+    {
+      "taskId": "brief-box",
+      "configId": "self-refine",
+      "kind": "brief",
+      "title": "快递纸箱的重复利用",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.3217,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3217,
+        "ctrl_clusters": 2,
+        "meanNovelty": 0.2534,
+        "maxNovelty": 0.4664,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.2534,
+        "crossConfigDistinctiveness": 0.1765
+      }
+    },
+    {
+      "taskId": "aut-brick",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: 砖头",
+      "metrics": {
+        "nIdeas": 39,
+        "nUnique": 39,
+        "meanPairwiseDistance": 0.487,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4839,
+        "ctrl_clusters": 4,
+        "meanNovelty": 0.5351,
+        "maxNovelty": 0.6341,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.5324,
+        "fluency": 39,
+        "flexibility": 8,
+        "meanOriginality": 0.5351,
+        "maxOriginality": 0.6341,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.764,
+        "crossConfigDistinctiveness": 0.457
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "建筑与铺设",
+          "研磨与工具",
+          "其他",
+          "热与能量",
+          "承重与固定",
+          "游戏与训练",
+          "装饰与艺术",
+          "信息与测量"
+        ]
+      }
+    },
+    {
+      "taskId": "aut-bottle",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: 塑料瓶",
+      "metrics": {
+        "nIdeas": 34,
+        "nUnique": 34,
+        "meanPairwiseDistance": 0.4481,
+        "clusters": 6,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4226,
+        "ctrl_clusters": 3,
+        "meanNovelty": 0.4969,
+        "maxNovelty": 0.6253,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.4862,
+        "fluency": 34,
+        "flexibility": 1,
+        "meanOriginality": 0.4969,
+        "maxOriginality": 0.6253,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.5738,
+        "crossConfigDistinctiveness": 0.3281
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "容器与储存"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-7",
+      "configId": "engine",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 29,
+        "nUnique": 29,
+        "meanPairwiseDistance": 0.5942,
+        "clusters": 18,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.6052,
+        "ctrl_clusters": 9,
+        "wordsGiven": 0,
+        "wordsScored": 0,
+        "validRate": 0,
+        "dispersion": 0,
+        "minPairDistance": 0,
+        "maxPairDistance": 0,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": -40.97,
+        "crossConfigDistinctiveness": 0.6046
+      },
+      "extras": {
+        "words": [],
+        "scored": []
+      }
+    },
+    {
+      "taskId": "dat-10",
+      "configId": "engine",
+      "kind": "dat",
+      "title": "DAT: 10 words",
+      "metrics": {
+        "nIdeas": 33,
+        "nUnique": 33,
+        "meanPairwiseDistance": 0.6041,
+        "clusters": 17,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.6021,
+        "ctrl_clusters": 8,
+        "wordsGiven": 9,
+        "wordsScored": 7,
+        "validRate": 0.9,
+        "dispersion": 45.36,
+        "minPairDistance": 32.9084,
+        "maxPairDistance": 60.414,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": 4.39,
+        "crossConfigDistinctiveness": 0.5768
+      },
+      "extras": {
+        "words": [
+          "潮汐",
+          "山折",
+          "与",
+          "漂洗",
+          "候诊",
+          "V",
+          "停歇",
+          "同时",
+          "弹开"
+        ],
+        "scored": [
+          "潮汐",
+          "山折",
+          "与",
+          "漂洗",
+          "候诊",
+          "V",
+          "停歇"
+        ]
+      }
+    },
+    {
+      "taskId": "rat-20",
+      "configId": "engine",
+      "kind": "rat",
+      "title": "RAT: 20 constructed items",
+      "metrics": {
+        "nIdeas": 29,
+        "nUnique": 29,
+        "meanPairwiseDistance": 0.4578,
+        "clusters": 6,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4433,
+        "ctrl_clusters": 3,
+        "strictAccuracy": 0,
+        "strictSolved": 0,
+        "passAtK": 0.05,
+        "itemsSolvedByAnyCandidate": 1,
+        "crossConfigDistinctiveness": 0.4081
+      },
+      "extras": {
+        "parseMode": "positional"
+      }
+    },
+    {
+      "taskId": "brief-stove",
+      "configId": "engine",
+      "kind": "brief",
+      "title": "独居老人忘记关火的安全方案",
+      "metrics": {
+        "nIdeas": 34,
+        "nUnique": 34,
+        "meanPairwiseDistance": 0.3599,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3382,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.3775,
+        "maxNovelty": 0.4933,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.3671,
+        "crossConfigDistinctiveness": 0.2809
+      }
+    },
+    {
+      "taskId": "brief-box",
+      "configId": "engine",
+      "kind": "brief",
+      "title": "快递纸箱的重复利用",
+      "metrics": {
+        "nIdeas": 40,
+        "nUnique": 40,
+        "meanPairwiseDistance": 0.3775,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.3659,
+        "ctrl_clusters": 1,
+        "meanNovelty": 0.33,
+        "maxNovelty": 0.5306,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.3284,
+        "crossConfigDistinctiveness": 0.2839
+      }
+    }
+  ]
+}

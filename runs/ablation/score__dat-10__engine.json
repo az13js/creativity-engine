@@ -1,0 +1,35 @@
+{
+  "taskId": "dat-10",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 32,
+    "nUnique": 32,
+    "meanPairwiseDistance": 0.6286,
+    "clusters": 15,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.6531,
+    "ctrl_clusters": 10,
+    "wordsGiven": 3,
+    "wordsScored": 3,
+    "validRate": 0.3,
+    "dispersion": 41.38,
+    "minPairDistance": 37.0452,
+    "maxPairDistance": 49.0312,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 0.41
+  },
+  "extras": {
+    "words": [
+      "用",
+      "自浮",
+      "法庭"
+    ],
+    "scored": [
+      "用",
+      "自浮",
+      "法庭"
+    ]
+  }
+}

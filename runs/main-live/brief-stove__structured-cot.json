@@ -1,0 +1,130 @@
+{
+  "taskId": "brief-stove",
+  "configId": "structured-cot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "structured-cot-0",
+      "text": "智能插座+电流检测：为每个电器配备智能插座，实时监测电流。若电器持续运行超过预设时间（如电熨斗30分钟）或电流异常，插座自动断电并向老人和紧急联系人发送报警。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-1",
+      "text": "红外温度传感器+自动关火：在灶台上方安装红外温度传感器，持续监测锅具温度。当温度超过安全阈值（如油温过高）或持续加热超过设定时间（如30分钟），自动关闭燃气阀门并发出声光警报。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-2",
+      "text": "门窗传感器+用电联动：在门窗安装传感器，当老人外出时（门窗关闭并上锁），自动切断非必要电器电源（除冰箱等）。回家后需手动恢复，防止忘记关闭。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-3",
+      "text": "智能烟雾报警器+机械手自动关阀：安装智能烟雾报警器，一旦检测到烟雾或异常高温，通过无线信号触发安装在燃气阀门上的机械手，自动关闭燃气总阀，并推送警报给紧急联系人。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-4",
+      "text": "用电习惯学习+异常提醒：通过学习老人日常用电模式（如每天固定时间使用电器），当检测到电器在非常规时间长时间开启时，通过语音助手提醒老人，若未响应则自动断电。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-5",
+      "text": "智能电表+总功率限制：在入户电箱安装智能电表，设置总功率上限。当同时使用的电器总功率超过安全值或单个电器长时间高功率运行，自动跳闸断电，并通过手机通知老人或亲属。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-6",
+      "text": "燃气报警器+联动排风与关阀：安装燃气泄漏报警器，当检测到燃气浓度超标时，自动关闭燃气阀门、启动排风扇，并向老人和亲属发送警报。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-7",
+      "text": "门磁+定时断电：在入户门安装门磁，设置定时器。若门长时间未打开（如超过24小时），系统自动检查大功率电器状态，若发现未关闭则自动断电并通知亲属。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-8",
+      "text": "可穿戴设备+环境传感器联动：老人佩戴智能手环，当手环检测到老人长时间静止（可能睡着或昏迷）且环境传感器检测到电器异常（如高温、烟雾），自动切断电器电源并呼叫紧急联系人。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-9",
+      "text": "智能灶具+离人自动关火：使用带有离人检测功能的智能灶具，通过红外或超声波检测灶前是否有人。若无人持续超过设定时间（如5分钟），自动关火并发出提示。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-10",
+      "text": "语音助手+定时提醒+自动执行：通过智能音箱设置定时提醒，如“30分钟后关闭电热毯”。若老人未回应，音箱自动通过智能插座断电，并发送通知。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-11",
+      "text": "电力载波+集中控制：在配电箱安装集中控制器，通过电力线通信监测各回路电流。当检测到某回路异常（如长时间大电流），自动切断该回路并上报，无需每个电器单独改造。",
+      "taskId": "brief-stove",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 128,
+    "completionTokens": 610,
+    "failures": 0,
+    "wallMs": 5549,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

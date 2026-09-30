@@ -1,0 +1,130 @@
+{
+  "taskId": "brief-stove",
+  "configId": "self-refine",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "self-refine-0",
+      "text": "毫米波雷达存在传感器持续检测厨房内是否有人，若灶具火焰持续燃烧且无人时长超过8分钟，自动触发燃气电磁阀关闭并推送通知至家属。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-1",
+      "text": "锅底温度传感器与火焰检测器联合判定：当火焰持续燃烧且锅底温度超过250℃并持续2分钟，或温度持续低于60℃但火焰未灭，自动关闭燃气。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-2",
+      "text": "燃气灶加装流量传感器，检测到微小持续气流（未点火）超过30秒，判定为忘关阀门，自动切断并报警。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-3",
+      "text": "智能插座内置负载特征识别模块，自动学习并标记冰箱、路由器等必须常开设备；对电熨斗、电暖器等大功率阻性负载，通电超过30分钟自动断电。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-4",
+      "text": "配电箱内安装智能断路器，按回路设定最大持续通电时间（如厨房插座回路2小时），超时自动跳闸，并允许用户通过手机为特定回路临时延长。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-5",
+      "text": "在客厅和卧室安装毫米波雷达，与厨房传感器联动：若全屋无人且灶具或大功率电器运行，5分钟后自动关闭燃气总阀并切断非必要电路。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-6",
+      "text": "智能门锁记录老人离家动作，若离家后检测到灶具仍在工作或大功率电器通电，自动关闭对应阀门和电路，并发送确认信息。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-7",
+      "text": "灶台区域安装热成像模块，识别锅具是否在火焰上；若火焰燃烧但无锅具超过3分钟，自动关火。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-8",
+      "text": "电水壶和电锅采用双重防干烧：底部温控器加重量传感器，检测到重量持续低于安全值且温度超限时断电。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-9",
+      "text": "燃气管道电磁阀与智能音箱联动，但仅作为执行结果播报：当系统自动关闭燃气后，音箱播报“已为您关闭燃气”，不依赖语音指令。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-10",
+      "text": "在插座回路中集成电流谐波分析，识别电热毯、电暖器等阻性负载，若持续工作超过45分钟且室内无人，自动断电。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-11",
+      "text": "总配电箱安装智能断路器，为每个回路设置“安全超时”参数：照明回路12小时，插座回路4小时，超时自动断开并推送提醒。",
+      "taskId": "brief-stove",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 3,
+    "cachedCalls": 3,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

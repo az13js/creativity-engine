@@ -1,0 +1,141 @@
+{
+  "taskId": "aut-bottle",
+  "configId": "zero-shot",
+  "kind": "aut",
+  "title": "AUT: 塑料瓶",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.4464,
+    "clusters": 3,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4464,
+    "ctrl_clusters": 3,
+    "meanNovelty": 0.4909,
+    "maxNovelty": 0.5669,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.4909,
+    "meanFeasibility": 0.7083,
+    "meanImpact": 0.3667,
+    "noveltyUsefulness": 0.3477,
+    "fluency": 12,
+    "flexibility": 4,
+    "meanOriginality": 0.4909,
+    "maxOriginality": 0.5669,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6464
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "手工与改造",
+      "容器与储存",
+      "其他",
+      "园艺与种植"
+    ],
+    "reviews": [
+      {
+        "text": "把塑料瓶剪成螺旋长条，缠绕在晾衣绳上作为防鸟刺，因为瓶身硬且带尖角，能阻止鸟类停靠并避免鸟粪污染衣物。",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "PET螺旋条边缘锋利但刚性不足，鸟类可能直接压弯或从缝隙间穿过，防鸟效果远不如金属刺。",
+        "chars": 51,
+        "novelty": 0.5669316344616432
+      },
+      {
+        "text": "将塑料瓶从中间剪开，上半部分倒扣在下半部分内，做成简易捕蝇器，因为瓶口小、瓶身透明，苍蝇易进难出且能观察诱饵状态。",
+        "feasibility": 0.9,
+        "impact": 0.4,
+        "failureMode": "苍蝇进入后仍可从瓶口原路飞出，且诱饵气味扩散差，实际捕获率低。",
+        "chars": 57,
+        "novelty": 0.5594599518502256
+      },
+      {
+        "text": "把多个塑料瓶装满水并密封，嵌入土墙中砌成透光砖，因为水和塑料的折射能让阳光柔和透入，同时提供一定隔热效果。",
+        "feasibility": 0.5,
+        "impact": 0.5,
+        "failureMode": "装满水的PET瓶长期承重会蠕变破裂，且水墙导热反而加速热桥，隔热效果存疑。",
+        "chars": 53,
+        "novelty": 0.48308818937739306
+      },
+      {
+        "text": "将塑料瓶纵向剖开并压平，用热风枪软化后塑形为自行车挡泥板，因为PET材料受热可塑且冷却后坚硬，能有效阻挡泥水。",
+        "feasibility": 0.6,
+        "impact": 0.4,
+        "failureMode": "PET热塑后脆性增加，挡泥板受震动易开裂，且瓶身面积太小难以覆盖车轮。",
+        "chars": 55,
+        "novelty": 0.48301222435434354
+      },
+      {
+        "text": "把塑料瓶底部剪掉，瓶口套在扫帚柄末端，做成墙壁角落的灰尘收集器，因为瓶身能贴合直角，扫入的灰尘不会散落。",
+        "feasibility": 0.9,
+        "impact": 0.3,
+        "failureMode": "瓶身贴合直角但开口朝上，灰尘扫入后无法固定，稍一倾斜即洒落。",
+        "chars": 52,
+        "novelty": 0.48184885006821043
+      },
+      {
+        "text": "将塑料瓶切成细丝，混入纸浆中压制成花盆，因为塑料纤维能增加纸盆的韧性和防水性，降解前可维持形状。",
+        "feasibility": 0.5,
+        "impact": 0.4,
+        "failureMode": "PET纤维与纸浆界面结合差，压制时易分层，且塑料不吸水导致花盆无法保水。",
+        "chars": 48,
+        "novelty": 0.4200180960164528
+      },
+      {
+        "text": "把塑料瓶装满沙子并封口，用绳子串联成防滑垫，因为沙袋能贴合地面且瓶身凹凸增加摩擦，适合铺在湿滑泥地。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "沙袋瓶身光滑且圆柱形，串联后踩踏会滚动，防滑效果不如直接铺沙袋。",
+        "chars": 50,
+        "novelty": 0.5406761268510683
+      },
+      {
+        "text": "将塑料瓶上半部剪下，瓶口插入橡皮筋并固定，做成简易弹弓的弹兜，因为瓶口能卡住石子且塑料弹性可缓冲拉力。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "PET瓶口边缘在拉力下会割断橡皮筋，且塑料无弹性，无法有效蓄能。",
+        "chars": 51,
+        "novelty": 0.4943064156961714
+      },
+      {
+        "text": "把塑料瓶横放并切开一个长口，内部放入旧毛巾，做成户外壁挂式洗手滴水器，因为瓶口可接小水管，拧盖控制水流。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "瓶口接小水管需额外配件，且拧盖控流精度差，实际洗手体验远不如普通水袋。",
+        "chars": 52,
+        "novelty": 0.3997042999766369
+      },
+      {
+        "text": "将塑料瓶剪成鱼鳞状小片，用线串成反光窗帘，因为瓶片能折射阳光并在风中碰撞发声，起到驱鸟和装饰作用。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "PET片反光率低且易老化变黄，驱鸟效果短暂，碰撞声在风中也不稳定。",
+        "chars": 49,
+        "novelty": 0.4699051090561168
+      },
+      {
+        "text": "把塑料瓶底部钻小孔，装满木炭碎块，挂在衣柜里做除湿除味器，因为炭块吸附湿气，瓶身孔洞让空气流通。",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "木炭在无强制对流下吸附效率极低，且瓶身孔洞太小，除湿除味效果可忽略。",
+        "chars": 48,
+        "novelty": 0.4958162688147565
+      },
+      {
+        "text": "将多个塑料瓶的瓶口对接并用胶带密封，连成浮力管绑在救生衣上，因为密封空瓶提供浮力，且连接后受力均匀不易断裂。",
+        "feasibility": 0.7,
+        "impact": 0.5,
+        "failureMode": "瓶口对接处胶带密封在受力时易撕裂，且空瓶受压会变形，浮力远低于同体积泡沫。",
+        "chars": 54,
+        "novelty": 0.4963477418278327
+      }
+    ]
+  }
+}

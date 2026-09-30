@@ -1,0 +1,37 @@
+{
+  "taskId": "dat-7",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 7 words",
+  "metrics": {
+    "nIdeas": 30,
+    "nUnique": 30,
+    "meanPairwiseDistance": 0.583,
+    "clusters": 15,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.594,
+    "ctrl_clusters": 11,
+    "wordsGiven": 4,
+    "wordsScored": 4,
+    "validRate": 0.5714,
+    "dispersion": 41.04,
+    "minPairDistance": 32.2456,
+    "maxPairDistance": 51.7775,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 0.07
+  },
+  "extras": {
+    "words": [
+      "影子",
+      "投射",
+      "石头",
+      "陶轮"
+    ],
+    "scored": [
+      "影子",
+      "投射",
+      "石头",
+      "陶轮"
+    ]
+  }
+}

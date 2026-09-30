@@ -1,0 +1,38 @@
+{
+  "taskId": "aut-bottle",
+  "configId": "engine",
+  "kind": "aut",
+  "title": "AUT: 塑料瓶",
+  "metrics": {
+    "nIdeas": 33,
+    "nUnique": 33,
+    "meanPairwiseDistance": 0.4679,
+    "clusters": 6,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4408,
+    "ctrl_clusters": 3,
+    "meanNovelty": 0.5283,
+    "maxNovelty": 0.6278,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.5016,
+    "fluency": 33,
+    "flexibility": 1,
+    "meanOriginality": 0.5283,
+    "maxOriginality": 0.6278,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.5863,
+    "crossConfigDistinctiveness": 0.3611
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "容器与储存"
+    ]
+  }
+}

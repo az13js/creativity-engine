@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-brick",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "把砖头裹上软布当门挡，因为它的重量足以抵抗风力推动门板。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "将砖头敲碎成小块，用作烧烤炉的蓄热体，因为陶瓷或黏土砖能缓慢释放热量。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "把砖头磨成粉末，混入黏土中制作手工陶器，因为砖粉可充当熟料减少收缩开裂。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "在砖头侧面钻孔，穿入铁丝做成简易挂钩，因为砖的强度能悬挂轻型工具。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "将砖头垫在汽车轮胎下防止溜车，因为其高摩擦力和抗压性可替代止退器。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "把砖头浸泡后冷冻，用作冷敷袋，因为多孔结构含水后能长时间保持低温。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "将砖头雕刻成砚台或镇纸，因为致密的烧结黏土易于打磨且有一定重量。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "在砖头表面涂上颜料，作为儿童户外绘画的立体画布，因为粗糙纹理能吸附颜料。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "把砖头放入马桶水箱，减少每次冲水量，因为占据体积可节约用水。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "将砖头敲成薄片，作为简易刮鱼鳞工具，因为边缘粗糙且不易生锈。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "用砖头压住帐篷地钉，增强固定效果，因为沙地或雪地中单靠地钉容易松脱。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "把砖头系上绳子沉入水中，作为深度标记或简易锚点，因为其密度大且耐水泡。",
+      "taskId": "aut-brick",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 64,
+    "completionTokens": 308,
+    "failures": 0,
+    "wallMs": 4058,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

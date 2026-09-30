@@ -1,0 +1,140 @@
+{
+  "taskId": "aut-bottle",
+  "configId": "self-refine",
+  "kind": "aut",
+  "title": "AUT: 塑料瓶",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.5121,
+    "clusters": 8,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.5121,
+    "ctrl_clusters": 8,
+    "meanNovelty": 0.5117,
+    "maxNovelty": 0.649,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.5117,
+    "meanFeasibility": 0.7167,
+    "meanImpact": 0.35,
+    "noveltyUsefulness": 0.3667,
+    "fluency": 12,
+    "flexibility": 3,
+    "meanOriginality": 0.5117,
+    "maxOriginality": 0.649,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6297
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "手工与改造",
+      "物理与工程",
+      "其他"
+    ],
+    "reviews": [
+      {
+        "text": "将PET瓶身剪成细条后用热风枪熔圆边缘，再编织成宠物咬胶球，因为钝化后的塑料条既耐咬又不会割伤宠物口腔。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "PET条热熔后边缘仍可能形成硬质锐边，且宠物长期啃咬会脱落微塑料被吞食。",
+        "chars": 52,
+        "novelty": 0.5181487787799645
+      },
+      {
+        "text": "把多个塑料瓶装入编织网袋并用绳索捆扎成浮排，因为网袋分散受力且浸水后不会像胶带那样失效。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "瓶体本身不提供浮力结构强度，捆扎点应力集中易撕裂网袋，且空瓶进水后浮力迅速丧失。",
+        "chars": 44,
+        "novelty": 0.5882074731752895
+      },
+      {
+        "text": "将塑料瓶片夹在两块金属板间放入150°C烤箱加热压平，冷却后做成防水杯垫，因为低温均匀加热可避免有毒气体且成品平整。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "150°C接近PET热变形区间，家用烤箱温控波动会导致瓶片卷曲或释放乙醛等挥发物。",
+        "chars": 58,
+        "novelty": 0.5292873793484956
+      },
+      {
+        "text": "把瓶身切成C形短管直接卡在电缆外层作为保护套，因为C形截面比螺旋缠绕更稳固且便于更换。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "PET无阻燃和耐候性，电缆发热或紫外老化会使C形管脆裂脱落，失去保护作用。",
+        "chars": 43,
+        "novelty": 0.5511048425918008
+      },
+      {
+        "text": "在瓶盖上用加热的针扎密集微孔，装入小苏打作为盐罐式撒粉器，因为微孔结构能精确控制粉末流量。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "小苏打吸湿后会在微孔处结块堵塞，孔径一致性差导致流量不可重复。",
+        "chars": 45,
+        "novelty": 0.5143404430100853
+      },
+      {
+        "text": "在瓶盖上用针扎小孔并穿入棉线倒插土中，做成毛细滴灌装置，因为棉线引流比直接开孔流速更稳定。",
+        "feasibility": 0.8,
+        "impact": 0.5,
+        "failureMode": "棉线在土壤中易腐烂和滋生霉菌，毛细流量随堵塞和干湿变化不可控。",
+        "chars": 45,
+        "novelty": 0.3759500774693476
+      },
+      {
+        "text": "将两个瓶子用棍子连接成杠铃结构，瓶内灌注水泥凝固，做成重量稳定、形状规整的负重工具。",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "PET瓶壁与水泥热膨胀系数差异大，凝固收缩会使瓶体开裂，棍子连接处是结构薄弱点。",
+        "chars": 42,
+        "novelty": 0.46867424025265525
+      },
+      {
+        "text": "在瓶内装入盐水和少量酒精冷冻成低温凝胶冰袋，因为混合液冰点更低，比纯水冰袋更贴合身体且持续时间更长。",
+        "feasibility": 0.8,
+        "impact": 0.4,
+        "failureMode": "盐水酒精混合液仍会在约-10°C以下冻结，且瓶体低温变脆，反复冻融易破裂泄漏。",
+        "chars": 50,
+        "novelty": 0.573641578455101
+      },
+      {
+        "text": "将瓶口加热拉伸成细长嘴并在瓶盖开孔，做成可控流量的注油漏斗，因为细长嘴能精准对准狭窄注油口。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "PET加热拉伸后壁厚不均且易产生微裂纹，接触热油或溶剂会软化变形甚至溶解。",
+        "chars": 46,
+        "novelty": 0.5598406611025979
+      },
+      {
+        "text": "把瓶身剪成碎块混入土壤作为轻质透气介质，因为碎块形成颗粒间隙而非整片滞水层，能改善排水透气。",
+        "feasibility": 0.7,
+        "impact": 0.4,
+        "failureMode": "PET碎块在土壤中几乎不降解，长期释放微塑料和锑催化剂，且尖锐碎片可能伤根。",
+        "chars": 46,
+        "novelty": 0.3204554530489092
+      },
+      {
+        "text": "将不同颜色的瓶片叠加后热压成带图案的复合板，再切割成书签，因为多层热塑可制造独特纹理且完全防水。",
+        "feasibility": 0.6,
+        "impact": 0.3,
+        "failureMode": "多层热压需要精确温压控制，家用条件下层间易夹气泡分层，且书签边缘仍需二次处理。",
+        "chars": 48,
+        "novelty": 0.6490495792537716
+      },
+      {
+        "text": "用LED蜡烛配合倒扣的瓶底作为氛围灯罩，因为冷光源不会使PET软化变形，透明塑料能柔和透光。",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "LED蜡烛虽为冷光源，但瓶底倒扣形成封闭空间，长时间使用仍可能积热并使PET缓慢变形。",
+        "chars": 46,
+        "novelty": 0.49214383047022536
+      }
+    ]
+  }
+}

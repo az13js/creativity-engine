@@ -1,0 +1,41 @@
+{
+  "taskId": "dat-10",
+  "configId": "engine",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 34,
+    "nUnique": 34,
+    "meanPairwiseDistance": 0.5803,
+    "clusters": 19,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.581,
+    "ctrl_clusters": 9,
+    "wordsGiven": 6,
+    "wordsScored": 6,
+    "validRate": 0.6,
+    "dispersion": 43.24,
+    "minPairDistance": 31.158,
+    "maxPairDistance": 48.874,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 2.27
+  },
+  "extras": {
+    "words": [
+      "用",
+      "自浮",
+      "膨胀",
+      "静电",
+      "心跳",
+      "同时"
+    ],
+    "scored": [
+      "用",
+      "自浮",
+      "膨胀",
+      "静电",
+      "心跳",
+      "同时"
+    ]
+  }
+}

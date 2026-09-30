@@ -1,0 +1,23 @@
+{
+  "taskId": "rat-20",
+  "configId": "engine",
+  "kind": "rat",
+  "title": "RAT: 20 constructed items",
+  "metrics": {
+    "nIdeas": 29,
+    "nUnique": 29,
+    "meanPairwiseDistance": 0.4599,
+    "clusters": 6,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4658,
+    "ctrl_clusters": 4,
+    "strictAccuracy": 0,
+    "strictSolved": 0,
+    "passAtK": 0.15,
+    "itemsSolvedByAnyCandidate": 3,
+    "crossConfigDistinctiveness": 0.3786
+  },
+  "extras": {
+    "parseMode": "positional"
+  }
+}

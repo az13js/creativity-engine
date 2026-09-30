@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "note": "Alternative Uses Test items. 'reference' lists the common (unoriginal) answers used as the novelty anchor; 'lexicon' maps responses to semantic categories for the flexibility dimension. Objects and references were authored for this benchmark.",
+  "items": [
+    {
+      "id": "aut-brick",
+      "object": "砖头",
+      "prompt": "请为「砖头」找尽可能多、尽可能与众不同的用途。每条写成一句话，说清怎么用和为什么可行。",
+      "ideasTarget": 12,
+      "reference": [
+        {
+          "text": "盖房子砌墙",
+          "count": 1
+        },
+        {
+          "text": "铺路面",
+          "count": 1
+        },
+        {
+          "text": "垫桌脚",
+          "count": 1
+        },
+        {
+          "text": "当凳子坐",
+          "count": 1
+        },
+        {
+          "text": "压住纸张防风吹",
+          "count": 1
+        },
+        {
+          "text": "用来砸东西",
+          "count": 1
+        },
+        {
+          "text": "堆成台阶",
+          "count": 1
+        },
+        {
+          "text": "做地基",
+          "count": 1
+        }
+      ],
+      "lexicon": [
+        {
+          "category": "建筑与铺设",
+          "patterns": [
+            "砌",
+            "墙",
+            "房",
+            "路",
+            "地基",
+            "台阶",
+            "地面",
+            "铺"
+          ]
+        },
+        {
+          "category": "承重与固定",
+          "patterns": [
+            "压",
+            "垫",
+            "凳",
+            "支撑",
+            "重物",
+            "固定",
+            "门挡",
+            "锚"
+          ]
+        },
+        {
+          "category": "研磨与工具",
+          "patterns": [
+            "磨",
+            "砂",
+            "砸",
+            "锤",
+            "砧",
+            "刀",
+            "钻",
+            "刮"
+          ]
+        },
+        {
+          "category": "热与能量",
+          "patterns": [
+            "加热",
+            "蓄热",
+            "保温",
+            "炉",
+            "太阳",
+            "散热",
+            "火"
+          ]
+        },
+        {
+          "category": "装饰与艺术",
+          "patterns": [
+            "画",
+            "颜料",
+            "雕",
+            "摆件",
+            "艺术",
+            "装饰",
+            "刻"
+          ]
+        },
+        {
+          "category": "游戏与训练",
+          "patterns": [
+            "玩具",
+            "积木",
+            "棋",
+            "健身",
+            "哑铃",
+            "训练",
+            "多米诺"
+          ]
+        },
+        {
+          "category": "信息与测量",
+          "patterns": [
+            "标尺",
+            "测量",
+            "标记",
+            "记号",
+            "书立",
+            "纸镇"
+          ]
+        },
+        {
+          "category": "生物与生态",
+          "patterns": [
+            "花盆",
+            "鱼缸",
+            "昆虫",
+            "栖",
+            "基质",
+            "苔藓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aut-bottle",
+      "object": "塑料瓶",
+      "prompt": "请为「塑料瓶」找尽可能多、尽可能与众不同的用途。每条写成一句话，说清怎么用和为什么可行。",
+      "ideasTarget": 12,
+      "reference": [
+        {
+          "text": "装水",
+          "count": 1
+        },
+        {
+          "text": "卖废品回收",
+          "count": 1
+        },
+        {
+          "text": "剪开当花盆",
+          "count": 1
+        },
+        {
+          "text": "装调料",
+          "count": 1
+        },
+        {
+          "text": "做笔筒",
+          "count": 1
+        },
+        {
+          "text": "当存钱罐",
+          "count": 1
+        },
+        {
+          "text": "装洗衣液",
+          "count": 1
+        },
+        {
+          "text": "做洒水壶",
+          "count": 1
+        }
+      ],
+      "lexicon": [
+        {
+          "category": "容器与储存",
+          "patterns": [
+            "装水",
+            "装调料",
+            "盛",
+            "储存",
+            "容器",
+            "储水",
+            "油壶",
+            "收纳",
+            "密封"
+          ]
+        },
+        {
+          "category": "园艺与种植",
+          "patterns": [
+            "花盆",
+            "种",
+            "育苗",
+            "浇水",
+            "园艺",
+            "插花",
+            "盆栽"
+          ]
+        },
+        {
+          "category": "手工与改造",
+          "patterns": [
+            "剪",
+            "手工",
+            "改造",
+            "笔筒",
+            "玩具",
+            "灯",
+            "风铃",
+            "装饰",
+            "DIY"
+          ]
+        },
+        {
+          "category": "物理与工程",
+          "patterns": [
+            "浮",
+            "压力",
+            "保温",
+            "隔热",
+            "隔音",
+            "配重",
+            "漏斗",
+            "水轮",
+            "喷",
+            "杠杆"
+          ]
+        },
+        {
+          "category": "信息与教育",
+          "patterns": [
+            "教具",
+            "实验",
+            "标本",
+            "模型",
+            "演示"
+          ]
+        },
+        {
+          "category": "材料回收再用",
+          "patterns": [
+            "碎片",
+            "纺",
+            "纤维",
+            "原料",
+            "熔化",
+            "3D打印",
+            "粉碎",
+            "熔融"
+          ]
+        }
+      ]
+    }
+  ]
+}

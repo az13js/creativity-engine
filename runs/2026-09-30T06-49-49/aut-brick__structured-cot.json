@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-brick",
+  "configId": "structured-cot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "structured-cot-0",
+      "text": "在戏剧舞台上，将砖头包裹绒布并系上鱼线，由幕后人员牵引，模拟漂浮的幽灵，因为鱼线隐蔽且砖头提供稳定配重。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-1",
+      "text": "作为编程教学中的实体变量，用不同颜色的砖头代表不同数据类型，学生通过堆叠和移动砖头理解内存分配，因为砖头的物理属性可直观映射抽象概念。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-2",
+      "text": "在音乐治疗中，让患者用鼓槌轻敲不同纹理的砖头（如粗糙面、光滑面）产生节奏，利用触觉和听觉刺激改善情绪，因为砖头易得且能发出独特音色。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-3",
+      "text": "在宠物仓鼠的笼子里，将砖头钻孔后穿入木棍做成迷宫通道，仓鼠在其中钻行，因为砖头无毒、易清洁且能提供类似地下洞穴的环境。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-4",
+      "text": "在物理实验中，用砖头作为斜面，让小车从不同高度滑下，验证重力势能与动能转化，因为砖头可堆叠调整角度且成本低廉。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-5",
+      "text": "在野外生存中，将砖头加热后放入挖好的土坑，覆盖树叶和食物，利用砖头的蓄热性慢炖食物，因为砖头能长时间保持温度。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-6",
+      "text": "作为舞蹈道具，两人一组用砖头作为接触即兴的支点，通过推拉砖头探索身体平衡与重心，因为砖头的重量和形状提供不稳定支撑。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-7",
+      "text": "在社区艺术中，组织居民在砖头上绘制图案并拼成马赛克壁画，因为砖头表面粗糙易上色且耐候性强。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-8",
+      "text": "在电子游戏中，将砖头作为体感控制器的配重，绑在手腕上模拟挥剑的力度，因为砖头的惯性可增强触觉反馈。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-9",
+      "text": "在数学课上，用砖头代表几何体，让学生测量并计算体积和表面积，因为砖头是标准的长方体且易于获取。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-10",
+      "text": "作为临时门挡，将砖头斜塞在门底缝隙，利用摩擦力防止门移动，因为砖头坚固且能提供可调节的阻力。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    },
+    {
+      "id": "structured-cot-11",
+      "text": "在园艺中，将砖头堆叠成矮墙，中间填充土壤种植多肉植物，因为砖头缝隙提供排水和隔热，适合浅根植物。",
+      "taskId": "aut-brick",
+      "configId": "structured-cot",
+      "generation": 1,
+      "agent": "structured-cot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "failures": 0,
+    "wallMs": 0,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

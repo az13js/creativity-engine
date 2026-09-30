@@ -1,0 +1,22 @@
+{
+  "taskId": "brief-stove",
+  "configId": "zero-shot",
+  "kind": "brief",
+  "title": "独居老人忘记关火的安全方案",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.3583,
+    "clusters": 1,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.3583,
+    "ctrl_clusters": 1,
+    "meanNovelty": 0.2734,
+    "maxNovelty": 0.4345,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.2734,
+    "meanFeasibility": 0.7583,
+    "meanImpact": 0.6417,
+    "noveltyUsefulness": 0.2073
+  }
+}

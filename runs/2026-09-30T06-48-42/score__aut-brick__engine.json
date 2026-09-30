@@ -1,0 +1,43 @@
+{
+  "taskId": "aut-brick",
+  "configId": "engine",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 36,
+    "nUnique": 36,
+    "meanPairwiseDistance": 0.491,
+    "clusters": 9,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.505,
+    "ctrl_clusters": 7,
+    "meanNovelty": 0.5222,
+    "maxNovelty": 0.6311,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.5195,
+    "fluency": 36,
+    "flexibility": 6,
+    "meanOriginality": 0.5222,
+    "maxOriginality": 0.6311,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.7089,
+    "crossConfigDistinctiveness": 0.4537
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "建筑与铺设",
+      "研磨与工具",
+      "其他",
+      "热与能量",
+      "承重与固定",
+      "游戏与训练"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "taskId": "aut-brick",
+  "configId": "self-refine",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.4767,
+    "clusters": 4,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4767,
+    "ctrl_clusters": 4,
+    "meanNovelty": 0.492,
+    "maxNovelty": 0.5728,
+    "meanElaboration": 1,
+    "ctrl_meanNovelty": 0.492,
+    "fluency": 12,
+    "flexibility": 4,
+    "meanOriginality": 0.492,
+    "maxOriginality": 0.5728,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.6468,
+    "crossConfigDistinctiveness": 0.3534
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "承重与固定",
+      "其他",
+      "研磨与工具",
+      "建筑与铺设"
+    ]
+  }
+}

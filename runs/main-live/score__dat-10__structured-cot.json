@@ -1,0 +1,46 @@
+{
+  "taskId": "dat-10",
+  "configId": "structured-cot",
+  "kind": "dat",
+  "title": "DAT: 10 words",
+  "metrics": {
+    "nIdeas": 10,
+    "nUnique": 10,
+    "meanPairwiseDistance": 0.4204,
+    "clusters": 2,
+    "ctrl_n": 10,
+    "ctrl_meanPairwiseDistance": 0.4204,
+    "ctrl_clusters": 2,
+    "wordsGiven": 10,
+    "wordsScored": 7,
+    "validRate": 1,
+    "dispersion": 41.62,
+    "minPairDistance": 34.1269,
+    "maxPairDistance": 47.6754,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": 0.66
+  },
+  "extras": {
+    "words": [
+      "石头",
+      "河流",
+      "椅子",
+      "窗户",
+      "面包",
+      "鞋子",
+      "雨伞",
+      "镜子",
+      "钥匙",
+      "蜡烛"
+    ],
+    "scored": [
+      "石头",
+      "河流",
+      "椅子",
+      "窗户",
+      "面包",
+      "鞋子",
+      "雨伞"
+    ]
+  }
+}

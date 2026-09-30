@@ -1,0 +1,85 @@
+{
+  "taskId": "dat-7",
+  "configId": "self-refine",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "self-refine-0",
+      "text": "磁铁",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-1",
+      "text": "芹菜",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-2",
+      "text": "袜子",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-3",
+      "text": "轮胎",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-4",
+      "text": "胶水",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-5",
+      "text": "梳子",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    },
+    {
+      "id": "self-refine-6",
+      "text": "漏斗",
+      "taskId": "dat-7",
+      "configId": "self-refine",
+      "generation": 1,
+      "agent": "self-refine",
+      "source": "refine"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 3,
+    "cachedCalls": 0,
+    "promptTokens": 285,
+    "completionTokens": 60,
+    "failures": 0,
+    "wallMs": 4008,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

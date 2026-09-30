@@ -1,0 +1,39 @@
+{
+  "taskId": "aut-brick",
+  "configId": "engine",
+  "kind": "aut",
+  "title": "AUT: 砖头",
+  "metrics": {
+    "nIdeas": 26,
+    "nUnique": 26,
+    "meanPairwiseDistance": 0.4817,
+    "clusters": 6,
+    "meanNovelty": 0.5355,
+    "maxNovelty": 0.6304,
+    "meanElaboration": 1,
+    "fluency": 26,
+    "flexibility": 7,
+    "meanOriginality": 0.5355,
+    "maxOriginality": 0.6304,
+    "elaboration": 1,
+    "invalid": 0,
+    "dtIndex": 0.7392
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "建筑与铺设",
+      "研磨与工具",
+      "其他",
+      "热与能量",
+      "承重与固定",
+      "游戏与训练",
+      "装饰与艺术"
+    ]
+  }
+}

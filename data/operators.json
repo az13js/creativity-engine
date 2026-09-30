@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "note": "Cognitive operators used by the generator agents. Each operator is an established creativity technique; 'origin' records the source tradition so the vocabulary stays standard.",
+  "operators": [
+    {
+      "id": "attribute-substitution",
+      "name": "属性列举与替换",
+      "origin": "Crawford (1931) attribute listing; SCAMPER - Substitute (Eberle 1971)",
+      "prompt": "列出对象的关键属性（材料、形状、重量、尺寸、成本、与人交互的方式）。每次替换其中一个属性，描述由此产生的新方案及其好处。"
+    },
+    {
+      "id": "combination",
+      "name": "组合创造",
+      "origin": "SCAMPER - Combine; 概念融合 conceptual blending (Fauconnier & Turner 2002)",
+      "prompt": "把目标对象与一个来自其他领域的对象强制组合，指出两个输入空间共享的抽象结构（generic space），并描述组合后涌现出的新功能。"
+    },
+    {
+      "id": "analogy-transfer",
+      "name": "类比迁移",
+      "origin": "Gentner (1983) structure-mapping; Synectics (Gordon 1961)",
+      "prompt": "先把目标的功能抽象成关系结构（谁作用于谁、产生什么效果），再到生物、工程或社会领域寻找同构机制，把该机制映射回目标问题。"
+    },
+    {
+      "id": "constraint-inversion",
+      "name": "约束反转",
+      "origin": "de Bono (1970) lateral thinking; TRIZ 40 条发明原理 (Altshuller)",
+      "prompt": "明确列出该场景中人们默认接受的 3-5 条约束或假设，逐条反转或删除，说明在反转后的世界里什么方案变得可行。"
+    },
+    {
+      "id": "extreme-scale",
+      "name": "极端尺度",
+      "origin": "TRIZ 尺度变换与分离原理",
+      "prompt": "把关键参数推向极端（百分之一到一千倍、秒到年、个体到全球），描述极端条件下问题的形态与对应的解法。"
+    },
+    {
+      "id": "random-stimulus",
+      "name": "随机刺激",
+      "origin": "de Bono (1970) random entry",
+      "prompt": "给定一个随机名词，先找出它与目标之间的 3 个共同特征或关系，再从这些关系出发产生方案。"
+    },
+    {
+      "id": "perspective-shift",
+      "name": "视角切换",
+      "origin": "六顶思考帽 (de Bono 1985); multi-persona prompting",
+      "prompt": "以指定角色的处境、约束和价值观重新看这个问题，写出该角色会提出的方案。"
+    },
+    {
+      "id": "re-representation",
+      "name": "重新表征",
+      "origin": "Wallas (1926) 四阶段模型的孕育期; 问题空间重构 (Newell & Simon)",
+      "prompt": "用另一种形式重新表述问题（草图、方程、故事、极端案例、反向问题），并在新表征下求解。"
+    },
+    {
+      "id": "contradiction-resolution",
+      "name": "矛盾消解",
+      "origin": "TRIZ 技术矛盾矩阵",
+      "prompt": "写出问题中一对相互冲突的要求（例如更强但更轻），寻找在时间、空间或条件上把两者分离的方案。"
+    },
+    {
+      "id": "reverse-brainstorming",
+      "name": "反向头脑风暴",
+      "origin": "reverse brainstorming",
+      "prompt": "先设计让目标彻底失败或变得最糟的方案，再逐条反转，得到反常识但可用的方案。"
+    },
+    {
+      "id": "cross-domain-transfer",
+      "name": "跨领域迁移",
+      "origin": "analogical transfer; TRIZ 跨行业类比",
+      "prompt": "选取一个与目标问题完全无关的成熟行业或工艺，描述它的核心机制，然后迁移到目标问题。"
+    },
+    {
+      "id": "function-decomposition",
+      "name": "功能分解与重组",
+      "origin": "价值工程 function analysis; 组合创新",
+      "prompt": "把目标拆成功能单元，对功能进行删除、合并、重排、外包，形成新的系统架构。"
+    }
+  ],
+  "personas": [
+    {
+      "id": "domain-expert",
+      "name": "该领域一线工程师",
+      "stance": "只提可制造、可维护的方案，关心成本与故障模式。"
+    },
+    {
+      "id": "outsider",
+      "name": "完全外行的聪明人",
+      "stance": "不受行业惯例约束，只问物理上是否可行。"
+    },
+    {
+      "id": "child",
+      "name": "好奇的儿童",
+      "stance": "用最朴素的直觉提问，敢于提荒诞的玩法。"
+    },
+    {
+      "id": "historian",
+      "name": "跨时代的技术史学者",
+      "stance": "熟悉从前解决同类问题的旧办法，善于做历史类比。"
+    },
+    {
+      "id": "biologist",
+      "name": "仿生学研究者",
+      "stance": "从生物的结构与适应策略中寻找答案。"
+    },
+    {
+      "id": "economist",
+      "name": "成本与激励设计者",
+      "stance": "关心谁付费、谁受益、激励机制如何改变行为。"
+    },
+    {
+      "id": "artist",
+      "name": "艺术家",
+      "stance": "关心感知、情绪与象征意义，敢于改变表达形式。"
+    },
+    {
+      "id": "regulator",
+      "name": "安全与合规负责人",
+      "stance": "先找失效路径与责任边界，再谈创新。"
+    }
+  ],
+  "stimuli": [
+    "海绵",
+    "珊瑚礁",
+    "风筝线",
+    "潮汐",
+    "候鸟迁徙",
+    "折纸",
+    "洋葱",
+    "回旋镖",
+    "苔藓",
+    "蜂巢",
+    "沙漏",
+    "橡皮筋",
+    "望远镜",
+    "毛衣编织",
+    "沙漠甲虫",
+    "磁悬浮",
+    "酵母发酵",
+    "陀螺仪",
+    "口香糖",
+    "陨石"
+  ]
+}
