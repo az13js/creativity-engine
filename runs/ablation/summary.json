@@ -1228,7 +1228,7 @@
       }
     }
   ],
-  "rescoredAt": "2026-09-30T07:03:16.555Z",
+  "rescoredAt": "2026-09-30T07:05:48.386Z",
   "judge": {
     "model": "deepseek-v4.1-flash",
     "note": "可行性由同一个 LLM 评委对每个配置独立评分"

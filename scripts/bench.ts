@@ -74,7 +74,7 @@ embedSpace?.flush();
 fs.mkdirSync(outDir, { recursive: true });
 
 // Project every idea of every config into two dimensions for the HTML scatter plot.
-let extras: { projection?: ReturnType<typeof project2d>; points?: { text: string; configId: string; taskId: string; generation: number }[]; runDir?: string } = { runDir: outDir };
+let extras: { projection?: ReturnType<typeof project2d>; points?: { text: string; configId: string; taskId: string; generation: number }[]; runDir?: string; seed?: number } = { runDir: outDir, seed };
 const flat = result.artifacts.flatMap((a) => a.ideas.map((i) => ({ text: i.text, configId: a.configId, taskId: a.taskId, generation: i.generation })));
 const spaceHasVectors = typeof (space as unknown as { embed?: unknown }).embed === "function";
 if (flat.length >= 3 && spaceHasVectors) {
@@ -82,6 +82,7 @@ if (flat.length >= 3 && spaceHasVectors) {
     const embedded = await embedItems(space, flat.map((f) => f.text));
     extras.projection = project2d(embedded);
     extras.points = flat;
+    extras.seed = seed;
   } catch (err) {
     console.warn("projection skipped:", String(err).slice(0, 200));
   }

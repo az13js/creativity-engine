@@ -8,6 +8,8 @@ import type { TaskScore } from "./scoring.ts";
 import type { Projection } from "./projection.ts";
 
 export interface ReportExtras {
+  /** Run seed, shown in the HTML header. */
+  seed?: number;
   projection?: Projection;
   points?: { text: string; configId: string; taskId: string; generation: number }[];
   runDir?: string;
@@ -263,7 +265,7 @@ export function buildHtmlReport(result: BenchmarkResult, extras: ReportExtras = 
   .legend i{width:10px;height:10px;display:inline-block;border-radius:2px;margin-right:5px}
   code{background:#eee;padding:1px 4px;border-radius:4px}
 </style></head><body>
-<header><h1>创造力机制基准实验</h1><div class="meta">运行 ${esc(result.runId)} · seed ${result.scores.length ? esc(String((result as unknown as { seed?: number }).seed ?? "")) : ""} · 生成于 ${new Date().toISOString()}</div></header>
+<header><h1>创造力机制基准实验</h1><div class="meta">运行 ${esc(result.runId)} · seed ${extras.seed ?? "—"} · 生成于 ${new Date().toISOString()}</div></header>
 <main>
 <div class="cards">
   <div class="card"><b>${tasks.length}</b><span>任务</span></div>

@@ -56,11 +56,11 @@ const summary = {
 fs.writeFileSync(path.join(runDir, "summary.json"), JSON.stringify(summary, null, 2));
 
 const flat = artifacts.flatMap((a) => a.ideas.map((i) => ({ text: i.text, configId: a.configId, taskId: a.taskId, generation: i.generation })));
-let extras: { projection?: ReturnType<typeof project2d>; points?: typeof flat; runDir: string } = { runDir };
+let extras: { projection?: ReturnType<typeof project2d>; points?: typeof flat; runDir: string; seed?: number } = { runDir, seed: summary.seed };
 if (flat.length >= 3) {
   try {
     const vecs = await embedItems(space, flat.map((f) => f.text));
-    extras = { projection: project2d(vecs), points: flat, runDir };
+    extras = { projection: project2d(vecs), points: flat, runDir, seed: summary.seed };
   } catch (err) { console.warn("projection skipped:", String(err).slice(0, 160)); }
 }
 fs.writeFileSync(path.join(runDir, "report.md"), buildMarkdownReport({ runId: summary.runId, dir: runDir, scores, artifacts, files: [] }, extras));
