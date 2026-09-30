@@ -1,0 +1,17 @@
+# 统一按 LF 存库，避免 Windows 克隆后出现整文件 diff
+* text=auto eol=lf
+
+# 图片按二进制处理，不要做换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# runs/ 下是脚本生成的报告与实验数据，不计入语言统计
+runs/** linguist-generated=true
+
+# 文档不计入语言统计
+docs/** linguist-documentation=true
+*.md linguist-documentation=true
+
+# data/ 是任务语料与配置，不是源码
+data/** linguist-detectable=false
