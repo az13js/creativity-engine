@@ -6,8 +6,13 @@
   "description": "Prompt + Skill + multi-agent mechanism for AI creativity, with an automatically scorable benchmark.",
   "scripts": {
     "test": "node --test",
+    "smoke": "node scripts/smoke.ts",
+    "demo": "node scripts/demo.ts",
     "bench": "node scripts/bench.ts",
-    "report": "node scripts/make-report.ts"
+    "bench:dry": "node scripts/bench.ts --dry",
+    "rescore": "node scripts/rescore.ts",
+    "analyze": "node scripts/analyze.ts",
+    "all": "bash scripts/run-all.sh"
   },
   "engines": {
     "node": ">=22.6"

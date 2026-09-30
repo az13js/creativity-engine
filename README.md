@@ -137,6 +137,7 @@ for (const idea of result.archive.elites) {
 ## 目录结构
 
 ```
+AGENTS.md              给编码 Agent 的项目约定（命令、约束、验证流程、已知坑）
 .agents/skills/creativity-engine/SKILL.md   Agent Skill（opencode 与 DSH 都会扫描）
 data/                  技法目录、AUT / DAT / RAT / 设计简报任务与已知方案语料
 src/core/              语义空间、新颖度、AUT / RAT 评分、质量-多样性档案、统计
@@ -149,6 +150,10 @@ test/                  35 个单元测试（确定性夹具或假模型，离线
 runs/                  实验产物与报告（模型调用缓存在 runs/cache/）
 docs/                  调研笔记、机制设计、基准方法、结果与结论
 ```
+
+## 参与开发
+
+改代码前先看 [`AGENTS.md`](AGENTS.md)：里面有不能引入依赖、只能用类型擦除语法、测试必须离线、生成物不要手改这些硬性约定，以及每类改动对应的验证流程。
 
 ## 环境要求
 
