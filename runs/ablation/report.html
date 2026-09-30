@@ -25,14 +25,15 @@
   .bar{height:14px;border-radius:4px;display:inline-block}
   .bar-val{font-variant-numeric:tabular-nums;font-size:12.5px}
   .note{color:var(--muted);font-size:13px}
-  .scatter-wrap{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  canvas{display:block;width:100%;height:auto;background:#fcfcfb}
-  .tip{position:absolute;pointer-events:none;background:#1b1b1b;color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;max-width:320px;display:none}
+  /* overflow is visible so a tooltip is never clipped by the frame; the canvas keeps the rounded corners. */
+  .scatter-wrap{position:relative;border:1px solid var(--line);border-radius:8px}
+  canvas{display:block;width:100%;height:auto;background:#fcfcfb;border-radius:7px}
+  .tip{position:absolute;pointer-events:none;background:#1b1b1b;color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;max-width:320px;line-height:1.45;white-space:normal;overflow-wrap:anywhere;box-shadow:0 4px 14px rgba(0,0,0,.18);display:none;z-index:5}
   .legend{display:flex;gap:14px;margin-top:8px;font-size:12.5px;color:var(--muted)}
   .legend i{width:10px;height:10px;display:inline-block;border-radius:2px;margin-right:5px}
   code{background:#eee;padding:1px 4px;border-radius:4px}
 </style></head><body>
-<header><h1>创造力机制基准实验</h1><div class="meta">运行 ablation · seed 20240930 · 生成于 2026-09-30T07:05:48.624Z</div></header>
+<header><h1>创造力机制基准实验</h1><div class="meta">运行 ablation · seed 20240930 · 生成于 2026-09-30T07:20:52.259Z</div></header>
 <main>
 <div class="cards">
   <div class="card"><b>3</b><span>任务</span></div>
@@ -79,15 +80,39 @@
     });
   };
   draw(-1);
+  // Tooltip placement works entirely in CSS pixels, so it stays correct at any window size:
+  // it anchors to the hovered point, flips left when there is no room on the right and flips
+  // above when there is no room below, then clamps so the whole box remains visible.
+  const place = (i) => {
+    const r = cv.getBoundingClientRect();
+    const wr = cv.parentElement.getBoundingClientRect();
+    const scaleX = r.width / W, scaleY = r.height / H;
+    const px = sx(d.points[i].x) * scaleX + (r.left - wr.left);
+    const py = sy(d.points[i].y) * scaleY + (r.top - wr.top);
+    tip.style.display = 'block';
+    tip.style.left = '0px'; tip.style.top = '0px';   // measure at a known position
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    const gap = 14, edge = 6;
+    let left = px + gap;
+    if (left + tw + edge > wr.width) left = px - gap - tw;
+    left = Math.max(edge, Math.min(left, Math.max(edge, wr.width - tw - edge)));
+    let top = py + gap;
+    if (top + th + edge > wr.height) top = py - gap - th;
+    top = Math.max(edge, Math.min(top, Math.max(edge, wr.height - th - edge)));
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  };
   cv.addEventListener('mousemove', (e)=>{
     const r = cv.getBoundingClientRect();
-    const mx = (e.clientX - r.left) * (W / r.width), my = (e.clientY - r.top) * (H / r.height);
-    let best = -1, bd = 14*14;
-    d.points.forEach((p,i)=>{ const dx = sx(p.x)-mx, dy = sy(p.y)-my, dd = dx*dx+dy*dy; if(dd<bd){bd=dd;best=i;} });
-    if(best>=0){ draw(best); tip.style.display='block'; tip.style.left = Math.min(mx+12, r.width-330)+'px'; tip.style.top = (my+12)+'px'; tip.textContent = '[' + d.points[best].g + '] ' + d.points[best].t; }
+    const scaleX = r.width / W, scaleY = r.height / H;
+    const mxc = e.clientX - r.left, myc = e.clientY - r.top;   // mouse in CSS pixels
+    let best = -1, bd = 18*18;
+    d.points.forEach((p,i)=>{ const dx = sx(p.x)*scaleX - mxc, dy = sy(p.y)*scaleY - myc, dd = dx*dx+dy*dy; if(dd<bd){bd=dd;best=i;} });
+    if(best>=0){ draw(best); tip.textContent = '[' + d.points[best].g + '] ' + d.points[best].t; place(best); }
     else { draw(-1); tip.style.display='none'; }
   });
   cv.addEventListener('mouseleave', ()=>{ draw(-1); tip.style.display='none'; });
+  window.addEventListener('resize', ()=>{ if(tip.style.display==='block') tip.style.display='none'; });
 })();
 </script>
 </body></html>
