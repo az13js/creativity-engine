@@ -144,7 +144,7 @@ export async function runCreativeEngine(opts: EngineRunOptions): Promise<EngineR
     for (const f of fresh) {
       const descriptor = [f.novelty ?? 0.5, f.feasibility ?? 0.5];
       f.objective = objectiveOf(f);
-      const res = archive.add(f, descriptor, f.objective);
+      const res = archive.add(f, descriptor, f.objective, f.id);
       f.cell = res.cell;
     }
     all.push(...fresh);
@@ -193,7 +193,7 @@ export async function runCreativeEngine(opts: EngineRunOptions): Promise<EngineR
           target.impact = typeof rev.impact === "number" ? Math.max(0, Math.min(1, rev.impact / 10)) : target.impact;
           target.failureMode = typeof rev.failure_mode === "string" ? rev.failure_mode : undefined;
           target.objective = objectiveOf(target);
-          archive.add(target, [target.novelty ?? 0.5, target.feasibility ?? 0.5], target.objective);
+          archive.add(target, [target.novelty ?? 0.5, target.feasibility ?? 0.5], target.objective, target.id);
         }
         events.push({ generation: g, stage: "critique", detail: "评审 " + (value.reviews?.length ?? 0) + " 条" });
       } catch (err) {

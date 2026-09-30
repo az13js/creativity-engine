@@ -113,6 +113,20 @@ test("quality-diversity archive keeps the best elite per cell and tracks coverag
   assert.equal(a.cell, b.cell);
 });
 
+test("archive moves a keyed item instead of leaving a stale copy in the old cell", () => {
+  const archive = new QualityDiversityArchive<{ id: string; text: string }>([[0, 0.5, 1], [0, 0.5, 1]]);
+  const idea = { id: "i1", text: "同一条想法" };
+  archive.add(idea, [0.2, 0.2], 0.3, idea.id);
+  archive.add(idea, [0.7, 0.7], 0.3, idea.id);           // 可行性被评审改写，换到另一格
+  assert.equal(archive.size, 1, "同一条想法不应占两格");
+  assert.equal(archive.elites()[0]!.cell, "1-1");
+  // 不同想法可以各占一格，格内仍按目标分数竞争
+  archive.add({ id: "i2", text: "另一条" }, [0.7, 0.7], 0.1, "i2");
+  assert.equal(archive.size, 1);
+  archive.add({ id: "i2", text: "另一条" }, [0.7, 0.7], 0.9, "i2");
+  assert.equal(archive.elites()[0]!.item.text, "另一条");
+});
+
 test("RAT scoring accepts exact answers and short phrases", () => {
   const item = { id: "r1", cues: ["cottage", "swiss", "cake"], answers: ["cheese"] };
   assert.ok(isCorrect("cheese", item));

@@ -29,7 +29,8 @@ test("engine runs the full diverge/critique/blend/meta loop and fills the archiv
   const fake = new FakeLlm((tag) => {
     tags.push(tag.split(":")[0]!);
     if (tag.startsWith("generator")) return engineIdeas(3);
-    if (tag === "critic") return { reviews: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => ({ index: i, feasibility: 7, novelty: 6, impact: 5, failure_mode: "none" })) };
+    // 可行性刻意打出高低两档，让想法落进不同档案格，融合阶段才有东西可配对
+    if (tag === "critic") return { reviews: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => ({ index: i, feasibility: i % 2 ? 3 : 9, novelty: 6, impact: 5, failure_mode: "none" })) };
     if (tag === "blender") return { generic_space: "g", blend: "融合方案：把甲的承重结构与乙的排水机制叠加", emergent: "e" };
     if (tag === "meta") return { diagnosis: "d", recommended_operators: [catalog.operators[0]!.id], recommended_note: "换角度" };
     return {};
@@ -40,7 +41,7 @@ test("engine runs the full diverge/critique/blend/meta loop and fills the archiv
     config: { ...DEFAULT_ENGINE_CONFIG, generations: 2, generators: 3, ideasPerGenerator: 3, blendPairs: 1, seedCount: 2 }
   });
   assert.ok(result.ideas.length > 0);
-  assert.ok(result.archive.size > 0);
+  assert.ok(result.archive.size >= 2, "档案至少要占两格，融合阶段才有跨格配对");
   assert.ok(result.generations.length === 2);
   for (const stage of ["diverge", "collect", "critique", "blend", "measure", "meta"]) {
     assert.ok(result.events.some((e) => e.stage === stage), "missing stage " + stage);

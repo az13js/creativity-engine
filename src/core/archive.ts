@@ -5,7 +5,7 @@
  * plagues single-objective creativity loops and is the mechanism-level answer to
  * originality-vs-usefulness trade-offs.
  */
-export interface ArchiveEntry<T> { item: T; descriptor: number[]; objective: number; cell: string }
+export interface ArchiveEntry<T> { item: T; descriptor: number[]; objective: number; cell: string; key?: string }
 
 export interface ArchiveOptions {
   /** Bin edges per descriptor dimension, e.g. [[0,0.5,1],[0,0.5,1]]. Values outside are clamped to the nearest bin. */
@@ -14,6 +14,8 @@ export interface ArchiveOptions {
 
 export class QualityDiversityArchive<T> {
   private cells = new Map<string, ArchiveEntry<T>>();
+  /** Item identity -> occupied cell, so re-filing the same item never leaves a stale copy behind. */
+  private keyToCell = new Map<string, string>();
   private edges: number[][];
   constructor(edges: number[][]) { this.edges = edges; }
 
@@ -25,12 +27,22 @@ export class QualityDiversityArchive<T> {
 
   cellOf(descriptor: readonly number[]): string { return descriptor.map((v, d) => this.binOf(d, v)).join("-"); }
 
-  add(item: T, descriptor: readonly number[], objective: number): { accepted: boolean; replaced: boolean; cell: string } {
+  /**
+   * File an item into the grid. `key` identifies the item itself: filing the same item again
+   * (for example after the critic revised its feasibility) moves it instead of duplicating it.
+   */
+  add(item: T, descriptor: readonly number[], objective: number, key?: string): { accepted: boolean; replaced: boolean; cell: string } {
     const cell = this.cellOf(descriptor);
     const cur = this.cells.get(cell);
     if (cur && cur.objective >= objective) return { accepted: false, replaced: false, cell };
     const replaced = cur !== undefined;
-    this.cells.set(cell, { item, descriptor: [...descriptor], objective, cell });
+    if (cur?.key !== undefined && this.keyToCell.get(cur.key) === cell) this.keyToCell.delete(cur.key);
+    if (key !== undefined) {
+      const prev = this.keyToCell.get(key);
+      if (prev !== undefined && prev !== cell && this.cells.get(prev)?.key === key) this.cells.delete(prev);
+      this.keyToCell.set(key, cell);
+    }
+    this.cells.set(cell, { item, descriptor: [...descriptor], objective, cell, key });
     return { accepted: true, replaced, cell };
   }
 
