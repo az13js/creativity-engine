@@ -135,15 +135,15 @@
 
 | 设计元素 | 代码 |
 | --- | --- |
-| 认知算子目录 | [data/operators.json](data/operators.json) |
-| 提示词协议 | [src/llm/prompts.ts](src/llm/prompts.ts) |
-| 多 Agent 编排 + 自适应控制器 | [src/agents/engine.ts](src/agents/engine.ts) |
-| 基线策略 | [src/agents/baselines.ts](src/agents/baselines.ts) |
-| 成对比较评审（位置交换控制） | [src/agents/judge.ts](src/agents/judge.ts) |
-| 质量-多样性档案 | [src/core/archive.ts](src/core/archive.ts) |
-| 语义距离与语义空间 | [src/core/semantic-space.ts](src/core/semantic-space.ts) |
-| 新颖度 | [src/core/novelty.ts](src/core/novelty.ts) |
-| AUT 评分 | [src/core/aut.ts](src/core/aut.ts) |
-| RAT 评分 | [src/core/rat.ts](src/core/rat.ts) |
-| 基准任务与运行器 | [src/bench/](src/bench/) |
+| 认知算子目录 | [data/operators.json](../data/operators.json) |
+| 提示词协议 | [src/llm/prompts.ts](../src/llm/prompts.ts) |
+| 多 Agent 编排 + 自适应控制器 | [src/agents/engine.ts](../src/agents/engine.ts) |
+| 基线策略 | [src/agents/baselines.ts](../src/agents/baselines.ts) |
+| 成对比较评审（位置交换控制） | [src/agents/judge.ts](../src/agents/judge.ts) |
+| 质量-多样性档案 | [src/core/archive.ts](../src/core/archive.ts) |
+| 语义距离与语义空间 | [src/core/semantic-space.ts](../src/core/semantic-space.ts) |
+| 新颖度 | [src/core/novelty.ts](../src/core/novelty.ts) |
+| AUT 评分 | [src/core/aut.ts](../src/core/aut.ts) |
+| RAT 评分 | [src/core/rat.ts](../src/core/rat.ts) |
+| 基准任务与运行器 | [src/bench/](../src/bench/) |
 | Skill 交付物 | [.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md) |

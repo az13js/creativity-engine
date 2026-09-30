@@ -12,6 +12,8 @@
     "bench:dry": "node scripts/bench.ts --dry",
     "rescore": "node scripts/rescore.ts",
     "analyze": "node scripts/analyze.ts",
+    "human": "node scripts/human.ts",
+    "human:fetch": "node scripts/fetch-human-data.ts",
     "all": "bash scripts/run-all.sh"
   },
   "engines": {

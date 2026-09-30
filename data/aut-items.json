@@ -260,6 +260,177 @@
           ]
         }
       ]
+    },
+    {
+      "id": "aut-box-en",
+      "object": "box",
+      "prompt": "List as many different uses for a cardboard box as you can. Condition: write one short sentence per use (at most 20 words), saying what you do with it and why it works. The wording of this item matches the SemDis AUT item (Beaty & Johnson, 2021), so the machine answers can be compared with the published human answers.",
+      "ideasTarget": 12,
+      "reference": [
+        {
+          "text": "hat",
+          "count": 67
+        },
+        {
+          "text": "house",
+          "count": 48
+        },
+        {
+          "text": "sled",
+          "count": 43
+        },
+        {
+          "text": "table",
+          "count": 40
+        },
+        {
+          "text": "fort",
+          "count": 38
+        },
+        {
+          "text": "chair",
+          "count": 33
+        },
+        {
+          "text": "storage",
+          "count": 30
+        },
+        {
+          "text": "bed",
+          "count": 26
+        },
+        {
+          "text": "car",
+          "count": 25
+        },
+        {
+          "text": "shoes",
+          "count": 24
+        },
+        {
+          "text": "boat",
+          "count": 23
+        },
+        {
+          "text": "costume",
+          "count": 22
+        }
+      ],
+      "note": "Wording matches the SemDis AUT item so the answers can be compared with the published human responses; the reference list is the most frequent human answers. Flexibility for this item is computed by clustering (no hand-built lexicon)."
+    },
+    {
+      "id": "aut-rope-en",
+      "object": "rope",
+      "prompt": "List as many different uses for a rope as you can. Condition: write one short sentence per use (at most 20 words), saying what you do with it and why it works. The wording of this item matches the SemDis AUT item (Beaty & Johnson, 2021), so the machine answers can be compared with the published human answers.",
+      "ideasTarget": 12,
+      "reference": [
+        {
+          "text": "belt",
+          "count": 89
+        },
+        {
+          "text": "swing",
+          "count": 48
+        },
+        {
+          "text": "jump",
+          "count": 45
+        },
+        {
+          "text": "necklace",
+          "count": 42
+        },
+        {
+          "text": "bracelet",
+          "count": 31
+        },
+        {
+          "text": "leash",
+          "count": 28
+        },
+        {
+          "text": "hair tie",
+          "count": 26
+        },
+        {
+          "text": "whip",
+          "count": 26
+        },
+        {
+          "text": "lasso",
+          "count": 25
+        },
+        {
+          "text": "tug of war",
+          "count": 20
+        },
+        {
+          "text": "dog leash",
+          "count": 18
+        },
+        {
+          "text": "weapon",
+          "count": 18
+        }
+      ],
+      "note": "Wording matches the SemDis AUT item so the answers can be compared with the published human responses; the reference list is the most frequent human answers. Flexibility for this item is computed by clustering (no hand-built lexicon)."
+    },
+    {
+      "id": "aut-brick-en",
+      "object": "brick",
+      "prompt": "List as many different uses for a brick as you can. Condition: write one short sentence per use (at most 20 words), saying what you do with it and why it works. The wording of this item matches the SemDis AUT item (Beaty & Johnson, 2021), so the machine answers can be compared with the published human answers.",
+      "ideasTarget": 12,
+      "reference": [
+        {
+          "text": "paper weight",
+          "count": 35
+        },
+        {
+          "text": "weapon",
+          "count": 25
+        },
+        {
+          "text": "door stop",
+          "count": 17
+        },
+        {
+          "text": "door stopper",
+          "count": 14
+        },
+        {
+          "text": "hammer",
+          "count": 14
+        },
+        {
+          "text": "paperweight",
+          "count": 12
+        },
+        {
+          "text": "pet",
+          "count": 11
+        },
+        {
+          "text": "house",
+          "count": 7
+        },
+        {
+          "text": "toy",
+          "count": 7
+        },
+        {
+          "text": "weight",
+          "count": 7
+        },
+        {
+          "text": "anchor",
+          "count": 6
+        },
+        {
+          "text": "art",
+          "count": 6
+        }
+      ],
+      "note": "Wording matches the SemDis AUT item so the answers can be compared with the published human responses; the reference list is the most frequent human answers. Flexibility for this item is computed by clustering (no hand-built lexicon)."
     }
   ]
 }

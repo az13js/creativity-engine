@@ -7,12 +7,13 @@
 ## 摘要
 
 **交付物**
-1. **机制实现**：[src/agents/engine.ts](src/agents/engine.ts)（12 个认知算子 × 异质多 Agent × 质量-多样性档案 × 自适应控制器）
-2. **提示词协议**：[src/llm/prompts.ts](src/llm/prompts.ts) 与算子目录 [data/operators.json](data/operators.json)
+1. **机制实现**：[src/agents/engine.ts](../src/agents/engine.ts)（12 个认知算子 × 异质多 Agent × 质量-多样性档案 × 自适应控制器）
+2. **提示词协议**：[src/llm/prompts.ts](../src/llm/prompts.ts) 与算子目录 [data/operators.json](../data/operators.json)
 3. **Skill**：[.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md)
 4. **基准**：[src/bench/](../src/bench/)（AUT / DAT / RAT / 设计简报四类任务，10 余个自动指标）
-5. **测试**：34 个单元测试（全部离线、确定性，`npm test`）
-6. **原始实验数据与报告**：[runs/main-live/report.html](runs/main-live/report.html)、[runs/ablation/report.html](runs/ablation/report.html)、[docs/results.md](results.md)
+5. **人类数据基线**：[src/bench/human.ts](../src/bench/human.ts) 与 [scripts/human.ts](../scripts/human.ts)，导入三个公开人类数据集（约 2.2 万条人类作答）做指标校验与人类分布定位
+6. **测试**：55 个单元测试（全部离线、确定性，`npm test`）
+7. **原始实验数据与报告**：[runs/main-live/report.html](../runs/main-live/report.html)、[runs/ablation/report.html](../runs/ablation/report.html)、[runs/human-baseline/report.html](../runs/human-baseline/report.html)、[docs/results.md](results.md)
 
 **最重要的五条结论**
 
@@ -24,9 +25,10 @@
 | 4 | 消融显示增益主要来自**算子异质化 + 概念融合**，而不是自适应升温 | 去掉异质化/融合（engine-flat）：多样性 0.347 vs 0.504，DT 指数 0.547 vs 0.718，DAT 簇数 2 vs 10；关闭自适应（engine-noadapt）：多样性 0.494 vs 0.504（几乎无差别） |
 | 5 | 发散能力与聚合能力**需要分开处理** | RAT 聚合任务：机制 0.45，直接作答 1.00；机制是发散器，不是解题器 |
 
-**不能声称的**：本实验没有人类被试，因此**不能**声称"超过人类水平"；
-自动评分与人类评分的一致性有限；每个任务只跑一次（单种子），结论是**机制可行性证据**，
-不是统计显著性结论。
+| 6 | 自动语义距离**与人类评分有一致的正相关**，在 AUT 上还高于原论文的 GloVe 距离 | AUT（n = 1,800）："与最近人类作答的距离" Spearman 0.518、"与题目词的距离" 0.398，原论文 GloVe 0.196 |
+
+**不能声称的**：人类数据来自公开数据集、被试不是本项目招募的，也没有人类评价过机器想法，因此**不能**声称"超过人类水平"；
+每个任务只跑一次（单种子），结论是**机制可行性证据**，不是统计显著性结论。
 
 ---
 
@@ -91,7 +93,7 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
 | structured-cot | 0.405 | 0.700 | **0.287** | 0.406 | 0.700 | 0.05 | 12.1 |
 | zero-shot | 0.393 | 0.708 | 0.281 | 0.406 | 0.667 | 1.00 | 12.1 |
 
-逐任务细节：[docs/results.md](results.md)、[runs/main-live/report.html](runs/main-live/report.html)。
+逐任务细节：[docs/results.md](results.md)、[runs/main-live/report.html](../runs/main-live/report.html)。
 
 **机制赢在**：
 - 新颖度：4/4 个可测任务中 3 个最高（aut-bottle 0.528、brief-box 0.330、brief-stove 0.372；aut-brick 0.535 略低于 structured-cot 的 0.566）；
@@ -151,6 +153,32 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
   "题目编号=答案"的输出样式后能解出 9/20 题，但仍明显低于直接作答。
   结论：**发散机制不能替代收敛步骤**；Skill 的最后一步（收敛交付）必须由独立环节完成。
 
+### 3.6 人类数据基线
+
+基准只比较机器配置时，回答不了「机器的想法在人类里算什么水平」。为此仓库导入了三个公开人类数据集（SemDis 的 AUT 与词语联想、Olson 等人的 DAT，共约 2.2 万条人类作答），用同一把语义尺子重算人类分布，并把机器输出放进去。口径与完整表格见 [human-baseline.md](human-baseline.md)，运行产物见 [runs/human-baseline/report.md](../runs/human-baseline/report.md)。
+
+**自动指标 vs 人类评分**（在人类作答内部算相关，Fisher 平均 Spearman）：
+
+| 数据 | 本仓库指标 | 原论文 GloVe 距离（参照） |
+| --- | --- | --- |
+| AUT，n = 1,800，3 题 | `minOther` 0.518 / `toItem` 0.398 / `meanOther` 0.398 | 0.196（cbowu 0.282、cbows 0.283） |
+| 词语联想，n = 4,984，67 题 | `meanOther` 0.337 / `minOther` 0.309 / `toItem` 0.279 | 0.379（cbowu 0.333） |
+
+也就是说：在 AUT 上，本仓库的嵌入距离比原论文的 GloVe 距离更贴近人类评分；在词语联想上，这一版 GloVe 距离更好，我们的 `meanOther` 居中。结论不是「我们的指标更好」，而是**指标与人类评分的一致性可以被测出来，而且它取决于任务与语义空间**。
+
+**DAT：机器落在人类分布的第几百分位**（人类 8,998 人，用本仓库嵌入重算 2,524 人：均值 39.41、标准差 3.91；这批人原论文分数均值 78.40，两把尺子相关 Pearson 0.451）：
+
+| 任务/配置 | 引擎 DAT 分数（本空间） | 人类百分位 | Cliff's δ |
+| --- | --- | --- | --- |
+| `dat-en-7/engine`（英文，与人类同题） | 40.67 | 0.63 | 0.25 |
+| `dat-en-7/zero-shot` | 38.96 | 0.44 | -0.11 |
+| `dat-7`、`dat-10` 的四个配置（中文，跨语言参考） | 41.0~43.2 | 0.67~0.86 | 0.33~0.71 |
+
+**同题 AUT：机器想法 vs 人类作答**。三个英文 AUT 任务与 SemDis 逐字同题；机器想法先压缩成 2~6 个词的短语，再和人类作答放进同一空间。机制的短语离题目词的距离是人类均值的上侧（`aut-box-en` 0.561 对 0.350，第 99 百分位；`aut-rope-en` 0.477 对 0.340，第 97 百分位；`aut-brick-en` 0.561 对 0.373，第 98 百分位），离任何一条人类作答也更远（第 99~100 百分位）。
+
+**诚实边界**：这些百分位说明「在自动语义距离这把尺子上，机器输出位于人类分布的高侧」，不是「人类会给它高分」。人类评分者的评分与距离正相关，所以我们有理由期待方向一致，但本仓库没有让人类评价机器想法；跨语言的行（中文任务对英文被试）只能当稳健性检查。
+
+
 ---
 
 ## 4. 这些结果说明了什么、没说明什么
@@ -160,10 +188,15 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
   多样性、跨配置区分度）上稳定优于单轮与自我批评基线；
 - 增益主要来自**算子异质化与概念融合**，而不是"多调用几次模型"（engine-flat 用同样的并行采样，
   多样性明显更低）；
-- 用 MAP-Elites 式档案 + 同质化审计，可以把"创造力"从主观印象变成可复现的数字。
+- 用 MAP-Elites 式档案 + 同质化审计，可以把"创造力"从主观印象变成可复现的数字；
+- 自动语义距离**确实量到了人类评分者看到的东西**：在 1,800 条人类 AUT 作答上，
+  "与最近人类作答的距离"与人类评分的 Spearman 相关 0.518，"与题目词的距离" 0.398，
+  都高于原论文 GloVe 距离在同一批作答上的 0.196；
+- 在与人类同题的任务上，机器输出落在人类分布的**高侧**：DAT 第 63 百分位、AUT 与题目词的距离第 97~99 百分位
+  （口径、样本与局限见 [human-baseline.md](human-baseline.md)）。
 
 **不能主张**
-- 不能主张"超过人类"：本基准没有人类被试；DAT 的绝对值也不能与文献常模直接比较（嵌入模型不同）；
+- 不能主张"超过人类"：人类数据取自公开数据集（被试不是本项目招募的），也没有让人类来评价机器想法；DAT 的绝对值不能与文献常模直接比较（嵌入模型不同），只能在同一把尺子内部比较百分位；
 - 不能主张"变革式创造"（transformational creativity，改变概念空间规则的那一类）：
   本机制属于组合式/探索式创造（combinational / exploratory）；
 - 不能主张在可行性上不输：在同一个 LLM 评委口径下，机制的可行性显著更低，且该差距可能被长度偏置放大；
@@ -173,10 +206,12 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
 
 ## 5. 要真正"超过人类"，还缺什么
 
-1. **人类基线**：在同一批任务与同一评分口径下采集人类答案（AUT 常用答案分布、DAT 的人类常模），
-   否则"超过"没有参照系。
-2. **人类锚点评分**：用人类评分校准自动指标，报告一致性（如 Cohen's κ 及解释区间），
-   并公开锚点集作为回归测试。
+1. **人类基线**（已做了一半）：仓库现在导入了 SemDis 的 AUT/词语联想与 Olson 等人的 DAT 共约 2.2 万条人类作答，
+   用同一把语义尺子重算人类分布，把机器输出放进百分位；新增的英文 AUT 与 DAT 任务与人类题目逐字对齐。
+   还缺的是**同语言、同题目的中文人类数据**：现有被试都是英文母语者，中文任务只能做跨语言稳健性检查。
+2. **人类锚点评分**（只做了一半）：现在校验的是"自动指标 vs 人类对**人类**答案的评分"（见
+   [docs/human-baseline.md](human-baseline.md)）；还缺"人类对**机器**答案的评分"，
+   以及由此得到的评分者间一致性（ICC / Cohen's κ）与锚点回归测试集。
 3. **长度/风格的盲评控制**：随机化或等长化想法文本，分离"新颖"与"啰嗦"。
 4. **重复与统计**：每个条件 ≥5 个种子，报告置信区间与效应量；对任务做分层分析。
 5. **真值可验证任务**：加入代码/算法/数学题（fitness 无争议），把"机制有效性"与"指标设计"解耦。
@@ -207,8 +242,10 @@ MAP-Elites 式的（新颖度 × 可行性）网格档案，每格保留目标�
 | Skill 交付物 | [.agents/skills/creativity-engine/SKILL.md](../.agents/skills/creativity-engine/SKILL.md) |
 | 机制设计说明 | [docs/design.md](design.md) |
 | 基准方法与指标定义 | [docs/benchmark.md](benchmark.md) |
+| 人类数据基线与口径 | [docs/human-baseline.md](human-baseline.md) |
+| 人类基线运行结果 | [runs/human-baseline/report.md](../runs/human-baseline/report.md)、[report.html](../runs/human-baseline/report.html) |
 | 自动生成的结果表 | [docs/results.md](results.md) |
 | 文献调研（71 条出处） | [docs/research-notes.md](research-notes.md) |
-| 主实验交互报告 | [runs/main-live/report.html](runs/main-live/report.html) |
-| 消融实验交互报告 | [runs/ablation/report.html](runs/ablation/report.html) |
+| 主实验交互报告 | [runs/main-live/report.html](../runs/main-live/report.html) |
+| 消融实验交互报告 | [runs/ablation/report.html](../runs/ablation/report.html) |
 | 代码 | [src/](../src/)、[scripts/](../scripts/)、[test/](../test/) |

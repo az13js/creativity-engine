@@ -11,6 +11,11 @@
       "id": "dat-10",
       "count": 10,
       "prompt": "请给出 10 个彼此尽量没有关联的常见名词。要求：每个都是单个词（不要写成句子）、不要专有名词、不要重复；每条想法只输出一个名词。"
+    },
+    {
+      "id": "dat-en-7",
+      "count": 7,
+      "prompt": "Please give 7 common nouns that are as unrelated to each other as possible. Conditions: each one must be a single English word (no sentences), no proper nouns, no repeats; output one noun per idea. This is the English wording of the Divergent Association Task (Olson et al., 2021), so results can be compared with the published human sample."
     }
   ],
   "calibration": [
