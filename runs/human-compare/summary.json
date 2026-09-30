@@ -1,0 +1,1486 @@
+{
+  "runId": "human-compare",
+  "createdAt": "2026-09-30T12:41:51.636Z",
+  "seed": 20240930,
+  "tasks": [
+    {
+      "id": "aut-box-en",
+      "kind": "aut",
+      "title": "AUT: box",
+      "ideasTarget": 12
+    },
+    {
+      "id": "aut-rope-en",
+      "kind": "aut",
+      "title": "AUT: rope",
+      "ideasTarget": 12
+    },
+    {
+      "id": "aut-brick-en",
+      "kind": "aut",
+      "title": "AUT: brick",
+      "ideasTarget": 12
+    },
+    {
+      "id": "dat-en-7",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "ideasTarget": 7
+    }
+  ],
+  "configs": [
+    {
+      "id": "zero-shot",
+      "label": "零样本单轮（基线 A）",
+      "budget": "1 次调用"
+    },
+    {
+      "id": "engine",
+      "label": "多Agent创造力引擎（本机制）",
+      "budget": "生成4x3 + 融合2 + 评审1 + 元反思1，共约 3 轮"
+    }
+  ],
+  "scores": [
+    {
+      "taskId": "aut-box-en",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: box",
+      "metrics": {
+        "nIdeas": 34,
+        "nUnique": 34,
+        "meanPairwiseDistance": 0.4808,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.5,
+        "ctrl_clusters": 6,
+        "meanNovelty": 0.6463,
+        "maxNovelty": 0.7298,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.6311,
+        "meanFeasibility": 0.5559,
+        "meanImpact": 0.3382,
+        "noveltyUsefulness": 0.3593,
+        "fluency": 34,
+        "flexibility": 8,
+        "meanOriginality": 0.6463,
+        "maxOriginality": 0.7298,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.8085,
+        "crossConfigDistinctiveness": 0.5156
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1",
+          "簇2",
+          "簇3",
+          "簇4",
+          "簇5",
+          "簇6",
+          "簇7"
+        ],
+        "reviews": [
+          {
+            "text": "把纸箱内壁涂成深蓝并垂挂银箔，做成随呼吸起伏的潮汐光影装置，让观众感到被涨落包裹。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "银箔与深蓝内壁在呼吸气流下几乎不产生可感知的起伏，需外部风机或机械驱动，否则'随呼吸'只是静态装饰。",
+            "chars": 41,
+            "novelty": 0.7056654217056623
+          },
+          {
+            "text": "将纸箱裁成月相般层层错开的弧形片，悬挂成一组随气流轻摆的潮声雕塑，暗示月亮牵引。",
+            "feasibility": 0.6,
+            "impact": 0.3,
+            "failureMode": "纸板弧形片质量太轻且刚性不足，气流只能使其抖动而非'轻摆'，难以形成可辨识的潮声。",
+            "chars": 40,
+            "novelty": 0.6682539390113895
+          },
+          {
+            "text": "用盐水浸过的纸箱板干燥后留下蜿蜒盐痕，拼贴成一幅会随湿度变深的潮间带地图。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "盐水干燥后的盐痕吸湿变色幅度极小，肉眼几乎无法分辨'随湿度变深'。",
+            "chars": 37,
+            "novelty": 0.6964616714336441
+          },
+          {
+            "text": "把纸箱按折纸山折痕微缩为八边形收纳盒，展开即恢复原体积，利用几何折痕分离刚性与可折叠这对矛盾。",
+            "feasibility": 0.5,
+            "impact": 0.3,
+            "failureMode": "纸板折痕反复开合会迅速疲劳断裂，无法长期维持'展开恢复原体积'的刚性。",
+            "chars": 47,
+            "novelty": 0.6544019791627231
+          },
+          {
+            "text": "用可逆淀粉胶把纸箱做成冷冻时硬化、常温时软化的互锁支架，按季节切换承重与折叠状态。",
+            "feasibility": 0.3,
+            "impact": 0.3,
+            "failureMode": "淀粉胶冷冻硬化后纸板纤维已被冰晶破坏，常温软化时结构强度不可逆下降。",
+            "chars": 41,
+            "novelty": 0.6237070985472104
+          },
+          {
+            "text": "将纸箱设计成内外双层的斐波那契折纸套筒，内层受力时卡住外层锁点，轻压下却各自坍缩。",
+            "feasibility": 0.4,
+            "impact": 0.3,
+            "failureMode": "纸板折纸套筒的锁点精度远低于塑料或金属，'轻压下各自坍缩'会变成整体压溃。",
+            "chars": 41,
+            "novelty": 0.6919916007836734
+          },
+          {
+            "text": "把箱子压扁当滑草板，从草坡冲下——因为硬纸板遇湿草会打滑，速度快得像回旋镖飞出去。",
+            "feasibility": 0.4,
+            "impact": 0.2,
+            "failureMode": "湿草会迅速浸软纸板使其撕裂，且纸板摩擦系数不足以支撑高速滑行。",
+            "chars": 41,
+            "novelty": 0.5566668513259037
+          },
+          {
+            "text": "在箱面戳洞穿绳，抡起来当回旋镖甩——因为空心箱体轻、空气阻力大，会飘着绕回。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "空心纸箱空气阻力大且形状不对称，投出后只会翻滚坠落，不可能绕回。",
+            "chars": 38,
+            "novelty": 0.60926818411584
+          },
+          {
+            "text": "把箱子拆成平板画上靶心，用另一小块纸板当回旋镖投掷——因为大平板能接住飘忽的纸板镖。",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "小块纸板镖质量太轻、翼面不稳，无法形成可预测的回旋轨迹。",
+            "chars": 42,
+            "novelty": 0.6447750853760328
+          },
+          {
+            "text": "把纸箱裁成条状交错编织成蜂窝格衬垫，模仿蜂巢六边形支撑结构，用于收纳易碎品。",
+            "feasibility": 0.8,
+            "impact": 0.5,
+            "failureMode": "纸板蜂窝格承重远低于塑料或金属蜂窝，仅适合极轻物品，'易碎品'保护有限。",
+            "chars": 38,
+            "novelty": 0.6985130809919791
+          },
+          {
+            "text": "在箱内壁折叠出螺旋褶并模拟松果鳞片吸湿开合，使纸箱随湿度自动调节通风缝隙。",
+            "feasibility": 0.4,
+            "impact": 0.4,
+            "failureMode": "纸板吸湿膨胀率低且不可逆，松果式开合几次后褶痕即失效。",
+            "chars": 37,
+            "novelty": 0.6314852513940801
+          },
+          {
+            "text": "将箱板压出中空夹层并编织气管网络，模仿昆虫气管系统，做成低成本根区透气种植槽。",
+            "feasibility": 0.5,
+            "impact": 0.5,
+            "failureMode": "纸板气管网络在潮湿土壤中会迅速腐烂塌陷，无法维持根区透气。",
+            "chars": 39,
+            "novelty": 0.7298385352751886
+          },
+          {
+            "text": "把纸箱做成内外双层的斐波那契折纸套筒，内层受力时卡住外层锁点，轻压下却各自坍缩；同时在箱面戳洞穿绳，抡起来当回旋镖甩——因为空心箱体轻、空气阻力大，会飘着绕回，而且套筒的坍缩与锁点能调节空气动力学性能。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "把折纸套筒与回旋镖两个互斥功能强行叠加，结果既不能锁也不能飞。",
+            "chars": 101,
+            "novelty": 0.6675802594273229
+          },
+          {
+            "text": "纸箱设计成双层斐波那契折纸套筒，内层压出中空夹层并编织气管网络，模仿昆虫气管系统。内层受力时卡住外层锁点，轻压下却各自坍缩，同时气管网络随形变调节根区透气。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "气管网络与折纸锁点在同一纸板上互相削弱结构，两者都无法实现。",
+            "chars": 78,
+            "novelty": 0.7152212265827516
+          },
+          {
+            "text": "流浪者把纸箱拆开压平塞进外套夹层，折叠纸的层间空气像羽绒一样锁住体温，夜里裹着睡不冻醒。",
+            "feasibility": 0.6,
+            "impact": 0.6,
+            "failureMode": "压平纸板的层间空气在人体重量下被挤出，隔热效果远不如羽绒，寒夜仍会失温。",
+            "chars": 44,
+            "novelty": 0.6185242453591236
+          },
+          {
+            "text": "快递员把纸箱沿对角折出硬脊再压扁，折纸的尖角变锋利的临时量尺，卡住包裹角量出长宽高，省得掏卷尺。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "折出的硬脊边缘易压溃变形，量尺精度不足以卡住包裹角。",
+            "chars": 48,
+            "novelty": 0.6421499430318305
+          },
+          {
+            "text": "幼儿把纸箱撕成小片对折再对折，折纸的折边变厚成卡片，拍在地上啪响，吓退抢玩具的同伴。",
+            "feasibility": 0.8,
+            "impact": 0.2,
+            "failureMode": "折厚纸片拍地声音微弱，吓不退同伴，且幼儿撕纸有误吞风险。",
+            "chars": 42,
+            "novelty": 0.6416549484350008
+          },
+          {
+            "text": "流浪者把纸箱撕开揉成团塞进衣服夹层，因为纸纤维间静止空气层能锁住体温，比单层报纸更挡风。",
+            "feasibility": 0.7,
+            "impact": 0.5,
+            "failureMode": "揉团纸纤维间空气层在身体压迫下被压实，挡风效果远低于预期。",
+            "chars": 44,
+            "novelty": 0.6311988547271434
+          },
+          {
+            "text": "快递员把箱板裁成手掌大的卡片，用海绵蘸印泥在卡片上盖编号戳，因为纸板吸水快干，收件人签字时不会蹭花前一单的墨迹。",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "纸板吸水后印泥会洇开，编号戳反而比普通纸更易糊。",
+            "chars": 56,
+            "novelty": 0.6284962731526023
+          },
+          {
+            "text": "幼儿把纸箱翻过来当小马桶坐上去拉臭臭，因为箱壁空腔能捂住声音、箱沿高度刚好撑住膝盖，比塑料便盆更像大人用的。",
+            "feasibility": 0.5,
+            "impact": 0.2,
+            "failureMode": "纸箱空腔不防水不承重，幼儿坐上去会塌陷且卫生风险极高。",
+            "chars": 54,
+            "novelty": 0.6065726477387967
+          },
+          {
+            "text": "流浪者将纸箱拆成平板，铺在湿冷地面隔绝寒气，因为纸板内瓦楞结构锁住静止空气形成隔热层。",
+            "feasibility": 0.9,
+            "impact": 0.6,
+            "failureMode": "纸板遇地面湿气会吸潮变软，隔热层几小时后即失效。",
+            "chars": 43,
+            "novelty": 0.6156869704579281
+          },
+          {
+            "text": "快递员用裁下的箱板边缘在包裹面单上划出凹痕，标记已扫描件，因为硬纸板边缘能留下可辨识的压痕而不划破纸张。",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "纸板边缘压痕在面单上很快回弹消失，无法作为持久标记。",
+            "chars": 52,
+            "novelty": 0.7015097873795113
+          },
+          {
+            "text": "农民把纸箱撕碎混入黏土浆，捏成带孔土块埋入田里诱捕蛴螬，因为纸纤维腐化前能保持孔道，幼虫钻入后无法退出。",
+            "feasibility": 0.4,
+            "impact": 0.4,
+            "failureMode": "纸纤维在土中数周即腐烂，孔道塌陷，蛴螬可轻易退出。",
+            "chars": 52,
+            "novelty": 0.6839035285388224
+          },
+          {
+            "text": "快递员把箱盖四边向内折成锁扣再缠胶带，让箱角受力时先由折边咬住，扛摔且少用胶带。",
+            "feasibility": 0.8,
+            "impact": 0.5,
+            "failureMode": "折边锁扣在多次搬运后疲劳松脱，抗摔性提升有限。",
+            "chars": 40,
+            "novelty": 0.621531242608871
+          },
+          {
+            "text": "农民剪开箱板叠成三层压在苗床上，利用纸板吸湿后缓慢放水，让幼苗根区保持湿润且抑制杂草。",
+            "feasibility": 0.6,
+            "impact": 0.4,
+            "failureMode": "纸板吸湿后放水极慢且总量小，无法维持苗床湿润，反而可能霉变。",
+            "chars": 43,
+            "novelty": 0.6173476590911927
+          },
+          {
+            "text": "程序员把箱面按行列戳出二进制孔位，用手机拍照识别孔洞串来记录库存数量，不用电也能离线盘点。",
+            "feasibility": 0.6,
+            "impact": 0.4,
+            "failureMode": "手机拍照识别纸板孔洞受光照和形变影响大，离线盘点错误率高。",
+            "chars": 45,
+            "novelty": 0.5831861387897341
+          },
+          {
+            "text": "用双层瓦楞纸板裁剪成六边形蜂窝单元，每个单元内部保留瓦楞空腔；单元之间以榫卯插接，形成可拆装的蜂窝隔垫。隔垫可平铺于地面作防潮隔热层，也可卷起作收纳脆弱品的缓冲柱。",
+            "feasibility": 0.7,
+            "impact": 0.5,
+            "failureMode": "瓦楞纸板榫卯插接在反复拆装后孔位松脱，蜂窝隔垫无法稳定承重。",
+            "chars": 82,
+            "novelty": 0.6885537767352246
+          },
+          {
+            "text": "将箱板压出中空夹层并编织气管网络，模仿昆虫气管系统；内层做成斐波那契折纸套筒，受压时卡住外层锁点；在箱面戳洞穿绳，通过挤压锁定或解锁气流通路，甩出时依靠箱体轻飘与折纸坍缩调节空气阻力，像回旋镖一样绕回并自动为根区补气。",
+            "feasibility": 0.1,
+            "impact": 0.2,
+            "failureMode": "把气管、折纸锁、回旋镖三种功能塞进同一纸箱，物理上互相矛盾，无一能实现。",
+            "chars": 109,
+            "novelty": 0.7014320539242953
+          },
+          {
+            "text": "把纸箱撕成毛边碎块，朝同桌头上撒，毛边互相勾缠像雪片糊住头发，因为纸纤维静电吸附。",
+            "feasibility": 0.7,
+            "impact": 0.2,
+            "failureMode": "纸纤维静电吸附极弱，毛边碎块只会掉落，不会糊住头发。",
+            "chars": 41,
+            "novelty": 0.5823396443650701
+          },
+          {
+            "text": "给纸箱灌水泡软，像折纸船一样折成能浮的方舟，放只蚂蚁进去看它沉不沉，因为湿纸板纤维吸饱水后仍包住空气浮着。",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "湿纸板吸水后纤维间空气被排出，方舟会迅速下沉而非浮起。",
+            "chars": 53,
+            "novelty": 0.5492093982425259
+          },
+          {
+            "text": "把纸箱板对折再对折成小三角，展开后折痕像地图道路，用铅笔沿线画迷宫让同学走，因为折痕压出的凸脊能引导笔尖不跑偏。",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "折痕凸脊高度太低，铅笔仍会轻易越过，引导效果有限。",
+            "chars": 56,
+            "novelty": 0.6502450120490616
+          },
+          {
+            "text": "在纸箱内壁粘贴海绵碎块，儿童按下凹陷后放手，纸板弹性让海绵回弹发出闷响，做成无需电的打击乐器。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "海绵回弹声闷响极弱，且纸板受潮后弹性丧失，乐器寿命短。",
+            "chars": 47,
+            "novelty": 0.6813806293758583
+          },
+          {
+            "text": "将纸箱裁成弧形瓦片叠成微型水车，放在雨后积水沟里，水流冲叶片带动纸板轴旋转。",
+            "feasibility": 0.5,
+            "impact": 0.3,
+            "failureMode": "纸板水车遇水即软，叶片在积水沟中很快解体。",
+            "chars": 38,
+            "novelty": 0.5899740567807881
+          },
+          {
+            "text": "把纸箱拆成平板，用指甲在表面压出密纹，背面贴海绵，做成廉价浮雕拓印板。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "指甲压出的密纹深度太浅，拓印图案模糊不清。",
+            "chars": 35,
+            "novelty": 0.6442279321408081
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "aut-box-en",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: box",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4713,
+        "clusters": 5,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4713,
+        "ctrl_clusters": 5,
+        "meanNovelty": 0.4351,
+        "maxNovelty": 0.5584,
+        "meanElaboration": 0.5139,
+        "ctrl_meanNovelty": 0.4351,
+        "meanFeasibility": 0.6583,
+        "meanImpact": 0.2083,
+        "noveltyUsefulness": 0.2864,
+        "fluency": 12,
+        "flexibility": 5,
+        "meanOriginality": 0.4351,
+        "maxOriginality": 0.5584,
+        "elaboration": 0.5139,
+        "invalid": 0,
+        "dtIndex": 0.5761,
+        "crossConfigDistinctiveness": 0.4776
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1",
+          "簇2",
+          "簇3",
+          "簇4"
+        ],
+        "reviews": [
+          {
+            "text": "Cut a hole for your head to wear it as a silly hat.",
+            "feasibility": 0.9,
+            "impact": 0.1,
+            "failureMode": "none",
+            "chars": 51,
+            "novelty": 0.29324316016686214
+          },
+          {
+            "text": "Stack several to build a sturdy fort for kids.",
+            "feasibility": 0.9,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 46,
+            "novelty": 0.3490798115628593
+          },
+          {
+            "text": "Flatten it into a makeshift sled for sliding down grass.",
+            "feasibility": 0.6,
+            "impact": 0.2,
+            "failureMode": "Cardboard becomes soggy and tears on damp grass, and lacks the low-friction base needed to slide.",
+            "chars": 56,
+            "novelty": 0.27012563797299427
+          },
+          {
+            "text": "Poke holes and fill with soil to grow seedlings.",
+            "feasibility": 0.4,
+            "impact": 0.3,
+            "failureMode": "Cardboard decomposes and loses structural integrity when wet, so seedlings outgrow the collapsing box before harvest.",
+            "chars": 48,
+            "novelty": 0.5583826602903594
+          },
+          {
+            "text": "Tape it shut and use as a lightweight shipping container.",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "Cardboard lacks the burst strength and water resistance required for real shipping, so it crushes under stacking loads.",
+            "chars": 57,
+            "novelty": 0.48377869406904306
+          },
+          {
+            "text": "Draw a target on it for safe indoor archery practice.",
+            "feasibility": 0.5,
+            "impact": 0.2,
+            "failureMode": "Arrows penetrate or pass through thin cardboard, so it fails to stop projectiles safely.",
+            "chars": 53,
+            "novelty": 0.5394879411611896
+          },
+          {
+            "text": "Cut windows and doors to make a dollhouse.",
+            "feasibility": 0.9,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 42,
+            "novelty": 0.42702022190546984
+          },
+          {
+            "text": "Fold it into a tray for painting or messy crafts.",
+            "feasibility": 0.7,
+            "impact": 0.2,
+            "failureMode": "Paint and moisture soak through and warp the cardboard, so it loses shape as a tray.",
+            "chars": 49,
+            "novelty": 0.5182928748146527
+          },
+          {
+            "text": "Place it over your head as a cheap eclipse viewer.",
+            "feasibility": 0.1,
+            "impact": 0.1,
+            "failureMode": "Cardboard is not optically safe for solar viewing and transmits no filtered image, risking eye damage.",
+            "chars": 50,
+            "novelty": 0.4348021981564454
+          },
+          {
+            "text": "Stuff with clothes to make a DIY punching bag.",
+            "feasibility": 0.6,
+            "impact": 0.2,
+            "failureMode": "Cardboard seams split and the box deforms under repeated punching impact.",
+            "chars": 46,
+            "novelty": 0.39584622785419565
+          },
+          {
+            "text": "Use as a canvas for a large painting or mural.",
+            "feasibility": 0.8,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 46,
+            "novelty": 0.4551763401364842
+          },
+          {
+            "text": "Cut into strips to make biodegradable packing material.",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "Shredded cardboard strips lack the cushioning resilience of commercial packing material and mat down under load.",
+            "chars": 55,
+            "novelty": 0.49577772422630817
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "aut-brick-en",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: brick",
+      "metrics": {
+        "nIdeas": 31,
+        "nUnique": 31,
+        "meanPairwiseDistance": 0.5202,
+        "clusters": 14,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.5372,
+        "ctrl_clusters": 9,
+        "meanNovelty": 0.6209,
+        "maxNovelty": 0.7254,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.6105,
+        "meanFeasibility": 0.5419,
+        "meanImpact": 0.3161,
+        "noveltyUsefulness": 0.3365,
+        "fluency": 31,
+        "flexibility": 14,
+        "meanOriginality": 0.6209,
+        "maxOriginality": 0.7254,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.8484,
+        "crossConfigDistinctiveness": 0.5918
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1",
+          "簇2",
+          "簇3",
+          "簇4",
+          "簇5",
+          "簇6",
+          "簇7",
+          "簇8",
+          "簇9",
+          "簇10",
+          "簇11",
+          "簇12",
+          "簇13"
+        ],
+        "reviews": [
+          {
+            "text": "用砖块蘸取层层退去的泥浆在墙上压印，像潮涨潮落一样留下不断变化的纹理，让墙面自己记录时间。",
+            "feasibility": 0.9,
+            "impact": 0.3,
+            "failureMode": "泥浆压印纹理在户外数小时内即被雨水冲刷殆尽，无法真正'记录时间'。",
+            "chars": 45,
+            "novelty": 0.6105748315560395
+          },
+          {
+            "text": "把砖块悬吊成摆,让它随人经过的气流来回摆动,像潮水一样把静止空间变成起伏的节奏。",
+            "feasibility": 0.6,
+            "impact": 0.2,
+            "failureMode": "砖块质量大，人体经过的气流远不足以驱动其摆动，需外力持续推动。",
+            "chars": 40,
+            "novelty": 0.5415973511661978
+          },
+          {
+            "text": "将砖块埋入沙中只露出一角,随每次涨潮被人移动位置,使它成为一件永远未完成的潮汐雕塑。",
+            "feasibility": 0.5,
+            "impact": 0.2,
+            "failureMode": "潮汐移动砖块的位置不可控，最终雕塑形态由自然随机决定而非艺术意图。",
+            "chars": 42,
+            "novelty": 0.5339651622477467
+          },
+          {
+            "text": "用砖做可折展的临时灶台：把砖当折纸的折痕，堆叠时收纳成扁平一件，展开时形成通风火道。",
+            "feasibility": 0.4,
+            "impact": 0.3,
+            "failureMode": "砖是脆性材料，无法像折纸一样反复折叠，折痕处必然断裂。",
+            "chars": 42,
+            "novelty": 0.6150318018692522
+          },
+          {
+            "text": "用砖做压纸镇——把报纸折成折纸模型，砖的重量替代手压，让折纸在干燥中定型。",
+            "feasibility": 0.9,
+            "impact": 0.2,
+            "failureMode": "普通镇纸即可完成，砖块无任何独特优势，且易压坏折纸细节。",
+            "chars": 37,
+            "novelty": 0.5718880256878901
+          },
+          {
+            "text": "用碎砖粉混纸浆折成拱壳：砖提供抗压，折纸褶皱提供抗拉，砌出比整砖更轻的穹顶。",
+            "feasibility": 0.3,
+            "impact": 0.4,
+            "failureMode": "碎砖粉与纸浆混合后抗压强度远低于整砖，拱壳承重能力存疑。",
+            "chars": 38,
+            "novelty": 0.6516477412637636
+          },
+          {
+            "text": "像回旋镖一样扔出去，让砖头飞出去再飞回来砸到自己，反转成用砖头当门挡防止门被风吹关。",
+            "feasibility": 0.1,
+            "impact": 0.1,
+            "failureMode": "砖块无空气动力学外形，抛出后不可能回旋返回。",
+            "chars": 42,
+            "novelty": 0.5288071277755428
+          },
+          {
+            "text": "故意把砖头扔进水里让它沉底，反转成把砖头绑在绳子上当水深探测器。",
+            "feasibility": 0.9,
+            "impact": 0.2,
+            "failureMode": "任何重物都可测水深，砖块无特殊性，且绳子长度限制测量范围。",
+            "chars": 32,
+            "novelty": 0.6655238213335255
+          },
+          {
+            "text": "用砖头把玩具砸烂来泄愤，反转成用砖头当锤子把玩具敲回原形修复。",
+            "feasibility": 0.2,
+            "impact": 0.1,
+            "failureMode": "被砸烂的玩具无法用锤子敲回原形，材料已发生不可逆破坏。",
+            "chars": 31,
+            "novelty": 0.5457461000992252
+          },
+          {
+            "text": "用砖块模仿白蚁丘的烟囱效应，砌成中空柱体引导热空气上升，为室内被动降温。",
+            "feasibility": 0.7,
+            "impact": 0.5,
+            "failureMode": "中空砖柱的烟囱效应需足够高度差，单层砖砌柱体难以产生有效抽力。",
+            "chars": 36,
+            "novelty": 0.6195468995707063
+          },
+          {
+            "text": "用砖块模仿蛋壳的拱形抗压结构，砌成薄壳穹顶，以极少材料承受大载荷。",
+            "feasibility": 0.6,
+            "impact": 0.6,
+            "failureMode": "砖砌薄壳穹顶需要精确的几何切割和砂浆配比，施工难度远超普通砌筑。",
+            "chars": 33,
+            "novelty": 0.7159479717073356
+          },
+          {
+            "text": "用砖块模仿毛衣编织的交错锁扣，将砖块间嵌入Z形金属钩互相咬合，砌成可抗震的柔性墙体。",
+            "feasibility": 0.5,
+            "impact": 0.6,
+            "failureMode": "Z形金属钩在砖块间咬合需精确预留槽位，且金属钩的疲劳寿命决定墙体寿命。",
+            "chars": 42,
+            "novelty": 0.6602635140302107
+          },
+          {
+            "text": "用砖块砌成中空柱体，柱体内悬挂一个可摆动的砖锤；当热空气上升驱动砖锤摆动时，砖锤反复敲击玩具，将其砸烂又敲回原形，同时柱体烟囱效应为室内降温。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "热空气上升的驱动力远不足以驱动砖锤反复摆动并砸烂玩具，能量严重不足。",
+            "chars": 71,
+            "novelty": 0.550042632622763
+          },
+          {
+            "text": "将砖头绑在绳子上，先砸烂玩具碎片，再用于探测水深以找回碎片；砖头的破坏力与测量功能在同一个工具中叠加，实现从泄愤到修复和探测的多重用途。",
+            "feasibility": 0.3,
+            "impact": 0.1,
+            "failureMode": "砸烂玩具产生的碎片与水深探测无逻辑关联，功能叠加是牵强拼凑。",
+            "chars": 68,
+            "novelty": 0.6123278008639088
+          },
+          {
+            "text": "把砖块高温烧结后当蓄热体，夜间放热供暖，用者按放热时长付费。",
+            "feasibility": 0.8,
+            "impact": 0.4,
+            "failureMode": "砖的蓄热密度远低于专用蓄热材料（如相变材料），按放热时长付费难以精确计量。",
+            "chars": 30,
+            "novelty": 0.5736332119353041
+          },
+          {
+            "text": "砖块棱角处开槽后扣成可拆锁扣护坡，减少水泥用量，租用者按砌块数量付租金。",
+            "feasibility": 0.6,
+            "impact": 0.4,
+            "failureMode": "开槽砖块的结构强度大幅下降，护坡在土压力下可能沿槽口断裂。",
+            "chars": 36,
+            "novelty": 0.6084408027813317
+          },
+          {
+            "text": "把砖块破碎筛成不同粒径，用于体育场跑道缓冲层，按运动员体重分级收费。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "碎砖粒径分布难以精确控制，按体重分级收费缺乏科学依据。",
+            "chars": 34,
+            "novelty": 0.7254395064102794
+          },
+          {
+            "text": "把砖坯孔隙率放大到海绵程度，埋入盐袋吸潮后取出日晒析盐，因孔隙毛细管力大于盐结晶压力而反复使用。",
+            "feasibility": 0.3,
+            "impact": 0.3,
+            "failureMode": "盐结晶压力通常大于毛细管力，反复吸潮析盐会导致砖体孔隙逐渐崩解。",
+            "chars": 48,
+            "novelty": 0.596769359973065
+          },
+          {
+            "text": "把砖的热容缩到薄片尺度，叠成百叶窗，白天吸热夜间缓慢放热，因热容与质量成正比而薄片响应更快。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "薄片砖的热容小意味着蓄热量也小，放热时间短，无法实现夜间持续供暖。",
+            "chars": 46,
+            "novelty": 0.6170266617815892
+          },
+          {
+            "text": "用砖的碱性棱角在羊皮上刮擦，碱液皂化脂肪、棱角刮除残毛，因碱与角蛋白反应而实现无刀脱毛。",
+            "feasibility": 0.4,
+            "impact": 0.2,
+            "failureMode": "砖的碱性极弱，不足以皂化脂肪，且刮擦会损伤羊皮。",
+            "chars": 44,
+            "novelty": 0.5735903851257202
+          },
+          {
+            "text": "把砖的棱角在显微镜下放大一千倍，每个尖角都变成能勾住衣物的倒刺，用来当登山者挂在岩壁上的微型锚点。",
+            "feasibility": 0.1,
+            "impact": 0.1,
+            "failureMode": "放大一千倍后砖的微观尖角仍是脆性矿物，无法承受人体重量作为锚点。",
+            "chars": 49,
+            "novelty": 0.6134977416893983
+          },
+          {
+            "text": "把一块砖的质量缩到百分之一克，它的热容随之变小，捏成粉末撒在皮肤上，能瞬间感知手指掠过空气的微弱热流。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "百分之一克的砖粉热容极小，感知到的热流信号会被皮肤自身热噪声淹没。",
+            "chars": 51,
+            "novelty": 0.6061372604198377
+          },
+          {
+            "text": "将砖的碱性放大到能中和整片酸雨的程度，把碎砖铺满候鸟迁徙路线上的湿地，让鸟群停歇时脚底接触碱面，抑制寄生虫。",
+            "feasibility": 0.1,
+            "impact": 0.2,
+            "failureMode": "砖的碱量远不足以中和整片酸雨，且碱面会灼伤候鸟脚底而非抑制寄生虫。",
+            "chars": 54,
+            "novelty": 0.649769976959512
+          },
+          {
+            "text": "将砖块破碎筛分成不同粒径，构建具有梯度孔隙率的中空柱体，结合烟囱效应驱动被动降温，并可根据运动员体重调节粒径分布以改变热舒适度，按分级收费。",
+            "feasibility": 0.3,
+            "impact": 0.3,
+            "failureMode": "梯度孔隙率与烟囱效应、体重调节、收费模式之间缺乏可验证的物理关联。",
+            "chars": 70,
+            "novelty": 0.6779993148862776
+          },
+          {
+            "text": "用中空砖柱诱导烟囱效应，使热空气上升并不断从底部吸入凉爽空气；同时让砖体在白天蓄积太阳辐射热，夜间通过热空气上升将蓄存的热量带入室内供暖。用户按夜间供暖时长付费。",
+            "feasibility": 0.5,
+            "impact": 0.5,
+            "failureMode": "同一砖体白天吸热夜间放热与烟囱效应驱动气流相互矛盾，热空气上升会加速热量散失而非蓄存。",
+            "chars": 81,
+            "novelty": 0.7149703170620256
+          },
+          {
+            "text": "把砖块当信息载体：在砖面刻盲文，砌成一面可触摸的公共地图，盲人沿墙摸行即可读取方向。",
+            "feasibility": 0.8,
+            "impact": 0.6,
+            "failureMode": "盲文刻在砖面需极高精度，且砌成地图后接缝会干扰触读连续性。",
+            "chars": 42,
+            "novelty": 0.6270884079501098
+          },
+          {
+            "text": "把砖块当社交筹码：每块砖刻一个居民姓名，砌成社区长椅，每人认领一块砖，坐上去即象征参与公共事务。",
+            "feasibility": 0.9,
+            "impact": 0.5,
+            "failureMode": "刻名砖块砌成长椅后，坐上去即象征参与，但实际公共事务参与度无法由此保证。",
+            "chars": 48,
+            "novelty": 0.6523681661171543
+          },
+          {
+            "text": "把砖块当游戏棋子：在泥地上画潮汐涨落格，砖块按潮汐节奏进退，两人轮流推砖占格，模拟潮水争夺滩涂。",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "砖块在泥地上推行的游戏规则依赖潮汐节奏，但潮汐周期与游戏回合难以同步。",
+            "chars": 48,
+            "novelty": 0.6078930096543196
+          },
+          {
+            "text": "把砖当筹码参与桌面游戏，刻凹槽标记面值，因其不可仿制的重量差异而防作弊。",
+            "feasibility": 0.7,
+            "impact": 0.2,
+            "failureMode": "砖块重量差异不足以防作弊，且刻凹槽标记面值可被仿制。",
+            "chars": 36,
+            "novelty": 0.6380701113901475
+          },
+          {
+            "text": "把砖竖在村口当无字碑，每户放一块代表一人，用数量而非文字记录人口，靠集体摆放完成仪式。",
+            "feasibility": 0.9,
+            "impact": 0.4,
+            "failureMode": "无字碑用数量记录人口，但砖块可被随意增减，记录不可靠。",
+            "chars": 43,
+            "novelty": 0.6890474532132391
+          },
+          {
+            "text": "把砖块依次传递当作发言令牌，持砖者才能说话，因砖的传递动作可见而强制顺序，替代会议主持。",
+            "feasibility": 0.9,
+            "impact": 0.5,
+            "failureMode": "砖块作为发言令牌的强制顺序依赖参与者自觉，无实际约束力。",
+            "chars": 44,
+            "novelty": 0.6532023958394928
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: brick",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4273,
+        "clusters": 3,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4273,
+        "ctrl_clusters": 3,
+        "meanNovelty": 0.3993,
+        "maxNovelty": 0.6155,
+        "meanElaboration": 0.8264,
+        "ctrl_meanNovelty": 0.3993,
+        "meanFeasibility": 0.7083,
+        "meanImpact": 0.2333,
+        "noveltyUsefulness": 0.2828,
+        "fluency": 12,
+        "flexibility": 3,
+        "meanOriginality": 0.3993,
+        "maxOriginality": 0.6155,
+        "elaboration": 0.8264,
+        "invalid": 0,
+        "dtIndex": 0.5587,
+        "crossConfigDistinctiveness": 0.5473
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1",
+          "簇2"
+        ],
+        "reviews": [
+          {
+            "text": "Use it as a doorstop to keep doors propped open because it's heavy and stable.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 78,
+            "novelty": 0.3426221427357451
+          },
+          {
+            "text": "Use it as a paperweight to hold papers down because it's heavy.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 63,
+            "novelty": 0.22885370484039425
+          },
+          {
+            "text": "Use it as a bookend to keep books upright because it's solid and weighty.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 73,
+            "novelty": 0.3843531529785399
+          },
+          {
+            "text": "Use it as a hammer to drive nails because it's hard and heavy.",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "Brick is brittle and may chip or shatter on impact, and lacks a handle for controlled striking.",
+            "chars": 62,
+            "novelty": 0.34237436000670873
+          },
+          {
+            "text": "Use it as a sharpener for knives by rubbing the blade on its rough surface.",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "Fired brick is too porous and irregular to abrade steel; it crumbles and dulls rather than sharpens the edge.",
+            "chars": 75,
+            "novelty": 0.4331776701193557
+          },
+          {
+            "text": "Use it as a weapon for self-defense because it's hard and heavy.",
+            "feasibility": 0.9,
+            "impact": 0.4,
+            "failureMode": "Requires close proximity and a firm grip; a dropped or glancing brick is easily taken and used against you.",
+            "chars": 64,
+            "novelty": 0.36785731912426334
+          },
+          {
+            "text": "Use it as a makeshift step to reach high places because it's sturdy.",
+            "feasibility": 0.6,
+            "impact": 0.2,
+            "failureMode": "A single brick is only ~6-8 cm tall, giving negligible height gain and an unstable, tipping platform.",
+            "chars": 68,
+            "novelty": 0.43809608086127094
+          },
+          {
+            "text": "Use it as a heat sink to absorb and radiate heat because it has thermal mass.",
+            "feasibility": 0.4,
+            "impact": 0.2,
+            "failureMode": "Brick is a thermal insulator, not a conductor; it stores heat slowly and radiates it poorly compared to metal.",
+            "chars": 77,
+            "novelty": 0.6155149268283187
+          },
+          {
+            "text": "Use it as a weight for exercise by lifting it repeatedly to build strength.",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "No grip surface; a standard brick is too light (~3 kg) for progressive overload and awkward to hold during reps.",
+            "chars": 75,
+            "novelty": 0.40284209228842216
+          },
+          {
+            "text": "Use it as a garden marker by scratching plant names on it with a nail.",
+            "feasibility": 0.7,
+            "impact": 0.2,
+            "failureMode": "Scratches on a porous, weathering surface fade and fill with dirt, becoming illegible within a season.",
+            "chars": 70,
+            "novelty": 0.49523872470038577
+          },
+          {
+            "text": "Use it as a toy for stacking and building with children because it's durable.",
+            "feasibility": 0.5,
+            "impact": 0.2,
+            "failureMode": "Bricks are heavy and abrasive; dropped on a child's foot or head they cause serious injury, so unsafe as a toy.",
+            "chars": 77,
+            "novelty": 0.3400772279640052
+          },
+          {
+            "text": "Use it as a writing surface by chalking on it for temporary notes.",
+            "feasibility": 0.6,
+            "impact": 0.2,
+            "failureMode": "Chalk adheres poorly to the rough, dusty, porous face and rubs off at the slightest contact.",
+            "chars": 66,
+            "novelty": 0.4002173830168959
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "aut-rope-en",
+      "configId": "engine",
+      "kind": "aut",
+      "title": "AUT: rope",
+      "metrics": {
+        "nIdeas": 31,
+        "nUnique": 31,
+        "meanPairwiseDistance": 0.4717,
+        "clusters": 8,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.477,
+        "ctrl_clusters": 4,
+        "meanNovelty": 0.6005,
+        "maxNovelty": 0.686,
+        "meanElaboration": 1,
+        "ctrl_meanNovelty": 0.6252,
+        "meanFeasibility": 0.5839,
+        "meanImpact": 0.3226,
+        "noveltyUsefulness": 0.3506,
+        "fluency": 31,
+        "flexibility": 8,
+        "meanOriginality": 0.6005,
+        "maxOriginality": 0.686,
+        "elaboration": 1,
+        "invalid": 0,
+        "dtIndex": 0.7902,
+        "crossConfigDistinctiveness": 0.4978
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1",
+          "簇2",
+          "簇3",
+          "簇4",
+          "簇5",
+          "簇6",
+          "簇7"
+        ],
+        "reviews": [
+          {
+            "text": "用绳索在沙滩上编出潮汐涨落的波形，让观者随脚印感受时间被拉长。",
+            "feasibility": 0.8,
+            "impact": 0.2,
+            "failureMode": "潮汐波形是静态绳形，观者无法真正感受时间被拉长，效果依赖主观解读。",
+            "chars": 31,
+            "novelty": 0.6503976910325725
+          },
+          {
+            "text": "把绳索浸入盐水后悬吊风干，盐晶沿绳纤维结晶成潮痕，作为会呼吸的雕塑。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "盐晶在柔软绳上易剥落，'呼吸'效果难以持续，且盐雾腐蚀环境。",
+            "chars": 34,
+            "novelty": 0.6860314184443588
+          },
+          {
+            "text": "将绳索一端系于码头、一端系于漂浮物，随潮汐松紧，绳索成为记录月亮牵引的乐器。",
+            "feasibility": 0.6,
+            "impact": 0.3,
+            "failureMode": "绳的松紧变化无法直接发声，需额外传感器或摩擦装置，'乐器'名不副实。",
+            "chars": 38,
+            "novelty": 0.6665992499599442
+          },
+          {
+            "text": "用绳芯夹折纸状金属箔做轻质高强绳，平时柔软可卷，受力时折纹展开锁紧变刚，兼顾柔韧与承重。",
+            "feasibility": 0.4,
+            "impact": 0.6,
+            "failureMode": "折纸金属箔反复展开会疲劳断裂，且锁紧后难以恢复柔软可卷状态。",
+            "chars": 44,
+            "novelty": 0.5820786514372782
+          },
+          {
+            "text": "按古帆船索具分股编绳：承重段密实抗拉，端头散开折叠成绑扎带，用同一根绳在空间上分离拉力与包裹需求。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "同一根绳分离承重与包裹需求在物理上可行但无显著优势，古法已有。",
+            "chars": 49,
+            "novelty": 0.6060918187129581
+          },
+          {
+            "text": "在绳中每隔一段编入折纸风箱式伸缩节，平时收紧省空间，拉重时节点展开增摩擦与锚力，按时间分离收纳与抓地。",
+            "feasibility": 0.5,
+            "impact": 0.5,
+            "failureMode": "折纸风箱节在拉力下展开会降低整体强度，摩擦锚力提升有限。",
+            "chars": 51,
+            "novelty": 0.5823248005294475
+          },
+          {
+            "text": "把绳子当回旋镖扔出去，因为绳子太软飞不回来，只能当鞭子抽空气。",
+            "feasibility": 0.2,
+            "impact": 0.1,
+            "failureMode": "绳子太软无法回旋，此条只是描述失败而非用途。",
+            "chars": 31,
+            "novelty": 0.5811188042293917
+          },
+          {
+            "text": "让绳子打结到解不开，越急越糟，索性当死结锁扣挂重物。",
+            "feasibility": 0.9,
+            "impact": 0.2,
+            "failureMode": "死结锁扣承重远低于专业绳结，且无法解开重复使用。",
+            "chars": 26,
+            "novelty": 0.5122323566336371
+          },
+          {
+            "text": "把绳子泡水冻成冰棍，因为软绳没法当棍子，冻硬后却能捅高处的东西。",
+            "feasibility": 0.6,
+            "impact": 0.3,
+            "failureMode": "冰绳脆性大，受力易断，且融化后失去刚性。",
+            "chars": 32,
+            "novelty": 0.5899070661523815
+          },
+          {
+            "text": "用绳子像蛛丝般从高处斜拉到低处，人顺绳下滑，因摩擦与倾角共同减速。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "摩擦与倾角减速需精确控制，实际下滑速度难以安全调节。",
+            "chars": 33,
+            "novelty": 0.5525922333054332
+          },
+          {
+            "text": "把绳子编成巢状网兜兜住树干，模仿织雀巢的缠绕，分散受力吊起重物。",
+            "feasibility": 0.6,
+            "impact": 0.4,
+            "failureMode": "巢状网兜分散受力但绳结处应力集中，吊重物易局部断裂。",
+            "chars": 32,
+            "novelty": 0.5593315314812461
+          },
+          {
+            "text": "将绳子打结穿环做成蠕虫式伸缩套，靠体节交替固定与放松沿杆攀爬。",
+            "feasibility": 0.5,
+            "impact": 0.4,
+            "failureMode": "蠕虫式伸缩套需多节交替固定，绳的柔性导致固定不可靠。",
+            "chars": 31,
+            "novelty": 0.556721376566004
+          },
+          {
+            "text": "将绳子的一端系成织雀巢式的缠绕网兜，用作回旋镖的柔软头部：投掷时，网兜在空气中展开并缠绕目标，而绳子本身因过软无法回旋，只好像鞭子一样抽打空气产生回旋的假象。也可以把绳子编成巢状网兜，里面放一个回旋镖，扔出去后网兜兜住回旋镖，绳子因太软飞不回来，只能被拖在地上当鞭子抽。",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "网兜缠绕目标不可控，回旋镖假象逻辑混乱，实际无法稳定投掷。",
+            "chars": 135,
+            "novelty": 0.6245699576994396
+          },
+          {
+            "text": "将绳子浸入饱和盐水中，取出后一端固定于高处悬垂，另一端自由；盐水沿绳纤维渗透，并在绳体缓慢干涸过程中析出盐晶。由于绳体柔软易动，盐晶在绳上形成不均匀的、会随空气流动轻微剥落或再造的潮痕结构；更关键的是，在绳子最低端系一个小重物或直接用手握住绳尾，像甩鞭子一样快速抽甩，甩出的盐尘和潮湿的绳体在空气中划出短暂弧线，同时绳体因盐晶变硬而局部变脆，甩动时断裂的细小盐晶像“回旋镖碎屑”一样向前喷出而绳体本身不飞回。整个装置既是一件随环境湿度“呼吸”的盐晶雕塑，又是一种动态的、不可预测的盐尘投掷/鞭打表演。",
+            "feasibility": 0.4,
+            "impact": 0.3,
+            "failureMode": "盐晶使绳变脆，甩动时断裂不可预测，盐尘投掷无实际用途。",
+            "chars": 250,
+            "novelty": 0.6586396727898008
+          },
+          {
+            "text": "把绳子按等距打结分成量尺，矿工用结数报告深度，省去购买卷尺的开支。",
+            "feasibility": 0.9,
+            "impact": 0.3,
+            "failureMode": "打结量尺精度低，矿工深度报告误差大，省卷尺钱但风险高。",
+            "chars": 33,
+            "novelty": 0.6220142612820436
+          },
+          {
+            "text": "两人各执绳一端按约定松紧表示同意或反对，绳绷直即否决，让沉默者也能低成本参与表决。",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "绳绷直即否决的约定易被单方操控，沉默者参与仍受制于执绳者。",
+            "chars": 41,
+            "novelty": 0.5716272404277168
+          },
+          {
+            "text": "把绳子系在门把与桌腿间，夜间绊倒闯入者并拉响铃铛，住户以极低成本获得警报收益。",
+            "feasibility": 0.8,
+            "impact": 0.4,
+            "failureMode": "绊倒闯入者可能误伤住户，铃铛触发需闯入者恰好踢到绳。",
+            "chars": 39,
+            "novelty": 0.6381582258132141
+          },
+          {
+            "text": "把绳子当古代驿站换马令牌，每传一程打一个特定结，收绳人凭结序读出情报与接力指令，绳成为会移动的编码档案。",
+            "feasibility": 0.7,
+            "impact": 0.4,
+            "failureMode": "结序编码容量有限，易被截获者模仿或篡改，安全性低。",
+            "chars": 52,
+            "novelty": 0.6480784625821275
+          },
+          {
+            "text": "像候鸟以V字队形分担气流那样，多人各执绳的一段按固定间距排成人链，领队抬手牵动绳波依次传到最后一人，绳成为无声的指令传导介质。",
+            "feasibility": 0.6,
+            "impact": 0.3,
+            "failureMode": "绳波传递指令需多人同步，实际中绳波衰减且易误读。",
+            "chars": 63,
+            "novelty": 0.5839288276580914
+          },
+          {
+            "text": "将绳系在两人手腕上像纺织提花机的经线，一方按预设节奏拉松拉紧，另一方被牵引做出动作，绳成为跨身体的程序化动作执行者。",
+            "feasibility": 0.5,
+            "impact": 0.3,
+            "failureMode": "跨身体牵引动作需精确节奏，绳的弹性导致动作失真。",
+            "chars": 58,
+            "novelty": 0.6569288125085126
+          },
+          {
+            "text": "把绳子每隔一臂打个结当信标，候鸟般按结序传递消息，收绳者摸结即解码。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "摸结解码需预先约定，结序易混淆，传递效率低。",
+            "chars": 34,
+            "novelty": 0.6246211871934808
+          },
+          {
+            "text": "将绳斜拉在教室两桌间当临时球门线，球触绳即判得分，绳软卸力不伤人。",
+            "feasibility": 0.9,
+            "impact": 0.3,
+            "failureMode": "绳软卸力但球触绳判分主观，边界模糊易争议。",
+            "chars": 33,
+            "novelty": 0.5559806920107074
+          },
+          {
+            "text": "把绳一端系手腕一端咬嘴里，弯腰时绳拉头提醒别驼背，像候鸟用磁场校正方向。",
+            "feasibility": 0.7,
+            "impact": 0.2,
+            "failureMode": "绳拉头提醒驼背需持续咬绳，舒适性差且无法校正习惯。",
+            "chars": 36,
+            "novelty": 0.5698061911887642
+          },
+          {
+            "text": "将绳子视为一种可投掷的编码档案：投掷者将绳子像回旋镖一样抛出，绳子上预先打好的结序在飞行中通过空气振动发出特定哨音，收绳人根据结序和哨音解码出情报与接力指令，同时绳子的鞭击声可驱赶敌人。",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "绳飞行中结序哨音不可控，鞭击声驱敌无实际威慑。",
+            "chars": 93,
+            "novelty": 0.6653336361245434
+          },
+          {
+            "text": "绳索一端系于随潮汐起伏的漂浮物，另一端系于驿站传令兵的手腕；潮汐的涨落自动在绳上打出不同的结，每个结对应潮位与月相，传令兵解绳便读出海潮的“来信”与下一程的接力指令，绳成为月亮与人间合写的编码档案。",
+            "feasibility": 0.2,
+            "impact": 0.2,
+            "failureMode": "潮汐自动打结在物理上不可能，绳无法自行形成不同结。",
+            "chars": 99,
+            "novelty": 0.6334614599493973
+          },
+          {
+            "text": "仿照潮汐涨落推动磨坊水轮的往复机制，把湿绳浸水后在两柱间绷紧，干湿循环使绳长微变，驱动指针在刻度上记录空气湿度。",
+            "feasibility": 0.5,
+            "impact": 0.4,
+            "failureMode": "湿绳干湿循环长度变化极小，驱动指针灵敏度不足。",
+            "chars": 56,
+            "novelty": 0.6726472457256636
+          },
+          {
+            "text": "像古代弩炮用扭绞动物筋键储能那样，把三根绳绞成一股后突然释放，绳的扭转解旋弹力把羽毛球从桶底弹射到对面场地。",
+            "feasibility": 0.6,
+            "impact": 0.3,
+            "failureMode": "绳扭转解旋弹力远小于弩炮筋键，弹射羽毛球力度不够。",
+            "chars": 54,
+            "novelty": 0.5244029194434802
+          },
+          {
+            "text": "用绳在骨折肢体两侧各绕一圈并施加反向拉力，绳的张力抗阻肌肉牵拉，把断骨两端稳定对位直至愈合。",
+            "feasibility": 0.4,
+            "impact": 0.5,
+            "failureMode": "绳张力抗阻肌肉牵拉无法精确稳定断骨，易造成二次损伤。",
+            "chars": 46,
+            "novelty": 0.5544766639517302
+          },
+          {
+            "text": "把三股绳中段各抽出纤维留空腔，灌入熔蜡再冷却，蜡芯承压时缓慢蠕变吸能，兼作防坠缓冲。",
+            "feasibility": 0.5,
+            "impact": 0.4,
+            "failureMode": "蜡芯蠕变吸能有限，防坠缓冲需精确设计，实际承压易失效。",
+            "chars": 42,
+            "novelty": 0.53478835678582
+          },
+          {
+            "text": "跳绳起跳前把绳中央浸湿再拍平，湿纤维摩擦翻倍贴地不打滑，落地噪音降到近乎无声。",
+            "feasibility": 0.7,
+            "impact": 0.3,
+            "failureMode": "湿纤维贴地降噪但增加绳重，起跳时湿绳易甩到使用者。",
+            "chars": 39,
+            "novelty": 0.5539627202412414
+          },
+          {
+            "text": "用弹性绳穿过针孔缝入纱布绷带，患者呼吸时绳随胸廓伸缩带动敷料微移，防止伤口粘连并按摩创缘。",
+            "feasibility": 0.4,
+            "impact": 0.4,
+            "failureMode": "弹性绳随呼吸带动敷料微移可能撕裂伤口，按摩创缘风险高。",
+            "chars": 45,
+            "novelty": 0.5971711539047552
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "kind": "aut",
+      "title": "AUT: rope",
+      "metrics": {
+        "nIdeas": 12,
+        "nUnique": 12,
+        "meanPairwiseDistance": 0.4248,
+        "clusters": 2,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.4248,
+        "ctrl_clusters": 2,
+        "meanNovelty": 0.3589,
+        "maxNovelty": 0.4781,
+        "meanElaboration": 0.5069,
+        "ctrl_meanNovelty": 0.3589,
+        "meanFeasibility": 0.7917,
+        "meanImpact": 0.2583,
+        "noveltyUsefulness": 0.2841,
+        "fluency": 12,
+        "flexibility": 2,
+        "meanOriginality": 0.3589,
+        "maxOriginality": 0.4781,
+        "elaboration": 0.5069,
+        "invalid": 0,
+        "dtIndex": 0.4696,
+        "crossConfigDistinctiveness": 0.4546
+      },
+      "extras": {
+        "weights": {
+          "fluency": 0.2,
+          "flexibility": 0.25,
+          "originality": 0.4,
+          "elaboration": 0.15
+        },
+        "categories": [
+          "簇0",
+          "簇1"
+        ],
+        "reviews": [
+          {
+            "text": "Tie a knot to secure cargo because tension holds it tight.",
+            "feasibility": 1,
+            "impact": 0.3,
+            "failureMode": "none",
+            "chars": 58,
+            "novelty": 0.39458582965833056
+          },
+          {
+            "text": "Make a swing by hanging it from a branch for fun.",
+            "feasibility": 0.9,
+            "impact": 0.3,
+            "failureMode": "none",
+            "chars": 49,
+            "novelty": 0.4454572382816473
+          },
+          {
+            "text": "Use as a clothesline to dry wet clothes in the sun.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 51,
+            "novelty": 0.38082273770626507
+          },
+          {
+            "text": "Create a leash to walk a dog safely outdoors.",
+            "feasibility": 1,
+            "impact": 0.3,
+            "failureMode": "none",
+            "chars": 45,
+            "novelty": 0.12707733042080038
+          },
+          {
+            "text": "Build a ladder by tying knots for climbing up.",
+            "feasibility": 0.3,
+            "impact": 0.2,
+            "failureMode": "A rope ladder needs rigid rungs or stiffened steps; knots alone collapse under a climber's weight.",
+            "chars": 46,
+            "novelty": 0.3771917779185947
+          },
+          {
+            "text": "Form a circle for a tug-of-war game with friends.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 49,
+            "novelty": 0.1837693100940695
+          },
+          {
+            "text": "Lash poles together to make a sturdy shelter frame.",
+            "feasibility": 0.9,
+            "impact": 0.4,
+            "failureMode": "none",
+            "chars": 51,
+            "novelty": 0.4329908801747111
+          },
+          {
+            "text": "Wrap around a tree as a guard for protection.",
+            "feasibility": 0.2,
+            "impact": 0.1,
+            "failureMode": "A rope wrapped around a tree provides no meaningful protection against any real threat.",
+            "chars": 45,
+            "novelty": 0.37845032124389655
+          },
+          {
+            "text": "Use as a jump rope for exercise and coordination.",
+            "feasibility": 1,
+            "impact": 0.2,
+            "failureMode": "none",
+            "chars": 49,
+            "novelty": 0.33052354276796003
+          },
+          {
+            "text": "Tie up a bundle of firewood for easy carrying.",
+            "feasibility": 1,
+            "impact": 0.3,
+            "failureMode": "none",
+            "chars": 46,
+            "novelty": 0.3933168560832898
+          },
+          {
+            "text": "Make a fishing line to catch fish for food.",
+            "feasibility": 0.4,
+            "impact": 0.3,
+            "failureMode": "Rope lacks the transparency, flexibility, and tensile behavior of monofilament, so fish see it and it sinks or tangles.",
+            "chars": 43,
+            "novelty": 0.3841733045363692
+          },
+          {
+            "text": "Create a tripwire to alert you of intruders.",
+            "feasibility": 0.8,
+            "impact": 0.3,
+            "failureMode": "none",
+            "chars": 44,
+            "novelty": 0.4780813977986593
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "dat-en-7",
+      "configId": "engine",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 34,
+        "nUnique": 34,
+        "meanPairwiseDistance": 0.6071,
+        "clusters": 14,
+        "ctrl_n": 12,
+        "ctrl_meanPairwiseDistance": 0.6187,
+        "ctrl_clusters": 8,
+        "wordsGiven": 7,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 40.67,
+        "minPairDistance": 14.9335,
+        "maxPairDistance": 56.4602,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": -0.29,
+        "crossConfigDistinctiveness": 0.7058
+      },
+      "extras": {
+        "words": [
+          "特征",
+          "把",
+          "DAT",
+          "想到",
+          "从",
+          "撞墙",
+          "耳垢"
+        ],
+        "scored": [
+          "特征",
+          "把",
+          "DAT",
+          "想到",
+          "从",
+          "撞墙",
+          "耳垢"
+        ]
+      }
+    },
+    {
+      "taskId": "dat-en-7",
+      "configId": "zero-shot",
+      "kind": "dat",
+      "title": "DAT: 7 words",
+      "metrics": {
+        "nIdeas": 7,
+        "nUnique": 7,
+        "meanPairwiseDistance": 0.3896,
+        "clusters": 1,
+        "ctrl_n": 7,
+        "ctrl_meanPairwiseDistance": 0.3896,
+        "ctrl_clusters": 1,
+        "wordsGiven": 7,
+        "wordsScored": 7,
+        "validRate": 1,
+        "dispersion": 38.96,
+        "minPairDistance": 31.0371,
+        "maxPairDistance": 46.0147,
+        "calibrationDispersion": 40.9685,
+        "dispersionVsCalibration": -2.01,
+        "crossConfigDistinctiveness": 0.6516
+      },
+      "extras": {
+        "words": [
+          "cloud",
+          "hammer",
+          "silk",
+          "lizard",
+          "volcano",
+          "courage",
+          "bicycle"
+        ],
+        "scored": [
+          "cloud",
+          "hammer",
+          "silk",
+          "lizard",
+          "volcano",
+          "courage",
+          "bicycle"
+        ]
+      }
+    }
+  ],
+  "rescoredAt": "2026-09-30T12:43:25.258Z",
+  "judge": {
+    "model": "deepseek-v4.1-flash",
+    "note": "可行性由同一个 LLM 评委对每个配置独立评分"
+  }
+}

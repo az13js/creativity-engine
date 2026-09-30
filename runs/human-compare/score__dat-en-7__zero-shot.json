@@ -1,0 +1,43 @@
+{
+  "taskId": "dat-en-7",
+  "configId": "zero-shot",
+  "kind": "dat",
+  "title": "DAT: 7 words",
+  "metrics": {
+    "nIdeas": 7,
+    "nUnique": 7,
+    "meanPairwiseDistance": 0.3896,
+    "clusters": 1,
+    "ctrl_n": 7,
+    "ctrl_meanPairwiseDistance": 0.3896,
+    "ctrl_clusters": 1,
+    "wordsGiven": 7,
+    "wordsScored": 7,
+    "validRate": 1,
+    "dispersion": 38.96,
+    "minPairDistance": 31.0371,
+    "maxPairDistance": 46.0147,
+    "calibrationDispersion": 40.9685,
+    "dispersionVsCalibration": -2.01
+  },
+  "extras": {
+    "words": [
+      "cloud",
+      "hammer",
+      "silk",
+      "lizard",
+      "volcano",
+      "courage",
+      "bicycle"
+    ],
+    "scored": [
+      "cloud",
+      "hammer",
+      "silk",
+      "lizard",
+      "volcano",
+      "courage",
+      "bicycle"
+    ]
+  }
+}

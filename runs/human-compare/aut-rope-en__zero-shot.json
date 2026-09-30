@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-rope-en",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "Tie a knot to secure cargo because tension holds it tight.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "Make a swing by hanging it from a branch for fun.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "Use as a clothesline to dry wet clothes in the sun.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "Create a leash to walk a dog safely outdoors.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "Build a ladder by tying knots for climbing up.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "Form a circle for a tug-of-war game with friends.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "Lash poles together to make a sturdy shelter frame.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "Wrap around a tree as a guard for protection.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "Use as a jump rope for exercise and coordination.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "Tie up a bundle of firewood for easy carrying.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "Make a fishing line to catch fish for food.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "Create a tripwire to alert you of intruders.",
+      "taskId": "aut-rope-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 109,
+    "completionTokens": 151,
+    "failures": 0,
+    "wallMs": 5465,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}

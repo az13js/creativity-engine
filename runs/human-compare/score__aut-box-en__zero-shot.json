@@ -1,0 +1,142 @@
+{
+  "taskId": "aut-box-en",
+  "configId": "zero-shot",
+  "kind": "aut",
+  "title": "AUT: box",
+  "metrics": {
+    "nIdeas": 12,
+    "nUnique": 12,
+    "meanPairwiseDistance": 0.4713,
+    "clusters": 5,
+    "ctrl_n": 12,
+    "ctrl_meanPairwiseDistance": 0.4713,
+    "ctrl_clusters": 5,
+    "meanNovelty": 0.4351,
+    "maxNovelty": 0.5584,
+    "meanElaboration": 0.5139,
+    "ctrl_meanNovelty": 0.4351,
+    "meanFeasibility": 0.6583,
+    "meanImpact": 0.2083,
+    "noveltyUsefulness": 0.2864,
+    "fluency": 12,
+    "flexibility": 5,
+    "meanOriginality": 0.4351,
+    "maxOriginality": 0.5584,
+    "elaboration": 0.5139,
+    "invalid": 0,
+    "dtIndex": 0.5761
+  },
+  "extras": {
+    "weights": {
+      "fluency": 0.2,
+      "flexibility": 0.25,
+      "originality": 0.4,
+      "elaboration": 0.15
+    },
+    "categories": [
+      "簇0",
+      "簇1",
+      "簇2",
+      "簇3",
+      "簇4"
+    ],
+    "reviews": [
+      {
+        "text": "Cut a hole for your head to wear it as a silly hat.",
+        "feasibility": 0.9,
+        "impact": 0.1,
+        "failureMode": "none",
+        "chars": 51,
+        "novelty": 0.29324316016686214
+      },
+      {
+        "text": "Stack several to build a sturdy fort for kids.",
+        "feasibility": 0.9,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 46,
+        "novelty": 0.3490798115628593
+      },
+      {
+        "text": "Flatten it into a makeshift sled for sliding down grass.",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "Cardboard becomes soggy and tears on damp grass, and lacks the low-friction base needed to slide.",
+        "chars": 56,
+        "novelty": 0.27012563797299427
+      },
+      {
+        "text": "Poke holes and fill with soil to grow seedlings.",
+        "feasibility": 0.4,
+        "impact": 0.3,
+        "failureMode": "Cardboard decomposes and loses structural integrity when wet, so seedlings outgrow the collapsing box before harvest.",
+        "chars": 48,
+        "novelty": 0.5583826602903594
+      },
+      {
+        "text": "Tape it shut and use as a lightweight shipping container.",
+        "feasibility": 0.8,
+        "impact": 0.3,
+        "failureMode": "Cardboard lacks the burst strength and water resistance required for real shipping, so it crushes under stacking loads.",
+        "chars": 57,
+        "novelty": 0.48377869406904306
+      },
+      {
+        "text": "Draw a target on it for safe indoor archery practice.",
+        "feasibility": 0.5,
+        "impact": 0.2,
+        "failureMode": "Arrows penetrate or pass through thin cardboard, so it fails to stop projectiles safely.",
+        "chars": 53,
+        "novelty": 0.5394879411611896
+      },
+      {
+        "text": "Cut windows and doors to make a dollhouse.",
+        "feasibility": 0.9,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 42,
+        "novelty": 0.42702022190546984
+      },
+      {
+        "text": "Fold it into a tray for painting or messy crafts.",
+        "feasibility": 0.7,
+        "impact": 0.2,
+        "failureMode": "Paint and moisture soak through and warp the cardboard, so it loses shape as a tray.",
+        "chars": 49,
+        "novelty": 0.5182928748146527
+      },
+      {
+        "text": "Place it over your head as a cheap eclipse viewer.",
+        "feasibility": 0.1,
+        "impact": 0.1,
+        "failureMode": "Cardboard is not optically safe for solar viewing and transmits no filtered image, risking eye damage.",
+        "chars": 50,
+        "novelty": 0.4348021981564454
+      },
+      {
+        "text": "Stuff with clothes to make a DIY punching bag.",
+        "feasibility": 0.6,
+        "impact": 0.2,
+        "failureMode": "Cardboard seams split and the box deforms under repeated punching impact.",
+        "chars": 46,
+        "novelty": 0.39584622785419565
+      },
+      {
+        "text": "Use as a canvas for a large painting or mural.",
+        "feasibility": 0.8,
+        "impact": 0.2,
+        "failureMode": "none",
+        "chars": 46,
+        "novelty": 0.4551763401364842
+      },
+      {
+        "text": "Cut into strips to make biodegradable packing material.",
+        "feasibility": 0.7,
+        "impact": 0.3,
+        "failureMode": "Shredded cardboard strips lack the cushioning resilience of commercial packing material and mat down under load.",
+        "chars": 55,
+        "novelty": 0.49577772422630817
+      }
+    ]
+  }
+}

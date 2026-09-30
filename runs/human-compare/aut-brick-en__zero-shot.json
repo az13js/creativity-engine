@@ -1,0 +1,130 @@
+{
+  "taskId": "aut-brick-en",
+  "configId": "zero-shot",
+  "seed": 20240930,
+  "ideas": [
+    {
+      "id": "zero-shot-0",
+      "text": "Use it as a doorstop to keep doors propped open because it's heavy and stable.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-1",
+      "text": "Use it as a paperweight to hold papers down because it's heavy.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-2",
+      "text": "Use it as a bookend to keep books upright because it's solid and weighty.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-3",
+      "text": "Use it as a hammer to drive nails because it's hard and heavy.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-4",
+      "text": "Use it as a sharpener for knives by rubbing the blade on its rough surface.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-5",
+      "text": "Use it as a weapon for self-defense because it's hard and heavy.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-6",
+      "text": "Use it as a makeshift step to reach high places because it's sturdy.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-7",
+      "text": "Use it as a heat sink to absorb and radiate heat because it has thermal mass.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-8",
+      "text": "Use it as a weight for exercise by lifting it repeatedly to build strength.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-9",
+      "text": "Use it as a garden marker by scratching plant names on it with a nail.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-10",
+      "text": "Use it as a toy for stacking and building with children because it's durable.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    },
+    {
+      "id": "zero-shot-11",
+      "text": "Use it as a writing surface by chalking on it for temporary notes.",
+      "taskId": "aut-brick-en",
+      "configId": "zero-shot",
+      "generation": 1,
+      "agent": "zero-shot",
+      "source": "baseline"
+    }
+  ],
+  "events": [],
+  "stats": {
+    "calls": 1,
+    "cachedCalls": 0,
+    "promptTokens": 109,
+    "completionTokens": 210,
+    "failures": 0,
+    "wallMs": 18669,
+    "generations": [],
+    "archive": {
+      "size": 0,
+      "coverage": 0,
+      "qdScore": 0
+    }
+  }
+}
